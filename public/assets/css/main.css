@@ -241,7 +241,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 12px;
-    font-size: 15px;
+    font-size: 18px;
     font-family: var(--nav-font);
     font-weight: 500;
     display: flex;
@@ -291,7 +291,7 @@ h6 {
 
   .navmenu .dropdown ul a {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 17px;
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
@@ -533,7 +533,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   position: relative;
 }
 
@@ -683,7 +683,7 @@ h6 {
 
 .footer .credits {
   margin-top: 6px;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -802,7 +802,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: 30px;
   letter-spacing: 1px;
   font-weight: 700;
   padding: 8px 20px;
@@ -995,8 +995,8 @@ section,
 .values .card {
   background-color: var(--surface-color);
   color: var(--default-color);
-  padding: 30px;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
   text-align: center;
   transition: 0.3s;
   height: 100%;
@@ -1271,9 +1271,9 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing .pricing-tem {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  padding: 40px 20px;
+  background-color: rgb(255, 255, 255);
+  /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
+  padding: 10px 10px;
   text-align: center;
   border-radius: 4px;
   position: relative;
@@ -1285,7 +1285,7 @@ section,
 @media (min-width: 1200px) {
   .pricing .pricing-tem:hover {
     transform: scale(1.1);
-    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
   }
 }
 
@@ -1861,9 +1861,41 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
+
+/* .contact .card {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+  height: 100%;
+  border: 0;
+}
+
+.contact .card:hover {
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact .card:hover img {
+  transform: scale(1);
+} */
+
+
+
+.contact .info-item {
+  background-color: var(--surface-color);
+  color: var(--default-color);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
+  /* background: color-mix(in srgb, var(--default-color), transparent 96%); */
+  padding: 30px;
+}
+
+@media (min-width: 1200px) {
+  .contact .info-item:hover {
+    transform: scale(1.02);
+    /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
+  }
 }
 
 .contact .info-item i {
@@ -1873,15 +1905,15 @@ section,
 }
 
 .contact .info-item h3 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 800;
   margin: 20px 0 10px 0;
 }
 
 .contact .info-item p {
   padding: 0;
   line-height: 24px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 

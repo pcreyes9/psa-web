@@ -9,6 +9,18 @@ Route::get('/', function () {
     return view('template/pages/landing');
 })->name('home');
 
+Route::get('/past-presidents', function () {
+    return view('template/pages/past-presidents');
+})->name('past-presidents');
+
+Route::get('/officers-boards', function () {
+    return view('template/pages/officers-boards');
+})->name('officers-boards');
+
+Route::get('/hymn', function () {
+    return view('template/pages/psa-hymn');
+})->name('hymn');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
