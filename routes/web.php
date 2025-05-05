@@ -17,6 +17,21 @@ Route::get('/officers-boards', function () {
     return view('template/pages/officers-boards');
 })->name('officers-boards');
 
+Route::get('/subsec-sig', function () {
+    return view('template/pages/subsec-sig');
+})->name('subsec-sig');
+
+Route::get('/chapter-pres', function () {
+    return view('template/pages/chapter-pres');
+})->name('chapter-pres');
+
+Route::get('/quintin-awardee', function () {
+    return view('template/pages/quintin');
+})->name('quintin');
+Route::get('/silao-leadership-awardee', function () {
+    return view('template/pages/silao');
+})->name('silao');
+
 Route::get('/hymn', function () {
     return view('template/pages/psa-hymn');
 })->name('hymn');

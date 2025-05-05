@@ -6,14 +6,14 @@
                 <li class="dropdown"><a href="#"><span>Legacy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                     <li><a href="{{route('past-presidents')}}">Past Presidents</a></li>
-                    <li><a href="#">Quintin J. Gomez Awardee</a></li>
-                    <li><a href="#">Manuel Silao Leadership Awardee</a></li>
+                    <li><a href="{{route('quintin')}}">Quintin J. Gomez Awardee</a></li>
+                    <li><a href="{{route('silao')}}">Manuel Silao Leadership Awardee</a></li>
                     <li><a href="{{route('hymn')}}">PSA Hymn</a></li>
                 </ul>
                 </li>
                 <li><a href="{{route('officers-boards')}}">Officers & Board</a></li>
-                <li><a href="#">Subspecialty & SIG</a></li>
-                <li><a href="#">Chapter Presidents</a></li>
+                <li><a href="{{route('subsec-sig')}}">Subspecialty & SIG</a></li>
+                <li><a href="{{route('chapter-pres')}}">Chapter Presidents</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span>CME Activities</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -37,9 +37,10 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#">Officers & Board</a></li>
-                <li><a href="#">Subspecialty & SIG</a></li>
-                <li><a href="#">Chapter Presidents</a></li>
+                <li><a href="#">Tagisan ng Talino</a></li>
+                <li><a href="#">Interesting Case Context</a></li>
+                <li><a href="#">Clinical Case Conference</a></li>
+                <li><a href="#">PJA</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span>Links</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -80,21 +81,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {{-- <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li>
@@ -124,7 +110,6 @@
                 </li>
             </ul>
         </li> --}}
-        
     </ul>
     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
