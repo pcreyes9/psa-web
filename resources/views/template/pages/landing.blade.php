@@ -36,7 +36,7 @@
 
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>UPCOMING EVENTS</h2>
+          <h2>UPCOMING EVENTS</h2> 
           {{-- <p>Check Our Affordable Pricing<br></p> --}}
         </div><!-- End Section Title -->
   
@@ -46,13 +46,13 @@
   
             <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
               <div class="pricing-tem">
-                <a href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
+                <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
               </div>
             </div>
 
             <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
               <div class="pricing-tem">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
               </div>
             </div>  
   

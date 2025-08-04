@@ -27,27 +27,28 @@
                                 <li><a href="#">Annual</a></li>
                             </ul>
                         </li> --}}
-                        <li class="dropdown"><a href="#"><span>Annual</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <li><a target="_blank" href="https://aca2025manila.org/">ACA 2025 Manila</a></li>
+                        {{-- <li class="dropdown"><a href="#"><span>Annual</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
                                 <li><a href="#">Poster</a></li>
                                 <li><a href="#">Registration</a></li>
                                 <li><a href="#">Program</a></li>
                                 <li><a href="#">Call For Abstracts</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 <li><a href="#">Tagisan ng Talino</a></li>
                 <li><a href="#">Interesting Case Context</a></li>
-                <li><a href="#">Clinical Case Conference</a></li>
-                <li><a href="#">PJA</a></li>
+                {{-- <li><a href="#">Clinical Case Conference</a></li> --}}
+                <li><a href="{{route('pja')}}">PJA</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span>Links</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li><a href="#">Koreanethesia 2024</a></li>
-                <li><a href="#">Asean Congress of Anesthesiologists 2025</a></li>
-                <li><a href="#">World Congress of Anesthesiologists (WCA)</a></li>
+                <li><a target="_blank" href="https://www.koreanesthesia.org/">Koreanethesia 2025</a></li>
+                <li><a target="_blank" href="https://aca2025manila.org/">Asean Congress of Anesthesiologists 2025</a></li>
+                <li><a target="_blank" href="https://wcacongress.org/">World Congress of Anesthesiologists (WCA)</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -69,6 +70,28 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span>Membership</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+                <li><a href="{{route('updEmail')}}">Email Update</a></li>
+                {{-- <li class="dropdown"><a href="#"><span>Convention</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="#"><span>2023</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Midyear</a></li>
+                                    <li><a href="#">Annual</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#"><span>2024</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <ul>
+                                    <li><a href="#">Midyear</a></li>
+                                    <li><a href="#">Annual</a></li>
+                                </ul>
+                            </li>
+                        </li>
+                    </ul>
+                </li> --}}
             </ul>
         </li>
         {{-- <li><a href="#contact">Contact</a></li> --}}

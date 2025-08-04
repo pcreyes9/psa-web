@@ -9,6 +9,8 @@ Route::get('/', function () {
     return view('template/pages/landing');
 })->name('home');
 
+
+//ABOUT US
 Route::get('/past-presidents', function () {
     return view('template/pages/past-presidents');
 })->name('past-presidents');
@@ -28,6 +30,7 @@ Route::get('/chapter-pres', function () {
 Route::get('/quintin-awardee', function () {
     return view('template/pages/quintin');
 })->name('quintin');
+
 Route::get('/silao-leadership-awardee', function () {
     return view('template/pages/silao');
 })->name('silao');
@@ -35,6 +38,20 @@ Route::get('/silao-leadership-awardee', function () {
 Route::get('/hymn', function () {
     return view('template/pages/psa-hymn');
 })->name('hymn');
+
+
+//CME ACTIVITIES
+Route::get('/pja', function () {
+    return view('template/pages/pja');
+})->name('pja');
+
+
+//MEMBERSHIP
+Route::get('/email-update', function () {
+    return view('template/pages/email-update');
+})->name('updEmail');
+
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
