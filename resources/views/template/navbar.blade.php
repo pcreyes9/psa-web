@@ -39,7 +39,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Tagisan ng Talino</a></li>
-                <li><a href="#">Interesting Case Context</a></li>
+                <li><a href="#">Interesting Case Contest</a></li>
                 {{-- <li><a href="#">Clinical Case Conference</a></li> --}}
                 <li><a href="{{route('pja')}}">PJA</a></li>
             </ul>

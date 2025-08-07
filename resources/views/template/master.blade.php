@@ -34,6 +34,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  @livewireStyles
+  @livewireScripts
 </head>
 
 <body class="index-page">
@@ -52,14 +54,25 @@
         </div>
     </header>
     
-    <main class="main">
-        @yield('content')
-    </main>
     
+      <div style="overflow: hidden; position: relative;">
+        <img class="master-bg" src="images/textured_bg.jpg" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
+        <div >
+          <main class="main">
+            @yield('content')
+          </main>
+              {{-- <div class="container">
+                  <h1 class="text-center m-5">THIS SITE IS UNDER DEVELOPMENT...</h1>
+              </div> --}}
+        </div>
+      </div>
+        {{-- @yield('content') --}}
+    
+    @livewireScripts
     @include('template.footer')
 
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     @include('template.scripts')
-
+    
 </body>

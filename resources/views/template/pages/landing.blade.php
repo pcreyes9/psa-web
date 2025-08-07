@@ -5,62 +5,58 @@
 @section('content')
     <section id="hero" class="hero section">
         <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 data-aos="fade-up">MISSION</h1>
-            <p data-aos="fade-up" data-aos-delay="100">To promote and maintain a community of responsible anesthesiologists who can practice safe and quality anesthesia care in the pursuit of serving the interests of its members, their patients and the nation.</p>
-            <h1 data-aos="fade-up">VISION</h1>
-            <p data-aos="fade-up" data-aos-delay="100">A Society that envisions the Filipino anesthesiologists as world-class professionals pursuing the PSA Mission with a deep of fulfillment and pride.</p>
-            <h1 data-aos="fade-up">SHARED VALUES</h1>
-            <p data-aos="fade-up" data-aos-delay="100"><strong>Commitment to Quality Care |
-              Concern for Members |
-              Professional Growth</strong> </p>
-            
-            
-            
-            <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                <a href="#contact" class="btn-get-started">Contact Us <i class="bi bi-arrow-right"></i></a>
-                  <a href="https://www.youtube.com/watch?v=5SMk8MZjFPg" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
-            </div>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-            <img src="assets/template/logo/PSA_LOGO.png" class="img-fluid animated" alt="">
-            </div>
-        </div>
+          <div class="row gy-4">
+              <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                <h1 data-aos="fade-up">MISSION</h1>
+                <p data-aos="fade-up" data-aos-delay="100">To promote and maintain a community of responsible anesthesiologists who can practice safe and quality anesthesia care in the pursuit of serving the interests of its members, their patients and the nation.</p>
+                <h1 data-aos="fade-up">VISION</h1>
+                <p data-aos="fade-up" data-aos-delay="100">A Society that envisions the Filipino anesthesiologists as world-class professionals pursuing the PSA Mission with a deep of fulfillment and pride.</p>
+                <h1 data-aos="fade-up">SHARED VALUES</h1>
+                <p data-aos="fade-up" data-aos-delay="100"><strong>Commitment to Quality Care |
+                  Concern for Members |
+                  Professional Growth</strong> </p>
+                
+                <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#contact" class="btn-get-started">Contact Us <i class="bi bi-arrow-right"></i></a>
+                    <a href="https://www.youtube.com/watch?v=5SMk8MZjFPg" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
+                </div>
+              </div>
+
+              <div class="col-lg-6 order-1 order-lg-2 hero-img d-flex flex-column align-items-center justify-content-center" data-aos="zoom-out">
+                <img src="assets/template/logo/PSA_LOGO.png" class="img-fluid animated" alt="">
+              </div>
+
+          </div>
         </div>
 
     </section><!-- /Hero Section -->
 
     <!-- UPCOMING EVENTS Section -->
-      <section id="pricing" class="pricing section">
+    <section id="pricing" class="pricing section">
 
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>UPCOMING EVENTS</h2> 
-          {{-- <p>Check Our Affordable Pricing<br></p> --}}
-        </div><!-- End Section Title -->
-  
-        <div class="container">
-  
-          <div class="row gy-4">
-  
-            <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pricing-tem">
-                <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
-              </div>
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>UPCOMING EVENTS</h2> 
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-tem">
+              <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
             </div>
-
-            <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pricing-tem">
-                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
-              </div>
-            </div>  
-  
           </div>
-  
+
+          <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-tem">
+              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
+            </div>
+          </div>  
+
         </div>
-  
-      </section><!-- /UPCOMING EVENTS Section -->
+      </div>
+    </section><!-- /UPCOMING EVENTS Section -->
 
       <!-- RECENT EVENTS Section -->
     <section id="portfolio" class="portfolio section">
@@ -77,15 +73,15 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
+            <li data-filter=".filter-app">Annual Convention</li>
+            <li data-filter=".filter-books">Midyear Convention</li>
+            <li data-filter=".filter-product">Tagisan ng Talino</li>
+            <li data-filter=".filter-branding">Interesting Case</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -97,7 +93,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -109,7 +105,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -121,7 +117,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -133,7 +129,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -145,7 +141,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -157,7 +153,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -169,7 +165,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -181,7 +177,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -193,7 +189,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -205,7 +201,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -217,7 +213,7 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="col-lg-4 col-md-4 col-6 portfolio-item isotope-item filter-books">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
