@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #f2fcff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #4154f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -46,7 +46,7 @@
 
 .dark-background {
   --background-color: #060606;
-  --default-color: #ffffff;
+  --default-color: oklab(100% 0 -0.00011);
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
@@ -97,7 +97,7 @@ h6 {
   overflow: clip;
   background-size: 100% 100%;   
 
-  opacity: 0.6;
+  opacity: 0.3;
   left: 0;
   top: 0;
   width: 100%;
@@ -796,7 +796,8 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* TEXTURED BACKGROUND */
+  /* background-color: var(--background-color); */ 
   padding: 60px 0;
   scroll-margin-top: 98px;
   overflow: clip;
@@ -1289,7 +1290,7 @@ section,
 # Pricing Section
 --------------------------------------------------------------*/
 .pricing .pricing-tem {
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
   padding: 10px 10px;
   text-align: center;

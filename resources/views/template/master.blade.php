@@ -56,7 +56,7 @@
     
     
       <div style="overflow: hidden; position: relative;">
-        <img class="master-bg" src="images/textured_bg.jpg" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
+        <img class="master-bg" src="images/gradient_bg3.jpg" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
         <div >
           <main class="main">
             @yield('content')
