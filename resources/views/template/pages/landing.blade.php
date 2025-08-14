@@ -28,7 +28,6 @@
 
           </div>
         </div>
-
     </section><!-- /Hero Section -->
 
     <!-- UPCOMING EVENTS Section -->
