@@ -8,7 +8,6 @@
           <div class="row gy-4">
               <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <h1 data-aos="fade-up">MISSION</h1>
-                TEST
                 <p data-aos="fade-up" data-aos-delay="100">To promote and maintain a community of responsible anesthesiologists who can practice safe and quality anesthesia care in the pursuit of serving the interests of its members, their patients and the nation.</p>
                 <h1 data-aos="fade-up">VISION</h1>
                 <p data-aos="fade-up" data-aos-delay="100">A Society that envisions the Filipino anesthesiologists as world-class professionals pursuing the PSA Mission with a deep of fulfillment and pride.</p>
