@@ -39,38 +39,35 @@
 </head>
 
 <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-          <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto">
-            <img src="assets/template/logo/PSA-Logoo.png" alt="">
-            {{-- <h1 class="sitename">PSA</h1> --}}
-          </a>
-          @include('template.navbar')
+  <header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto">
+          <img src="assets/template/logo/PSA-Logoo.png" alt="">
+          {{-- <h1 class="sitename">PSA</h1> --}}
+        </a>
+        @include('template.navbar')
 
-          {{-- <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a> --}}
-    
-        </div>
-    </header>
-    
-    
-      <div style="overflow: hidden; position: relative;">
-        <img class="master-bg" src="images/gradient_bg3.jpg" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
-        <div >
-          <main class="main">
-            @yield('content')
-          </main>
-              {{-- <div class="container">
-                  <h1 class="text-center m-5">THIS SITE IS UNDER DEVELOPMENT...</h1>
-              </div> --}}
-        </div>
+        {{-- <a class="btn-getstarted flex-md-shrink-0" href="index.html#about">Get Started</a> --}}
       </div>
+  </header>
+
+    <div style="overflow: hidden; position: relative;">
+      <img class="master-bg" src="images/gradient_bg3.jpg" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
+      <div >
+        <main class="main">
+          @yield('content')
+        </main>
+            {{-- <div class="container">
+                <h1 class="text-center m-5">THIS SITE IS UNDER DEVELOPMENT...</h1>
+            </div> --}}
+      </div>
+    </div>
         {{-- @yield('content') --}}
-    
-    @livewireScripts
-    @include('template.footer')
+  
+  @livewireScripts
+  @include('template.footer')
 
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    @include('template.scripts')
-    
+  @include('template.scripts')
 </body>

@@ -14,8 +14,10 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="home" :href="route('members')" :current="request()->routeIs('members')" wire:navigate>{{ __('Members') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
+            
 
             <flux:spacer />
 
@@ -32,7 +34,7 @@
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
                 <flux:profile
-                    :name="auth()->user()->name"
+                    :name="auth()->user()->mem_last_name"
                     :initials="auth()->user()->initials()"
                     icon-trailing="chevrons-up-down"
                 />
@@ -50,8 +52,8 @@
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
-                                    <span class="truncate text-xs">{{ auth()->user()->email }}</span>
+                                    <span class="truncate font-semibold">{{ auth()->user()->mem_last_name }}</span>
+                                    <span class="truncate text-xs">{{ auth()->user()->id }}</span>
                                 </div>
                             </div>
                         </div>

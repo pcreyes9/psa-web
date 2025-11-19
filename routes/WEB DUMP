@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\MemberLoginController;
 
+Route::get('/mem-login', [MemberLoginController::class, 'showLoginForm'])->name('mem_login');
+Route::post('/mem-login', [MemberLoginController::class, 'login']);
+
+
 Route::get('/', function () {
     return view('template/pages/landing');
 })->name('home');
@@ -47,13 +51,27 @@ Route::get('/pja', function () {
     return view('template/pages/pja');
 })->name('pja');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth'])
-    ->name('dashboard');
 
-Route::view('members', 'mem-access')
-    ->middleware(['auth'])
-    ->name('members');
+//MEMBERSHIP
+// Route::get('/mem-login', function () {
+//     return view('template/pages/mem-login');
+// })->name('mem_login');
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/mem-dashboard', function () {
+        return view('members/mem-dashboard');
+    })->name('mem-dashboard');
+
+    Route::post('/mem-logout', [MemberLoginController::class, 'logout'])->name('logout');
+});
+
+
+
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');

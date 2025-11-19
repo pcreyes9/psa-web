@@ -2,60 +2,53 @@
 
 namespace App\Livewire\Auth;
 
-use App\Models\User;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\RateLimiter;
-use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
-use Livewire\Component;
+use Illuminate\Validation\ValidationException;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
+use Livewire\Component;
 
 #[Layout('components.layouts.auth')]
 class Login extends Component
 {
-    #[Validate('required|string')]
-    public string $member_id = '';
+    #[Validate('required|string|email')]
+    public string $email = '';
 
     #[Validate('required|string')]
     public string $password = '';
 
     public bool $remember = false;
 
+    /**
+     * Handle an incoming authentication request.
+     */
     public function login(): void
     {
         $this->validate();
 
         $this->ensureIsNotRateLimited();
 
-        // Fetch the user using id field
-        $user = User::where('id', $this->member_id)->first();
-
-        // Validate plain text password
-        if (! $user || $user->password !== $this->password) {
+        if (! Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
-                'member_id' => __('auth.failed'),
+                'email' => __('auth.failed'),
             ]);
         }
-
-        // Log the user in without password hashing
-        Auth::login($user, $this->remember);
 
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
-        // Redirect to dashboard
-        // dd(Auth::user());
-        $this->redirectIntended(
-            default: route('dashboard', absolute: false),
-            navigate: true
-        );
+        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
 
+    /**
+     * Ensure the authentication request is not rate limited.
+     */
     protected function ensureIsNotRateLimited(): void
     {
         if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5)) {
@@ -67,15 +60,18 @@ class Login extends Component
         $seconds = RateLimiter::availableIn($this->throttleKey());
 
         throw ValidationException::withMessages([
-            'member_id' => __('auth.throttle', [
+            'email' => __('auth.throttle', [
                 'seconds' => $seconds,
                 'minutes' => ceil($seconds / 60),
             ]),
         ]);
     }
 
+    /**
+     * Get the authentication rate limiting throttle key.
+     */
     protected function throttleKey(): string
     {
-        return Str::lower($this->member_id).'|'.request()->ip();
+        return Str::transliterate(Str::lower($this->email).'|'.request()->ip());
     }
 }

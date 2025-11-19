@@ -7,7 +7,7 @@
                 <ul>
                     <li><a href="{{route('past-presidents')}}">Past Presidents</a></li>
                     <li><a href="{{route('quintin')}}">Quintin J. Gomez Awardee</a></li>
-                    <li><a href="{{route('silao')}}">Manuel Silao Leadership Awardee</a></li>
+                    <li><a href="{{route('silao')}}">Manuel V. Silao Leadership Awardee</a></li>
                     <li><a href="{{route('hymn')}}">PSA Hymn</a></li>
                 </ul>
                 </li>
@@ -74,7 +74,7 @@
         </li>
         <li class="dropdown"><a href="#"><span>Membership</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li><a href="{{route('updEmail')}}">Email Update</a></li>
+                <li><a href="{{route('login')}}">Login</a></li>
                 {{-- <li class="dropdown"><a href="#"><span>Convention</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li class="dropdown"><a href="#"><span>2023</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -95,14 +95,6 @@
             </ul>
         </li>
         {{-- <li><a href="#contact">Contact</a></li> --}}
-
-
-
-
-
-
-
-
 
         {{-- <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>

@@ -1,22 +1,17 @@
 <div class="container">
-    <div class="row justify-content-center text-center">
-        <div class="col-lg-6 ">
+    <div class="row justify-content-center text-left">
+        <div class="col-lg-4">
             <form wire:submit.prevent>
-                <div class="form-group mb-4 ">
-                    <h1>{{ $psa_id }}</h1>
-
-                    <label for="psa_id">PSA ID Number</label>
-                    <input wire:model="psa_id" type="text" class="form-control" id="psa_id" placeholder="Enter PSA ID #">
-                    <p>You entered: {{ $psa_id }}</p>
+                <div class="form-group mb-4">
+                    <label class="mb-1">PSA ID #</label>
+                    <input type="text" class="form-control text-left" id="psa_id"  wire:model.live="psa_id" placeholder="PSA ID #">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label class="mb-1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" wire:model.live="password" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary mt-4">Submit</button>
             </form>
         </div>
     </div>
 </div>
-
