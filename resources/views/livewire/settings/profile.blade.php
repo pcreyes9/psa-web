@@ -1,15 +1,25 @@
 <section class="w-full">
 @include('partials.settings-heading')
 
-    <x-settings.layout :heading="__('Profile')" :subheading="__('View your name and email address')">
+    <x-settings.layout :heading="__('Profile')" :subheading="__('View your information')">
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
             <flux:input 
                 wire:model="mem_id" 
                 :label="__('PSA ID')" 
-                type="text" 
+                type="number" 
                 required 
                 autofocus 
                 autocomplete="mem_id" 
+                disabled
+            />
+
+            <flux:input 
+                wire:model="prc" 
+                :label="__('PRC')" 
+                type="number" 
+                required 
+                autofocus 
+                autocomplete="prc" 
                 disabled
             />
             
