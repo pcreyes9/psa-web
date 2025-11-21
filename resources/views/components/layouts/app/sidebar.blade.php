@@ -13,7 +13,7 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
-                    <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                     <flux:navlist.item icon="home" :href="route('members')" :current="request()->routeIs('members')" wire:navigate>{{ __('Members') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
@@ -21,7 +21,7 @@
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
+            {{-- <flux:navlist variant="outline">
                 <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
                 {{ __('Repository') }}
                 </flux:navlist.item>
@@ -29,12 +29,12 @@
                 <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
                 {{ __('Documentation') }}
                 </flux:navlist.item>
-            </flux:navlist>
+            </flux:navlist> --}}
 
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
                 <flux:profile
-                    :name="auth()->user()->mem_last_name"
+                    :name="auth()->user()->id"
                     :initials="auth()->user()->initials()"
                     icon-trailing="chevrons-up-down"
                 />
@@ -45,15 +45,15 @@
                             <div class="flex items-center gap-2 px-1 py-1.5 text-start text-sm">
                                 <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-lg">
                                     <span
-                                        class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white"
+                                        class="flex h-full w-full items-center justify-center rounded-lg  text-black dark:bg-neutral-700 dark:text-white"
                                     >
-                                        {{ auth()->user()->initials() }}
+                                        {{ auth()->user()->id }}
                                     </span>
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate font-semibold">{{ auth()->user()->mem_last_name }}</span>
-                                    <span class="truncate text-xs">{{ auth()->user()->id }}</span>
+                                    <span class="truncate text-xs font-bold">{{ auth()->user()->mem_first_name }} {{ auth()->user()->mem_last_name }}</span>
+                                    <span class="truncate text-xs">{{ auth()->user()->mem_email_address }}</span>
                                 </div>
                             </div>
                         </div>
@@ -102,8 +102,8 @@
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
-                                    <span class="truncate text-xs">{{ auth()->user()->email }}</span>
+                                    <span class="truncate text-xs font-bold">{{ auth()->user()->mem_first_name }} {{ auth()->user()->mem_last_name }}</span>
+                                    <span class="truncate text-xs">{{ auth()->user()->mem_email_address }}</span>
                                 </div>
                             </div>
                         </div>

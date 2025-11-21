@@ -1,12 +1,31 @@
 <section class="w-full">
-    @include('partials.settings-heading')
+@include('partials.settings-heading')
 
-    <x-settings.layout :heading="__('Profile')" :subheading="__('Update your name and email address')">
+    <x-settings.layout :heading="__('Profile')" :subheading="__('View your name and email address')">
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
-            <flux:input wire:model="name" :label="__('Name')" type="text" required autofocus autocomplete="name" />
+            <flux:input 
+                wire:model="mem_id" 
+                :label="__('PSA ID')" 
+                type="text" 
+                required 
+                autofocus 
+                autocomplete="mem_id" 
+                disabled
+            />
+            
+            <flux:input 
+                wire:model="name" 
+                :label="__('Name')" 
+                type="text" 
+                required 
+                autofocus 
+                autocomplete="name" 
+                disabled
+            />
+
 
             <div>
-                <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" />
+                <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" disabled/>
 
                 @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail &&! auth()->user()->hasVerifiedEmail())
                     <div>
@@ -28,9 +47,9 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <div class="flex items-center justify-end">
+                {{-- <div class="flex items-center justify-end">
                     <flux:button variant="primary" type="submit" class="w-full">{{ __('Save') }}</flux:button>
-                </div>
+                </div> --}}
 
                 <x-action-message class="me-3" on="profile-updated">
                     {{ __('Saved.') }}
@@ -38,6 +57,6 @@
             </div>
         </form>
 
-        <livewire:settings.delete-user-form />
+    {{-- <livewire:settings.delete-user-form /> --}}
     </x-settings.layout>
 </section>

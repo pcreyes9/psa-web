@@ -13,6 +13,7 @@ class Profile extends Component
     public string $name = '';
 
     public string $email = '';
+    public $mem_id = '';
 
     /**
      * Mount the component.
@@ -21,6 +22,7 @@ class Profile extends Component
     {
         $this->name = Auth::user()->mem_last_name;
         $this->email = Auth::user()->mem_email_address;
+        $this->mem_id = Auth::user()->id;
     }
 
     /**
@@ -45,7 +47,7 @@ class Profile extends Component
 
         $user->fill($validated);
 
-        if ($user->isDirty('email')) {
+        if ($user->isDirty('mem_email_address')) {
             $user->email_verified_at = null;
         }
 
