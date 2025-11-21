@@ -55,7 +55,7 @@
   </section><!-- /UPCOMING EVENTS Section -->
 
       <!-- RECENT EVENTS Section -->
-      @include('template.pages.recentEvents')
+      {{-- @include('template.pages.recentEvents') --}}
       <!-- Contact Section -->
   <section id="contact" class="contact section">
     <!-- Section Title -->
