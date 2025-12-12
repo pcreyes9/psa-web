@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('title', 'ACA 2025 - GALLERY')
+@section('title', 'ACA 2025 - GALLERY ')
 
 @section('content')
 <div id="page-loader">
