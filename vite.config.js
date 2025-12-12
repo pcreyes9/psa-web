@@ -5,20 +5,20 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: ['resources/views/**/*'],
+            input: [
+                'resources/css/app.css',
+                'resources/js/app.js'
+            ],
+            refresh: true,
         }),
         tailwindcss(),
     ],
 
-    // ✔ Add this
     build: {
         outDir: 'public/build',
-        manifest: true,
         emptyOutDir: true,
-        rollupOptions: {
-            input: 'resources/js/app.js',
-        },
+        // ❌ DO NOT add: manifest: true
+        // ❌ DO NOT add: rollupOptions
     },
 
     server: {
