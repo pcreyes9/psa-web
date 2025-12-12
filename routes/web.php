@@ -8,9 +8,11 @@ use App\Http\Controllers\GalleryController;
 
 use App\Http\Controllers\Auth\MemberLoginController;
 
-Route::get('/', function () {
-    return view('template/pages/landing');
-})->name('home');
+// Route::get('/', function () {
+//     return view('template/pages/landing');
+// })->name('home');
+
+Route::get('/', [GalleryController::class, 'landing'])->name('home');
 
 
 //ABOUT US
