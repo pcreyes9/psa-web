@@ -9,57 +9,6 @@ class GalleryController extends Controller
 {
     public $day, $title;
 
-    public function show($day){
-        // dd($day);
-        $this->day = $day;
-
-        if($day == 'day1')
-            { $this->title = "Gallery - Day 1"; } 
-        elseif($day == 'day2')
-            { $this->title = "Gallery - Day 2"; } 
-        elseif($day == 'day3')
-            { $this->title = "Gallery - Day 3"; }
-
-        $arrOpening = [];
-        $arrReg = [];
-        $arrAsean = [];
-        $arrChapter = [];
-        $arrLectures = [];
-
-        // $opening = File::allFiles(public_path('images/gallery/day1/opening_ceremony'));
-        // $reg = File::allFiles(public_path('images/gallery/day1/registration'));
-        // $asean = File::allFiles(public_path('images/gallery/day1/asean_night'));
-
-        $opening = File::allFiles(public_path('images/gallery/aca_2025/' . $this->day . '/opening_ceremony'));
-        $reg = File::allFiles(public_path('images/gallery/aca_2025/' . $this->day . '/registration'));
-        $asean = File::allFiles(public_path('images/gallery/aca_2025/' . $this->day . '/asean_night'));
-        $chapter = File::allFiles(public_path('images/gallery/aca_2025/' . $this->day . '/chapter_delegates'));
-        $lectures = File::allFiles(public_path('images/gallery/aca_2025/' . $this->day . '/lectures'));
-
-        foreach ($opening as $file) {
-            $arrOpening[] = pathinfo($file)['basename']; // filename + extension
-        }
-
-        foreach ($reg as $file) {
-            $arrReg[] = pathinfo($file)['basename']; // filename + extension
-        }
-
-        foreach ($asean as $file) {
-            $arrAsean[] = pathinfo($file)['basename']; // filename + extension
-        }
-        foreach ($chapter as $file) {
-            $arrChapter[] = pathinfo($file)['basename']; // filename + extension
-        }
-        foreach ($lectures as $file) {
-            $arrLectures[] = pathinfo($file)['basename']; // filename + extension
-        }
-
-        // dd(array("arrOpening"=>$arrOpening, "arrReg"=>$arrReg, "arrAsean"=>$arrAsean), $this->title);
-
-        return view("template.pages.gallery-aca", array("arrOpening"=>$arrOpening, "arrReg"=>$arrReg, "arrAsean"=>$arrAsean, "arrChapter"=>$arrChapter, "arrLectures"=>$arrLectures), 
-        ["title" => $this->title, "day" => $this->day]);
-    }
-
     public function landing()
     {
         $base = public_path('images/gallery/aca_2025');
@@ -96,11 +45,75 @@ class GalleryController extends Controller
 
         // Pick 9 random landscape images
         $random9 = $files->shuffle()->take(15)->values()->toArray();
+        // dd($random9);
 
         // Return to view
         return view("template.pages.landing", [
             "arrLanding" => $random9,
             "title" => "Philippine Statistical Association - 2025 ACA Gallery"
+        ]);
+    }
+
+    public function general($day)
+    {
+        $this->day = $day;
+
+        // Set the title
+        if ($day == 'day1') {
+            $this->title = "Gallery - Day 1"; 
+        } elseif ($day == 'day2') {
+            $this->title = "Gallery - Day 2"; 
+        } elseif ($day == 'day3') {
+            $this->title = "Gallery - Day 3"; 
+        }
+
+        // Path to the specific day folder inside aca_2025
+        $base = public_path('images/gallery/aca_2025/' . $day);
+
+        // Make sure the folder exists
+        if (!is_dir($base)) {
+            return view("template.pages.gallery-aca-test", [
+                "arrGallery" => [],
+                "title" => $this->title
+            ]);
+        }
+
+        $folders = collect(File::directories($base)); // get subfolders only
+
+        $arrGallery = [];
+
+        foreach ($folders as $folderPath) {
+            $subfolderName = basename($folderPath); // e.g., opening_ceremony, asean_night
+
+            // Get all files in this subfolder
+            $files = collect(File::files($folderPath))
+                ->map(function ($file) use ($base) {
+                    // Check if landscape
+                    [$width, $height] = getimagesize($file->getPathname());
+                    if ($width <= $height) {
+                        return null; // skip portrait
+                    }
+
+                    // Relative path from public/
+                    $relativePath = str_replace(public_path() . DIRECTORY_SEPARATOR, '', $file->getPathname());
+
+                    return [
+                        'filename' => $file->getFilename(),
+                        'relative_path' => $relativePath
+                    ];
+                })
+                ->filter() // remove portrait images
+                ->values()
+                ->toArray();
+
+            $arrGallery[$subfolderName] = $files;
+        }
+
+        // dd($arrGallery);
+        // Return to view
+        return view("template.pages.gallery-aca-test", [
+            "arrGallery" => $arrGallery,
+            "title" => $this->title
         ]);
     }
 }

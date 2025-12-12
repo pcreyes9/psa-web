@@ -48,7 +48,9 @@ Route::get('/hymn', function () {
 //     return view('template/pages/gallery-aca');
 // })->name('gallery-aca1');
 
-Route::get('/gallery-aca-{day}', [GalleryController::class, 'show'])->name('gallery-aca');
+// Route::get('/gallery-aca-{day}', [GalleryController::class, 'show'])->name('gallery-aca');
+
+Route::get('/gallery-aca-{day}', [GalleryController::class, 'general'])->name('gallery-aca');
 
 
 //CME ACTIVITIES

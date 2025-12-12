@@ -56,6 +56,8 @@
                 <li class="dropdown"><a href="#"><span>ACA 2025</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="{{route('gallery-aca', ['day' => 'day1'])}}">Day 1</a></li>
+                        <li><a href="{{route('gallery-aca', ['day' => 'day2'])}}">Day 2</a></li>
+                        <li><a href="{{route('gallery-aca', ['day' => 'day3'])}}">Day 3</a></li>
                         {{-- <li class="dropdown"><a href="#"><span>Midyear</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
                                 <li><a href="#">Midyear</a></li>
