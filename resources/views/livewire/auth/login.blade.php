@@ -1,22 +1,26 @@
 <div class="flex flex-col gap-6">
-    <x-auth-header :title="__('Log in to your account')" :description="__('Enter your PSA ID # and password below to log in')" />
+    <x-auth-header :title="__('MEMBERS ACCESS IS UNDER DEVELOPNENT')" :description="__('Come back later :)')" />
+    <div class="flex items-center justify-end">
+            <flux:button variant="primary" href="/" class="w-full">{{ __('Homepage') }}</flux:button>
+        </div>
+    {{-- <x-auth-header :title="__('Log in to your account')" :description="__('Enter your PSA ID # and password below to log in')" />
 
-    <!-- Session Status -->
+
     <x-auth-session-status class="text-center" :status="session('status')" />
 
     <form wire:submit="login" class="flex flex-col gap-6">
-        <!-- Email Address -->
+
         <flux:input
             wire:model="member_id"
             :label="__('PSA ID')"
             type="text"
             required
             autofocus
-            {{-- autocomplete="email" --}}
+            
             placeholder="Enter PSA ID #"
         />
 
-        <!-- Password -->
+
         <div class="relative">
             <flux:input
                 wire:model="password"
@@ -34,7 +38,7 @@
             @endif
         </div>
 
-        <!-- Remember Me -->
+
         <flux:checkbox wire:model="remember" :label="__('Remember me')" />
 
         <div class="flex items-center justify-end">
@@ -47,5 +51,5 @@
             {{ __('Don\'t have an account?') }}
             <flux:link :href="route('register')" wire:navigate>{{ __('Sign up') }}</flux:link>
         </div>
-    @endif
+    @endif --}}
 </div>

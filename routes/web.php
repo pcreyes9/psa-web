@@ -4,6 +4,7 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GalleryController;
 
 use App\Http\Controllers\Auth\MemberLoginController;
 
@@ -40,6 +41,12 @@ Route::get('/silao-leadership-awardee', function () {
 Route::get('/hymn', function () {
     return view('template/pages/psa-hymn');
 })->name('hymn');
+
+// Route::get('/gallery-aca1', function () {
+//     return view('template/pages/gallery-aca');
+// })->name('gallery-aca1');
+
+Route::get('/gallery-aca-{day}', [GalleryController::class, 'show'])->name('gallery-aca');
 
 
 //CME ACTIVITIES

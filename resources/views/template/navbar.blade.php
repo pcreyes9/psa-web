@@ -3,17 +3,17 @@
         <li><a href="{{route('home')}}" >Home<br></a></li>
         <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li class="dropdown"><a href="#"><span>Legacy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                    <li><a href="{{route('past-presidents')}}">Past Presidents</a></li>
-                    <li><a href="{{route('quintin')}}">Quintin J. Gomez Awardee</a></li>
-                    <li><a href="{{route('silao')}}">Manuel V. Silao Leadership Awardee</a></li>
-                    <li><a href="{{route('hymn')}}">PSA Hymn</a></li>
-                </ul>
-                </li>
                 <li><a href="{{route('officers-boards')}}">Officers & Board</a></li>
                 <li><a href="{{route('subsec-sig')}}">Subspecialty & SIG</a></li>
                 <li><a href="{{route('chapter-pres')}}">Chapter Presidents</a></li>
+                <li class="dropdown"><a href="#"><span>Legacy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="{{route('past-presidents')}}">Past Presidents</a></li>
+                        <li><a href="{{route('quintin')}}">Quintin J. Gomez Awardee</a></li>
+                        <li><a href="{{route('silao')}}">Manuel V. Silao Leadership Awardee</a></li>
+                        <li><a href="{{route('hymn')}}">PSA Hymn</a></li>
+                    </ul>
+                </li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span>CME Activities</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -53,21 +53,15 @@
         </li>
         <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li class="dropdown"><a href="#"><span>Convention</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="#"><span>ACA 2025</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li class="dropdown"><a href="#"><span>2023</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Midyear</a></li>
-                                    <li><a href="#">Annual</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#"><span>2024</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Midyear</a></li>
-                                    <li><a href="#">Annual</a></li>
-                                </ul>
-                            </li>
-                        </li>
+                        <li><a href="{{route('gallery-aca', ['day' => 'day1'])}}">Day 1</a></li>
+                        {{-- <li class="dropdown"><a href="#"><span>Midyear</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">Midyear</a></li>
+                                <li><a href="#">Annual</a></li>
+                            </ul>
+                        </li> --}}
                     </ul>
                 </li>
             </ul>
