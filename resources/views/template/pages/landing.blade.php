@@ -43,7 +43,7 @@
                       <div class="portfolio-content h-100">
                           <img src="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" class="img-fluid" alt="">
                           <div class="portfolio-info">
-                              <h4>{{ $img['last_folder'] }}</h4>
+                              <h4>{{ strtoupper(str_replace('_', ' ', $img['last_folder'])) }}</h4>
                               <p>ASEAN CONGRESS OF Anesthesiologists 2025</p>
                               <a href="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                               {{-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> --}}
