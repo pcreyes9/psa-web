@@ -1,4 +1,5 @@
 <footer id="footer" class="footer">
+  TEST
 
     {{-- <div class="container footer-top">
       <div class="row gy-4">
