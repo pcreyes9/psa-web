@@ -7,30 +7,23 @@ use Illuminate\Http\Request;
 
 class GalleryController extends Controller
 {
-    public $day, $title;
+    public $day, $title, $fb_link;
 
     public function landing()
     {
         $base = public_path('images/gallery/aca_2025');
 
-        // Get all files recursively
         $allFiles = collect(File::allFiles($base));
-
-        // Map to last folder + relative path + filename, filter only landscape
+        
         $files = $allFiles->map(function ($file) use ($base) {
-
-            // Check image dimensions
             [$width, $height] = getimagesize($file->getPathname());
 
-            // Only keep landscape images
             if ($width <= $height) {
                 return null;
             }
-
-            // Relative path from public/
+            
             $relativePath = str_replace(public_path() . DIRECTORY_SEPARATOR, '', $file->getPathname());
 
-            // Get last folder name
             $folders = explode(DIRECTORY_SEPARATOR, str_replace($base . DIRECTORY_SEPARATOR, '', $file->getPath()));
             $lastFolder = end($folders);
 
@@ -40,11 +33,11 @@ class GalleryController extends Controller
                 'filename' => $file->getFilename()
             ];
         })
-        ->filter() // remove null values (portrait images)
+        ->filter()
         ->values();
 
         // Pick 9 random landscape images
-        $random9 = $files->shuffle()->take(15)->values()->toArray();
+        $random9 = $files->shuffle()->take(18)->values()->toArray();
         // dd($random9);
 
         // Return to view
@@ -61,10 +54,13 @@ class GalleryController extends Controller
         // Set the title
         if ($day == 'day1') {
             $this->title = "Gallery - Day 1"; 
+            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
         } elseif ($day == 'day2') {
             $this->title = "Gallery - Day 2"; 
+            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
         } elseif ($day == 'day3') {
             $this->title = "Gallery - Day 3"; 
+            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
         }
 
         // Path to the specific day folder inside aca_2025
@@ -113,7 +109,8 @@ class GalleryController extends Controller
         // Return to view
         return view("template.pages.gallery-aca-test", [
             "arrGallery" => $arrGallery,
-            "title" => $this->title
+            "title" => $this->title,
+            "fb_link" => $this->fb_link
         ]);
     }
 }
