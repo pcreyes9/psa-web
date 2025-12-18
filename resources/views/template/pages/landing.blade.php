@@ -36,29 +36,28 @@
     </div><!-- End Section Title -->
 
     <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-              @foreach ($arrLanding as $img)
-                  <div class="col-lg-4 col-md-6 col-6 portfolio-item isotope-item opening">
-                      <div class="portfolio-content h-100">
-                          <img src="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" class="img-fluid" alt="">
-                          <div class="portfolio-info">
-                              <h4>{{ strtoupper(str_replace('_', ' ', $img['last_folder'])) }}</h4>
-                              <p>ASEAN CONGRESS OF Anesthesiologists 2025</p>
-                              <a href="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                              {{-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> --}}
-                          </div>
-                      </div>
-                  </div>
-              @endforeach            
-            </div><!-- End Portfolio Container -->
-          </div>
-
-          <div class="d-flex justify-content-center mt-4">
-              <button href="{{route('gallery-aca', ['day' => 'day1'])}}" class="w-1/2">View ACA 2025 Gallery</button>
-          </div>
-          
+      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          @foreach ($arrLanding as $img)
+            <div class="col-lg-4 col-md-6 col-6 portfolio-item isotope-item opening">
+              <div class="portfolio-content h-100">
+                <img src="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                    <h4>{{ strtoupper(str_replace('_', ' ', $img['last_folder'])) }}</h4>
+                    <p>ASEAN CONGRESS OF Anesthesiologists 2025</p>
+                    <a href="{{ asset($img['relative_path']) }}" alt="{{ $img['filename'] }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    {{-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> --}}
+                </div>
+              </div>
+            </div>
+          @endforeach            
+        </div><!-- End Portfolio Container -->
       </div>
+
+      <div class="d-flex justify-content-center mt-4">
+          <button href="{{route('gallery-aca', ['day' => 'day1'])}}" class="w-1/2">View ACA 2025 Gallery</button>
+      </div>
+    </div>
       
   </section><!-- /Portfolio Section -->
 

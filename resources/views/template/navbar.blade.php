@@ -20,13 +20,12 @@
             <ul>
                 <li class="dropdown"><a href="#"><span>Convention</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li><a href="#">Midyear</a></li>
-                        {{-- <li class="dropdown"><a href="#"><span>Midyear</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <li class="dropdown"><a href="#"><span>Midyear 2026</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="#">Midyear</a></li>
-                                <li><a href="#">Annual</a></li>
+                                <li><a href="{{ route('midyear-registration') }}">Registration</a></li>
+                                {{-- <li><a href="#">Annual</a></li> --}}
                             </ul>
-                        </li> --}}
+                        </li>
                         <li><a target="_blank" href="https://aca2025manila.org/">ACA 2025 Manila</a></li>
                         {{-- <li class="dropdown"><a href="#"><span>Annual</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>

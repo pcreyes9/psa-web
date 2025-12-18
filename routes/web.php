@@ -6,8 +6,6 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 
-use App\Http\Controllers\Auth\MemberLoginController;
-
 // Route::get('/', function () {
 //     return view('template/pages/landing');
 // })->name('home');
@@ -58,6 +56,12 @@ Route::get('/pja', function () {
     return view('template/pages/pja');
 })->name('pja');
 
+Route::get('/midyear-registration', function () {
+    return view('template/midyear/midyear-registration');
+})->name('midyear-registration');
+
+// AUTHENTICATE MEMBER LOGIN
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth'])
     ->name('dashboard');
@@ -73,5 +77,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
+
+// ADMIN LOGIN
+
+Route::view('admin/login', 'admin.login');
+Route::view('admin/dashboard', 'admin.dashboard');
 
 require __DIR__.'/auth.php';

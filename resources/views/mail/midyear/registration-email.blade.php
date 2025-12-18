@@ -1,0 +1,18 @@
+Dear Dr. {{ $name }},
+<br>
+<br>
+Thank you for registering for the PSA Midyear Convention 2026. We are currently checking your payment and processing your registration. 
+<br>
+<br>
+Upon completion and verification of your registration, you will receive another email containing your barcode.
+<br>
+<br>
+Thank you and we hope to see you soon!
+<br>
+<br>
+<br>
+Sincerely, 
+<br>
+Paul Reyes | IT Specialist
+<br>
+PSA Secretariat
