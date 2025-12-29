@@ -67,13 +67,13 @@ class MidyearRegistration extends Component
     }
 
     public function submit(){
-        $date = Carbon::now()->format('mdy - his');
+        $date = Carbon::now()->format('mdy-his');
         // dd($date);
         $pay_extension = strtolower($this->payment_proof->extension());
 
         // dd("submitted");
         if (in_array($pay_extension, $this->allowed_ext)) {
-            $this->payment_name = "{$this->psa_id} {$this->member->mem_last_name} - Proof of Payment {$date}.{$pay_extension}";
+            $this->payment_name = "{$this->psa_id}-{$this->member->mem_last_name}-Proof_of_Payment-{$date}.{$pay_extension}";
         } else {
             $this->err = "INVALID FILE FORMAT OF PROOF OF PAYMENT.";
         }
@@ -81,7 +81,7 @@ class MidyearRegistration extends Component
         if($this->disc != "non_disc"){
             $disc_extension = strtolower($this->discount_img->extension());
             if (in_array($disc_extension, $this->allowed_ext)) {
-                $this->discount_name = "{$this->psa_id} {$this->member->mem_last_name} - {$this->disc} {$date}.{$disc_extension}";
+                $this->discount_name = "{$this->psa_id}-{$this->member->mem_last_name}-{$this->disc}-{$date}.{$disc_extension}";
             } else {
                 $this->err = "INVALID FILE FORMAT OF DISCOUNT ID.";
             }       
@@ -120,8 +120,12 @@ class MidyearRegistration extends Component
             'created_at' => Carbon::now(),  // Use Carbon to get the current timestamp
             'updated_at' => Carbon::now(),  // Same for updated_at
         ]);
-        $this->discount_img->storeAs('photos/discounts', $this->discount_name);
-        $this->payment_proof->storeAs('photos/payments', $this->payment_name);
+        
+        if($this->disc != "non_disc"){
+            $this->discount_img->storeAs('photos/discounts', $this->discount_name, 'public');    
+        }
+
+        $this->payment_proof->storeAs('photos/payments', $this->payment_name, 'public');
 
         Mail::mailer('smtp')->to($this->email_address)->send(new RegistrationEmail($this->member->mem_last_name));
         return redirect()->route('midyear-registration')->with('success', 'Your registration is on process, Dr. ' . $this->member->mem_last_name . '. We will update you in this email, ' . $this->email_address . '. Thank you and we hope to see you soon!');

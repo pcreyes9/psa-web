@@ -50,10 +50,18 @@ class Login extends Component
 
         // Redirect to dashboard
         // dd(Auth::user());
-        $this->redirectIntended(
+        if ($this->member_id == '0000') {
+            // dd('admin');
+            $this->redirectIntended(
+                default: route('admin_dashboard', absolute: false),
+                navigate: true
+            );
+        }else{
+            $this->redirectIntended(
             default: route('dashboard', absolute: false),
             navigate: true
         );
+        }
     }
 
     protected function ensureIsNotRateLimited(): void

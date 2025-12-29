@@ -80,7 +80,6 @@ Route::middleware(['auth'])->group(function () {
 
 // ADMIN LOGIN
 
-Route::view('admin/login', 'admin.login');
-Route::view('admin/dashboard', 'admin.dashboard');
+Route::view('admin/dashboard', 'admin.dashboard')->name('admin_dashboard');
 
 require __DIR__.'/auth.php';
