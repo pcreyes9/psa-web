@@ -17,7 +17,7 @@
             Professional Growth</strong> </p>
           
           <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              <a href="{{ route('login') }}" target="_blank" class="btn-get-started">Members Access <i class="bi bi-arrow-right"></i></a>
+              {{-- <a href="{{ route('login') }}" target="_blank" class="btn-get-started">Members Access <i class="bi bi-arrow-right"></i></a> --}}
               <a href="https://www.youtube.com/watch?v=5SMk8MZjFPg" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
           </div>
         </div>
@@ -65,7 +65,7 @@
   <section id="pricing" class="pricing section">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>UPCOMING EVENTS</h2> 
+      <h2>EVENTS</h2> 
     </div><!-- End Section Title -->
 
     <div class="container">

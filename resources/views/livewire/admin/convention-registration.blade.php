@@ -162,13 +162,10 @@
 
                             <span wire:loading class="spinner-border spinner-border-sm"></span>
                             <span wire:loading.remove>Print</span>
-
                         </button>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
-
 </section>

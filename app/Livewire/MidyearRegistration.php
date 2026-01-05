@@ -67,7 +67,7 @@ class MidyearRegistration extends Component
     }
 
     public function submit(){
-        $date = Carbon::now()->format('mdy-his');
+        $date = Carbon::now()->format('mdy_his');
         // dd($date);
         $pay_extension = strtolower($this->payment_proof->extension());
 
