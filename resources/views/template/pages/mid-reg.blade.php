@@ -14,7 +14,6 @@
                     MEMBERS REGISTRATION
                 </a>
             </div>
-
         </div>
     </section>
 @endsection
