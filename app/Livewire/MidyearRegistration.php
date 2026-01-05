@@ -73,7 +73,7 @@ class MidyearRegistration extends Component
 
         // dd("submitted");
         if (in_array($pay_extension, $this->allowed_ext)) {
-            $this->payment_name = "{$this->psa_id}-{$this->member->mem_last_name}-Proof_of_Payment-{$date}.{$pay_extension}";
+            $this->payment_name = "{$this->psa_id}_{$this->member->mem_last_name}_Proof_of_Payment_{$date}.{$pay_extension}";
         } else {
             $this->err = "INVALID FILE FORMAT OF PROOF OF PAYMENT.";
         }
