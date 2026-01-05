@@ -96,13 +96,20 @@
                                         {{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
                                             ? 'bg-secondary' 
                                             : 'bg-success' }}">
-                                            <a href="{{ asset('storage/photos/discounts/'.$regs->discount_id) }}" class="text-white text-decoration-none">{{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
+                                            <a href="{{ asset('photos/discounts/'.$regs->discount_id) }}" class="text-white text-decoration-none">{{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
                                             ? 'No Discount' 
                                             : 'With Discount' }}</a>
                                         
                                     </span>
                                 </td>
-                                <td class="text-center">{{ $regs->created_at ?? '-' }}</td>
+                                <td class="text-center">
+                                    <a href="{{ asset('photos/payments/'.$regs->proof_payment) }}" 
+                                    style="color: black; text-decoration: none;">
+                                        {{ $regs->created_at ?? '-' }}
+                                    </a>
+                                </td>
+
+                                {{-- <td class="text-center">{{ $regs->created_at ?? '-' }}</td> --}}
                                 <td class="text-center">{{ $regs->updated_at ?? '-' }}</td>
                                 <td class="text-center">
                                     <span class="badge 
@@ -113,7 +120,7 @@
                                 </td>
                                 <td class="text-center">
                                     <button class="btn btn-sm btn-outline-primary">
-                                        Edit
+                                        Approve
                                     </button>
                                 </td>
                             </tr>

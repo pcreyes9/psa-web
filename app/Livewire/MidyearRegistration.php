@@ -135,10 +135,7 @@ class MidyearRegistration extends Component
             );
         }
 
-
-
-
         Mail::mailer('smtp')->to($this->email_address)->send(new RegistrationEmail($this->member->mem_last_name));
-        return redirect()->route('midyear-registration')->with('success', 'Your registration is on process, Dr. ' . $this->member->mem_last_name . '. We will update you in this email, ' . $this->email_address . '. Thank you and we hope to see you soon!');
+        return redirect()->route('midyear-registration-deets')->with('success', 'Your registration is on process, Dr. ' . $this->member->mem_last_name . '. We will update you in this email, ' . $this->email_address . '. Thank you and we hope to see you soon!');
     }
 }

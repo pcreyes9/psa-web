@@ -20,7 +20,7 @@ class ConventionRegistration extends Component
     public function render()
     {
         Paginator::useBootstrapFive();
-        $reg = DB::table('registrations')->orderBy('id', 'DESC')->Paginate(5);
+        $reg = DB::table('registrations')->orderBy('id', 'DESC')->Paginate(15);
 
         $map = [
             'dateNew'   => ['id','DESC','Registration ID (newest)'],
@@ -31,7 +31,7 @@ class ConventionRegistration extends Component
 
         [$col, $dir, $label] = $map[$this->sort] ?? $map[$this->sort];
 
-        $reg = DB::table('registrations')->orderBy($col, $dir)->paginate(5);
+        $reg = DB::table('registrations')->orderBy($col, $dir)->paginate(15);
         $this->sortName = $label;
         $this->label = $label;
 

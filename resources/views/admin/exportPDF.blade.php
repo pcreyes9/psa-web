@@ -30,10 +30,10 @@
             <h1 style="text-align:right;float:right;"> # {{ $infos->id }}</h1> 
             <hr style="clear:both;"/>
             <h2 >PSA ID: {{ $infos->psa_id }}</h2>
-            @if ($infos->membership == 'RM' && $infos->discount_id != 'Not available')
-                <h2>Membership: {{ $infos->membership }} | with Senior/PWD</h2>
-            @elseif ($infos->membership == 'TM' && $infos->discount_id != 'Not available')
-                <h2>Membership: {{ $infos->membership }} | with PWD</h2>
+            @if ($infos->membership == 'RM' && $infos->discount_id != 'No discount')
+                <h2>Membership: {{ $infos->membership }} | with Senior</h2>
+            @elseif ($infos->membership == 'TM' && $infos->discount_id != 'No discount')
+                <h2>Membership: {{ $infos->membership }} | with Senior</h2>
             @else
                 <h2>
                     Membership: {{ $infos->membership }}
