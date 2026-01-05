@@ -46,7 +46,7 @@ class ConventionRegistration extends Component
             'to'   => 'required|numeric',
         ]);
         $info = DB::table('registrations')->where('id', '>=' , $this->from)->where('id', '<=' , $this->to)->get();
-        // dd($info);
+        dd($info);
         $pdf = Pdf::loadView('admin.exportPDF', [
             'info' => $info
         ]);
