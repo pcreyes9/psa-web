@@ -55,14 +55,18 @@
       </div>
 
       <div class="d-flex justify-content-center mt-4">
-          <button href="{{route('gallery-aca', ['day' => 'day1'])}}" class="w-1/2">View ACA 2025 Gallery</button>
+          <a href="{{route('gallery-aca', ['day' => 'day1'])}}"
+          target="_blank"
+          class="btn btn-primary px-4 py-2 fs-5 fw-bold">
+              VIEW ACA GALLERY
+          </a>
       </div>
     </div>
       
   </section><!-- /Portfolio Section -->
 
     <!-- UPCOMING EVENTS Section -->
-  <section id="pricing" class="pricing section">
+  {{-- <section id="pricing" class="pricing section">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
       <h2>EVENTS</h2> 
@@ -84,7 +88,7 @@
 
       </div>
     </div>
-  </section><!-- /UPCOMING EVENTS Section -->
+  </section><!-- /UPCOMING EVENTS Section --> --}}
 
       <!-- RECENT EVENTS Section -->
       {{-- @include('template.pages.recentEvents') --}}
