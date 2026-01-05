@@ -56,7 +56,12 @@ Route::get('/pja', function () {
     return view('template/pages/pja');
 })->name('pja');
 
+Route::get('/midyear-registration-details', function () {
+    return view('template/pages/mid-reg');
+})->name('midyear-registration-deets');
+
 Route::get('/midyear-registration', function () {
+    // dd("redirecting...");
     return view('template/midyear/midyear-registration');
 })->name('midyear-registration');
 

@@ -121,11 +121,22 @@ class MidyearRegistration extends Component
             'updated_at' => Carbon::now(),  // Same for updated_at
         ]);
         
-        if($this->disc != "non_disc"){
-            $this->discount_img->storeAs('photos/discounts', $this->discount_name, 'public');    
+        $this->payment_proof->storeAs(
+            'photos/payments',
+            $this->payment_name,
+            'public_uploads'
+        );
+
+        if($this->disc != "non_disc" && $this->discount_img) {
+            $this->discount_img->storeAs(
+                'photos/discounts',
+                $this->discount_name,
+                'public_uploads'
+            );
         }
 
-        $this->payment_proof->storeAs('photos/payments', $this->payment_name, 'public');
+
+
 
         Mail::mailer('smtp')->to($this->email_address)->send(new RegistrationEmail($this->member->mem_last_name));
         return redirect()->route('midyear-registration')->with('success', 'Your registration is on process, Dr. ' . $this->member->mem_last_name . '. We will update you in this email, ' . $this->email_address . '. Thank you and we hope to see you soon!');

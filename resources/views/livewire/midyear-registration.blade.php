@@ -101,12 +101,12 @@
                                     Senior Citizen
                                 </label>
                             </div>
-                            <div class="form-check">
+                            {{-- <div class="form-check">
                                 <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio2" value="pwd_disc">
                                 <label class="form-check-label" for="discount_radio2">
                                     Person With Disability
                                 </label>
-                            </div>
+                            </div> --}}
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio3" value="non_disc" checked>
                                 <label class="form-check-label" for="discount_radio3">
