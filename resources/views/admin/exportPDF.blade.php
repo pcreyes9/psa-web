@@ -48,7 +48,7 @@
             </h3>
             <br>
             <img
-                src="{{ asset('storage/photos/payments/'.$infos->proof_payment) }}"
+                src="{{ public_path('photos/payments/'.$infos->proof_payment) }}"
                 style="height:600px;width:auto"
                 class="img"
                 alt=""
