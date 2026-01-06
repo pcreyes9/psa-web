@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('title', 'Midyear 2026 - Admin Dashboard')
+@section('title', 'Admin Dashboard - Convention Registration')
 
 @section('content')
     <livewire:admin.convention-registration/>

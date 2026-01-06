@@ -57,10 +57,10 @@ class GalleryController extends Controller
             $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
         } elseif ($day == 'day2') {
             $this->title = "Gallery - Day 2"; 
-            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
+            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1338982804591893&type=3";
         } elseif ($day == 'day3') {
             $this->title = "Gallery - Day 3"; 
-            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1333298321827008&type=3";
+            $this->fb_link = "https://www.facebook.com/media/set/?set=a.1352343376589169&type=3";
         }
 
         // Path to the specific day folder inside aca_2025
