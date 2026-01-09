@@ -36,14 +36,14 @@ class GalleryController extends Controller
         ->filter()
         ->values();
 
-        // Pick 9 random landscape images
-        $random9 = $files->shuffle()->take(18)->values()->toArray();
-        // dd($random9);
+        // Pick 18 random landscape images
+        $random = $files->shuffle()->take(18)->values()->toArray();
+        // dd($random);
 
         // Return to view
         return view("template.pages.landing", [
-            "arrLanding" => $random9,
-            "title" => "Philippine Statistical Association - 2025 ACA Gallery"
+            "arrLanding" => $random,
+            "title" => "Philippine Society of Anesthesiologists - 2025 ACA Gallery"
         ]);
     }
 
