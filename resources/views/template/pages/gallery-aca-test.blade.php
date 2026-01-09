@@ -52,8 +52,7 @@
             </div><!-- End Portfolio Container -->
         </div>
         <div class="d-flex justify-content-center mt-4">
-          <button
-            class="w-1/2" onclick="window.open('{{ $fb_link }}', '_blank')">View More</button>
+          <button class="w-1/2" onclick="window.open('{{ $fb_link }}', '_blank')">View More</button>
       </div>
     </div>
 </section><!-- /Portfolio Section -->
