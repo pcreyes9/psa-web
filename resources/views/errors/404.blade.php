@@ -17,7 +17,7 @@
                 </a>
                 <div class="mt-3">
                 <img
-                    src="assets/img/404.png"
+                    src="{{ asset('assets/img/404.png') }}"
                     alt="page-misc-error-light"
                     width="500"
                     class="img-fluid"
