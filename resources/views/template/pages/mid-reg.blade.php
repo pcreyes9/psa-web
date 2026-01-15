@@ -19,9 +19,15 @@
                 </a>
             </div>
 
-            <a href="{{ route('midyear-registration') }}">
-                <img src="images/PSA MIDYEAR 2026 RATES.jpg" class="img-fluid animated " alt="">
-            </a>
+           <div class="my-4 text-center">
+    <a href="{{ route('midyear-registration') }}" class="d-inline-block w-100">
+        <img src="images/PSA MIDYEAR 2026 RATES.jpg"
+             class="img-fluid w-100"
+             style="max-width: 1100px; margin: auto; display: block;"
+             alt="PSA Midyear 2026 Rates">
+    </a>
+</div>
+
 
             <div class="row gy-4 my-4">
                 <h3 class="">
