@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('title', 'Midyear 2026 - Registration')
+@section('title', 'Midyear 2026 - Poster')
 
 @section('content')
     <section id="portfolio" class="portfolio section">
