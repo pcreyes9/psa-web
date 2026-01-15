@@ -27,7 +27,52 @@
         </div>
       </div>
     </div>
-  </section><!-- /Hero Section -->
+  </section>
+  
+  <!-- UPCOMING EVENTS Section -->
+  <section id="pricing" class="pricing section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>UPCOMING EVENTS</h2> 
+    </div><!-- End Section Title -->
+
+    <div class="container">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pricing-tem">
+            <a target="_blank" href="{{ route('midyear-registration-deets') }}"><img src="images/PSA_MIDYEAR_2026_POSTER.jpg" class="img-fluid animated " alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT EVENTS Section -->
+  <section id="pricing" class="pricing section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>RECENT EVENTS</h2> 
+    </div><!-- End Section Title -->
+
+    <div class="container">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pricing-tem">
+            <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
+          </div>
+        </div>
+
+        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pricing-tem">
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
+          </div>
+        </div>  
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- /Hero Section -->
   <section id="portfolio" class="portfolio section mt-5">
     <!-- Section Title -->
     <div class="container section-title mt-5" data-aos="fade-up">
@@ -65,34 +110,13 @@
       
   </section><!-- /Portfolio Section -->
 
-    <!-- UPCOMING EVENTS Section -->
-  {{-- <section id="pricing" class="pricing section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>EVENTS</h2> 
-    </div><!-- End Section Title -->
+  
+  <!-- /UPCOMING EVENTS Section -->
 
-    <div class="container">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="pricing-tem">
-            <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
-          </div>
-        </div>
+  
 
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="pricing-tem">
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
-          </div>
-        </div>  
-
-      </div>
-    </div>
-  </section><!-- /UPCOMING EVENTS Section --> --}}
-
-      <!-- RECENT EVENTS Section -->
-      {{-- @include('template.pages.recentEvents') --}}
-      <!-- Contact Section -->
+  {{-- @include('template.pages.recentEvents') --}}
+  <!-- Contact Section -->
   <section id="contact" class="contact section">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">

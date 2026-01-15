@@ -65,6 +65,12 @@
 
 /* Personal CSS */
 
+.mod{
+  font-size: large;
+  font-weight: normal;
+  color: black;
+}
+
 #page-loader {
     position: fixed;
     top: 0;
