@@ -60,6 +60,10 @@ Route::get('/midyear-registration-details', function () {
     return view('template/pages/mid-reg');
 })->name('midyear-registration-deets');
 
+Route::get('/midyear-poster', function () {
+    return view('template/pages/mid-poster');
+})->name('midyear-poster');
+
 Route::get('/midyear-registration', function () {
     // dd("redirecting...");
     return view('template/midyear/midyear-registration');
