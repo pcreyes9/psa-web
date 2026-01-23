@@ -1,7 +1,5 @@
 @extends('template.master')
-
 @section('title', 'Philippine Society of Anesthesiologists')
-
 @section('content')
   <section id="hero" class="hero section">
     <div class="container">
@@ -171,5 +169,5 @@
         </div>
       </div>
     </div>
-  </secti on><!-- /Contact Section -->
+  </section><!-- /Contact Section -->
 @endsection

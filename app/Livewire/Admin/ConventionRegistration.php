@@ -15,10 +15,12 @@ class ConventionRegistration extends Component
     use WithPagination;
 
     public $sort = 'dateNew', $sortName = 'Registration ID (newest)', $label = 'Registration ID (newest)';
-    public $from, $to;
+    public $from, $to, $search;
     
     public function render()
     {
+        
+
         Paginator::useBootstrapFive();
         $reg = DB::table('registrations')->orderBy('id', 'DESC')->Paginate(15);
 
@@ -31,7 +33,13 @@ class ConventionRegistration extends Component
 
         [$col, $dir, $label] = $map[$this->sort] ?? $map[$this->sort];
 
-        $reg = DB::table('registrations')->orderBy($col, $dir)->paginate(15);
+        if ($this->search) {
+            $col = 'last_name';
+            $dir = 'ASC';
+        }
+
+        // $reg = DB::table('registrations')->orderBy($col, $dir)->paginate(15);
+        $reg = DB::table('registrations')->where('last_name', 'like', "$this->search%")->orderBy($col, $dir)->paginate(20);
         $this->sortName = $label;
         $this->label = $label;
 
