@@ -13,11 +13,13 @@ try:
     sqlQuery = """
         SELECT member_id_no
             ,[psa_chapter_code]
-            ,[mem_prc_no]
+            ,psa_mem_type
             ,[mem_last_name]
             ,[mem_first_name]
             ,[mem_middle_name]
             ,[mem_email_address]
+            ,[psa_mem_stat]
+            ,mem_gender
             ,CONCAT(mem_last_name, member_id_no) AS password
         FROM member
         """

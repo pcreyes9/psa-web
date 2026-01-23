@@ -7,57 +7,74 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <div class="d-flex justify-content-start" >
-                <div class="dropdown position-relative">
-                    <button class="btn btn-secondary dropdown-toggle"
-                            type="button"
-                            id="sortDropdown"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        Sort by: {{ $label }}
-                    </button>
-
-                    <ul class="dropdown-menu p-3" aria-labelledby="sortDropdown">
-                        <li class="form-check mb-2">
-                            <input wire:model.live="sort" class="form-check-input"
-                                type="radio" name="sort" id="dateNew" value="dateNew">
-                            <label class="form-check-label" for="dateNew">
-                                Date (newest)
-                            </label>
-                        </li>
-
-                        <li class="form-check">
-                            <input wire:model.live="sort" class="form-check-input"
-                                type="radio" name="sort" id="dateOld" value="dateOld">
-                            <label class="form-check-label" for="dateOld">
-                                Date (oldest)
-                            </label>
-                        </li>
-
-                        <li class="form-check">
-                            <input wire:model.live="sort" class="form-check-input"
-                                type="radio" name="sort" id="pending" value="pending">
-                            <label class="form-check-label" for="pending">
-                                Status (Pending)
-                            </label>
-                        </li>
-
-                         <li class="form-check">
-                            <input wire:model.live="sort" class="form-check-input"
-                                type="radio" name="sort" id="approved" value="approved">
-                            <label class="form-check-label" for="approved">
-                                Date (Approved)
-                            </label>
-                        </li>
-                    </ul>
+            <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+    
+                <!-- Left: Search -->
+                <div class="d-flex justify-content-start">
+                    <input type="text"
+                        wire:model.live="search"
+                        name="search"
+                        id="search"
+                        class="form-control"
+                        placeholder="Enter last name..."
+                        style="max-width: 350px;">
                 </div>
-                <button class="btn btn-secondary mx-3"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exportPdfModal">
-                    Export PDF
-                </button>
+
+                <!-- Right: Sort + Export -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown position-relative">
+                        <button class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                id="sortDropdown"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Sort by: {{ $label }}
+                        </button>
+
+                        <ul class="dropdown-menu p-3" aria-labelledby="sortDropdown">
+                            <li class="form-check mb-2">
+                                <input wire:model.live="sort" class="form-check-input"
+                                    type="radio" name="sort" id="dateNew" value="dateNew">
+                                <label class="form-check-label" for="dateNew">
+                                    Date (newest)
+                                </label>
+                            </li>
+
+                            <li class="form-check">
+                                <input wire:model.live="sort" class="form-check-input"
+                                    type="radio" name="sort" id="dateOld" value="dateOld">
+                                <label class="form-check-label" for="dateOld">
+                                    Date (oldest)
+                                </label>
+                            </li>
+
+                            <li class="form-check">
+                                <input wire:model.live="sort" class="form-check-input"
+                                    type="radio" name="sort" id="pending" value="pending">
+                                <label class="form-check-label" for="pending">
+                                    Status (Pending)
+                                </label>
+                            </li>
+
+                            <li class="form-check">
+                                <input wire:model.live="sort" class="form-check-input"
+                                    type="radio" name="sort" id="approved" value="approved">
+                                <label class="form-check-label" for="approved">
+                                    Status (Approved)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-secondary"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exportPdfModal">
+                        Export PDF
+                    </button>
+                </div>
             </div>
+
             <div class="table-responsive mt-4">
                 <table class="table table-bordered table-hover align-middle text-nowrap">
                     <thead class="table-dark text-center">
