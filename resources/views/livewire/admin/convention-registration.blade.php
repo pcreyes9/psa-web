@@ -113,14 +113,14 @@
                                         {{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
                                             ? 'bg-secondary' 
                                             : 'bg-success' }}">
-                                            <a href="{{ asset('photos/discounts/'.$regs->discount_id) }}" class="text-white text-decoration-none">{{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
+                                            <a target="_blank" href="{{ asset('photos/discounts/'.$regs->discount_id) }}" class="text-white text-decoration-none">{{ str_contains(strtolower($regs->discount_id ?? ''), 'no discount') 
                                             ? 'No Discount' 
                                             : 'With Discount' }}</a>
                                         
                                     </span>
                                 </td>
                                 <td class="text-center">
-                                    <a href="{{ asset('photos/payments/'.$regs->proof_payment) }}" 
+                                    <a target="_blank" href="{{ asset('photos/payments/'.$regs->proof_payment) }}" 
                                     style="color: black; text-decoration: none;">
                                         {{ $regs->created_at ?? '-' }}
                                     </a>

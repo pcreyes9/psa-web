@@ -4,7 +4,13 @@
         <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="{{route('officers-boards')}}">Officers & Board</a></li>
-                <li><a href="{{route('subsec-sig')}}">Subspecialty & SIG</a></li>
+
+                <li class="dropdown"><a href="#"><span>Subspecialty & SIG</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="{{ route('subspec-activity') }}">RASPHIL CONVENTION 2026</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="{{route('chapter-pres')}}">Chapter Presidents</a></li>
                 <li class="dropdown"><a href="#"><span>Legacy</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
