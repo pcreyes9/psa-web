@@ -69,6 +69,12 @@ Route::get('/midyear-registration', function () {
     return view('template/midyear/midyear-registration');
 })->name('midyear-registration');
 
+Route::get('/subspec-activity', function () {
+    return view('template/pages/subspec-activity');
+})->name('subspec-activity');
+
+
+
 // AUTHENTICATE MEMBER LOGIN
 
 Route::view('dashboard', 'dashboard')
