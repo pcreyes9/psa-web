@@ -73,6 +73,10 @@ Route::get('/subspec-activity', function () {
     return view('template/pages/subspec-activity');
 })->name('subspec-activity');
 
+Route::get('/subspec-sig', function () {
+    return view('template/pages/subsec-sig');
+})->name('subspec-sig');
+
 
 
 // AUTHENTICATE MEMBER LOGIN

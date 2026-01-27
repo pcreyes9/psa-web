@@ -5,7 +5,7 @@
             <ul>
                 <li><a href="{{route('officers-boards')}}">Officers & Board</a></li>
 
-                <li class="dropdown"><a href="#"><span>Subspecialty & SIG</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="{{ route('subspec-sig') }}"><span>Subspecialty & SIG</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li><a href="{{ route('subspec-activity') }}">RASPHIL CONVENTION 2026</a></li>
                     </ul>
