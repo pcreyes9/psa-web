@@ -24,11 +24,6 @@
                 <li data-filter="*" class="filter-active">All</li>
                 @foreach ($arrGallery as $folder => $images)
                     <li data-filter=".{{ $folder }}">{{ strtoupper(str_replace('_', ' ', $folder)) }}</li>
-
-                    {{-- <li data-filter=".asean">Asean Night</li>
-                    <li data-filter=".registration">Registration</li>
-                    <li data-filter=".lectures">Plenary Lectures</li>
-                    <li data-filter=".chapter">Chapter Delegates Meeting</li> --}}
                 @endforeach
             </ul><!-- End Portfolio Filters -->
 

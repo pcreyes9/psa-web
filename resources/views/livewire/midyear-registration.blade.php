@@ -140,7 +140,7 @@
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div> --}}
 
-                            <button type="submit" class="mt-4 w-full">Register</button>
+                            <button type="submit" class="mt-4 w-full" {{ $btnShow }}>Register</button>
                         </div>
                     </div>
                 </form>

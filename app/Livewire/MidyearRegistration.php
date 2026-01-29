@@ -24,10 +24,16 @@ class MidyearRegistration extends Component
 
     public $allowed_ext = ['jpg', 'jpeg', 'png', 'heic'];
 
+    public $btnShow = "hidden";
+
     public function render()
     {
         if(DB::table('registrations')->where('psa_id', '=', $this->psa_id)->exists()){
             session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. DB::table('registrations')->where('psa_id', '=', $this->psa_id)->value('email') .'. Thank you!');
+            $this->btnShow = "hidden";
+        }
+        else{
+            $this->btnShow = "";
         }
 
         if($this->disc != ""){
