@@ -5,7 +5,7 @@
 @section('content')
     <section>
         <div class="container pt-5 mt-5">
-            <img src="images/Manuel-Silao-Leadership-Awardee_Feb-2025.png" class="img-fluid animated" alt="">
+            <img src="images/Manuel Silao Leadership Awardee.png" class="img-fluid animated" alt="">
         </div>
     </section>
 @endsection

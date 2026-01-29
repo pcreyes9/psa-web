@@ -16,7 +16,7 @@
           
           <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
               {{-- <a href="{{ route('login') }}" target="_blank" class="btn-get-started">Members Access <i class="bi bi-arrow-right"></i></a> --}}
-              <a href="https://www.youtube.com/watch?v=5SMk8MZjFPg" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
+              <a href="https://www.youtube.com/watch?v=81UKHb9LJx0" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
           </div>
         </div>
 
@@ -41,6 +41,13 @@
             <a target="_blank" href="{{ route('midyear-registration-deets') }}"><img src="images/PSA_MIDYEAR_2026_POSTER.jpg" class="img-fluid animated " alt=""></a>
           </div>
         </div>
+        <div class="d-flex justify-content-center mt-4">
+          <a href="{{route('midyear-registration-deets')}}"
+          target="_blank"
+          class="btn btn-primary px-4 py-2 fs-5 fw-bold">
+              Register Now!
+          </a>
+      </div>
       </div>
     </div>
   </section>
@@ -71,7 +78,7 @@
   </section>
   
   <!-- /Hero Section -->
-  <section id="portfolio" class="portfolio section mt-5">
+  <section id="portfolio" class="portfolio section">
     <!-- Section Title -->
     <div class="container section-title mt-5" data-aos="fade-up">
         <h2>ASEAN CONGRESS OF Anesthesiologists 2025</h2>
@@ -112,7 +119,6 @@
   <!-- /UPCOMING EVENTS Section -->
 
   
-
   {{-- @include('template.pages.recentEvents') --}}
   <!-- Contact Section -->
   <section id="contact" class="contact section">
