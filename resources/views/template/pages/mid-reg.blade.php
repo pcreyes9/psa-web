@@ -21,14 +21,14 @@
 
            <div class="my-4 text-center">
                 <a href="{{ route('midyear-registration') }}" class="d-inline-block w-100">
-                    <img src="images/PSA MIDYEAR 2026 RATES.jpg"
+                    <img src="images/PSA MIDYEAR 2026 RATES.png"
                         class="img-fluid w-100"
                         style="max-width: 1100px; margin: auto; display: block;"
                         alt="PSA Midyear 2026 Rates">
                 </a>
             </div>
 
-            <div class="row gy-4 my-4">
+            {{-- <div class="row gy-4 my-4">
                 <h3 class="">
                     Bank Details for Payment
                 </h3>
@@ -50,7 +50,7 @@
                         Account Number: 0711 0635 44
                     </p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 @endsection
