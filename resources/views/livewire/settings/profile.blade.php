@@ -5,23 +5,25 @@
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
             <flux:input 
                 wire:model="mem_id" 
+                value="{{ $mem_data->member_id_no }}"
                 :label="__('PSA ID')" 
                 type="number" 
                 required 
                 autofocus 
                 autocomplete="mem_id" 
-                disabled
+                readonly
             />
 
-            <flux:input 
+            {{-- <flux:input 
                 wire:model="prc" 
+                value="{{ $mem_data->mem_prc_no }}"
                 :label="__('PRC')" 
                 type="number" 
                 required 
                 autofocus 
                 autocomplete="prc" 
                 disabled
-            />
+            /> --}}
             
             <flux:input 
                 wire:model="name" 
@@ -30,12 +32,11 @@
                 required 
                 autofocus 
                 autocomplete="name" 
-                disabled
+                readonly
             />
-
-
+            
             <div>
-                <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" disabled/>
+                <flux:input wire:model="email" :label="__('Email')" type="email" required autocomplete="email" readonly/>
 
                 @if (auth()->user() instanceof \Illuminate\Contracts\Auth\MustVerifyEmail &&! auth()->user()->hasVerifiedEmail())
                     <div>

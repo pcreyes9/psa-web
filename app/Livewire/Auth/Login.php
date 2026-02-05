@@ -5,6 +5,7 @@ namespace App\Livewire\Auth;
 use App\Models\User;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Validation\ValidationException;
@@ -12,6 +13,8 @@ use Illuminate\Support\Str;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
+use Illuminate\Support\Facades\Hash;
+
 
 #[Layout('components.layouts.auth')]
 class Login extends Component
@@ -26,15 +29,22 @@ class Login extends Component
 
     public function login(): void
     {
+        $check = DB::table('members')->where('member_id_no', $this->member_id)->value('bal');
+        if ($check != 0) {
+            throw ValidationException::withMessages([
+                'member_id' => 'Your membership is not in good standing. Please settle your dues to proceed.',
+            ]);
+        }
+
         $this->validate();
 
         $this->ensureIsNotRateLimited();
 
-        // Fetch the user using id field
+        // Fetch the user using id
         $user = User::where('id', $this->member_id)->first();
 
-        // Validate plain text password
-        if (! $user || $user->password !== $this->password) {
+        // Check hashed password
+        if (! $user || ! Hash::check($this->password, $user->password)) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
@@ -42,27 +52,26 @@ class Login extends Component
             ]);
         }
 
-        // Log the user in without password hashing
+        // Log the user in
         Auth::login($user, $this->remember);
 
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
-        // Redirect to dashboard
-        // dd(Auth::user());
+        // Redirect
         if ($this->member_id == '0000') {
-            // dd('admin');
             $this->redirectIntended(
                 default: route('admin_dashboard', absolute: false),
                 navigate: true
             );
-        }else{
+        } else {
             $this->redirectIntended(
-            default: route('dashboard', absolute: false),
-            navigate: true
-        );
+                default: route('dashboard', absolute: false),
+                navigate: true
+            );
         }
     }
+
 
     protected function ensureIsNotRateLimited(): void
     {
