@@ -29,7 +29,7 @@
                 margin: 700px 90px 80px 950px; /* top, right, bottom, left */
                 font-size: 45px;
                 line-height: 1.8;
-                text-align: justify; /* Justifies the paragraphs */
+                /* text-align: justify; */
             }
 
             .title {
@@ -95,7 +95,7 @@
                 and is classified as
                 <span class="underline"><i>{{ $mem_type }}</i></span>
                 of the Philippine Society of Anesthesiologists, Inc.
-                She is also a member of World Federation of Societies of Anaesthesiologists (WFSA).
+                He/She is also a member of World Federation of Societies of Anaesthesiologists (WFSA).
             </p>
 
             <p class="mt-30">

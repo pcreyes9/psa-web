@@ -28,27 +28,25 @@ class GoodStanding extends Component
 
         $this->purpose = 'Philhealth Purposes';
         
-        if($this->mem->mem_gender == 'Male') {
-            $this->gender = 'He';
-        } elseif($this->mem->mem_gender == 'Female') {
-            $this->gender = 'She';
-        } else {
-            $this->gender = 'They'; 
-        }
+        // if($this->mem->mem_gender == 'Male') {
+        //     $this->gender = 'He';
+        // } elseif($this->mem->mem_gender == 'Female') {
+        //     $this->gender = 'She';
+        // } else {
+        //     $this->gender = 'They'; 
+        // }
     }
     
     public function submit()
     {
         $this->validate([
             'purpose' => 'required',
-            'gender' => 'required',
         ]);
         // dd($this->purpose, $this->gender);
 
         $pdf = Pdf::loadView('members.goodtandingPDF', [
             'info' => $this->mem,
             'purpose' => $this->purpose,
-            'gender' => $this->gender,
             'mem_type' => $this->mem_type,
         ]);
         return response()->streamDownload(function () use ($pdf) { echo $pdf->stream(); }, $this->mem->mem_first_name . ' ' . $this->mem->mem_last_name . ' - Certificate of Good Standing.pdf');

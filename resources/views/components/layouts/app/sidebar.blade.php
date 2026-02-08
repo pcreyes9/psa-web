@@ -13,7 +13,7 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
-                    <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Video Recordings') }}</flux:navlist.item>
                     <flux:navlist.item icon="newspaper" :href="route('settings.good-standing')" :current="request()->routeIs('settings.good-standing')" wire:navigate>{{ __('Certificate of Goodstanding') }}</flux:navlist.item>
                     {{-- <flux:navlist.item icon="home" :href="route('members')" :current="request()->routeIs('members')" wire:navigate>{{ __('Members') }}</flux:navlist.item> --}}
                     <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>

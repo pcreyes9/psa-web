@@ -30,12 +30,12 @@
             </div>
 
             <!-- Gender -->
-            <div class="col-span-12 md:col-span-2">
+            {{-- <div class="col-span-12 md:col-span-2">
                 <flux:select :label="__('Gender')" wire:model="gender">
                     <flux:select.option>He</flux:select.option>
                     <flux:select.option>She</flux:select.option>
                 </flux:select>
-            </div>
+            </div> --}}
 
             <!-- Membership Type -->
             <div class="col-span-12 md:col-span-2">
