@@ -16,7 +16,8 @@
                     <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Video Recordings') }}</flux:navlist.item>
                     <flux:navlist.item icon="newspaper" :href="route('settings.good-standing')" :current="request()->routeIs('settings.good-standing')" wire:navigate>{{ __('Certificate of Goodstanding') }}</flux:navlist.item>
                     {{-- <flux:navlist.item icon="home" :href="route('members')" :current="request()->routeIs('members')" wire:navigate>{{ __('Members') }}</flux:navlist.item> --}}
-                    <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile', 'settings.password')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
+                    <flux:navlist.item icon="device-phone-mobile" :href="route('settings.appearance')" :current="request()->routeIs('settings.appearance')" wire:navigate>{{ __('Website Appearance') }}</flux:navlist.item>
 
                 </flux:navlist.group>
             </flux:navlist>

@@ -26,6 +26,7 @@ class Profile extends Component
         // $this->prc = Auth::user()->mem_prc_no;
 
         $this->mem_data = DB::table('members')->where('member_id_no', Auth::user()->id)->first();
+        
     }
 
     /**

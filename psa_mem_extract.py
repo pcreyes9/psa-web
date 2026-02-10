@@ -18,16 +18,41 @@ try:
             ,[mem_first_name]
             ,[mem_middle_name]
             ,[mem_email_address]
-            ,[psa_mem_stat]
             ,mem_gender
+            ,[mem_fax_no]
             ,CONCAT(mem_last_name, member_id_no) AS password
         FROM member
         """
+    
+    # sqlQuery = """
+    #     SELECT 
+    #         m.member_id_no,
+    #         mlb.bal
+    #     FROM member m
+    #     LEFT JOIN member_ledger_bal mlb 
+    #         ON m.member_id_no = mlb.member_id_no
+    #         WHERE mlb.fiscal_year = 2026
+    #         AND m.mem_stat = 'Active'
+    #     ORDER BY m.member_id_no;
+    # """
+    
+    # sqlQuery = """
+    #         SELECT 
+    #             m.member_id_no,
+    #             mlb.bal
+    #         FROM member m
+    #         LEFT JOIN member_ledger_bal mlb 
+    #             ON m.member_id_no COLLATE SQL_Latin1_General_CP1_CI_AS
+    #             = mlb.member_id_no COLLATE SQL_Latin1_General_CP1_CI_AS
+    #         WHERE mlb.fiscal_year = 2026
+    #         AND m.mem_stat = 'Active'
+    #         ORDER BY m.member_id_no;
+    #     """
 
       
     query = pd.read_sql(sqlQuery, con)
     df = pd.DataFrame(query)
-    # print(df)
+    print(df)
     
     df.to_csv("PSA_MEM as of " + datetime.now().strftime("%d-%b-%Y") + ".csv", index = False)
 

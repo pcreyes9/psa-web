@@ -6,7 +6,7 @@
     <x-auth-session-status class="text-center" type="info" :status="session('info')" />
     <x-auth-session-status class="text-center" type="error" :status="session('error')" />
 
-    <form wire:submit="sendAccountRequest" class="flex flex-col gap-6">
+    <form wire:submit="create" class="flex flex-col gap-6">
         <!-- Email Address -->
         <flux:input
             wire:model="last_name"
@@ -33,7 +33,7 @@
             placeholder="Enter your middle initial"
         />
 
-        <flux:select :label="__('Gender')" wire:model="gender">
+        <flux:select :label="__('Gender')" wire:model="gender" placeholder="Choose your gender">
             <flux:select.option>Male</flux:select.option>
             <flux:select.option>Female</flux:select.option>
         </flux:select>
@@ -55,12 +55,12 @@
             placeholder="Enter your email address"
         />
         <flux:input
-            wire:model="phone_number"
-            :label="__('Phone Number')"
+            wire:model="contact_number"
+            :label="__('Contact Number')"
             type="number"
             required
             autofocus
-            placeholder="Enter your phone number"
+            placeholder="Enter your contact number"
         />
 
         <flux:input
@@ -71,6 +71,8 @@
             autofocus
             placeholder="Enter your PRC number"
         />
+
+        <flux:input type="file" wire:model="payment" label="Upload your membership payment"/>
         
         <flux:button variant="primary" type="submit" class="w-full">{{ __('Submit') }}</flux:button>
     </form>

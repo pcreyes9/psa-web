@@ -15,7 +15,6 @@
         </div>
 
         <div class="grid grid-cols-12 gap-4">
-
             <!-- Purpose -->
             <div class="col-span-12 md:col-span-4">
                 <flux:select :label="__('Purpose')" wire:model="purpose">
