@@ -10,7 +10,7 @@
 
     <x-auth-session-status class="text-center" :status="session('status')" />
 
-    <form wire:submit="login" class="flex flex-col gap-6">
+    <form wire:submit="membership" class="flex flex-col gap-6">
 
         <flux:input
             wire:model="member_id"
@@ -51,6 +51,12 @@
         <div class="space-x-1 rtl:space-x-reverse text-center text-sm text-zinc-600 dark:text-zinc-400">
             {{ __('Don\'t have an account?') }}
             <flux:link :href="route('acc-request')" wire:navigate>{{ __('Sign up') }}</flux:link>
+            <br> or <br>
+            {{ __('Don\'t have a PSA ID?') }}
+            <flux:link :href="route('new-member')" wire:navigate>{{ __('Be a PSA Member') }}</flux:link>
+        </div>
+        <div class="space-x-1 rtl:space-x-reverse text-center text-sm text-zinc-600 dark:text-zinc-400">
+            
         </div>
     @endif
 </div>

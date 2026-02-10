@@ -4,7 +4,7 @@
     <x-settings.layout :heading="__('Profile')" :subheading="__('View your information')">
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
             <flux:input 
-                wire:model="mem_id" 
+                {{-- wire:model="mem_id"  --}}
                 value="{{ $mem_data->member_id_no }}"
                 :label="__('PSA ID')" 
                 type="number" 

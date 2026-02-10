@@ -76,7 +76,7 @@
         </li>
         <li class="dropdown"><a href="#"><span>Membership</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                {{-- <li><a href="{{route('login')}}">Login</a></li> --}}
+                <li><a href="{{route('new-member')}}">Be a PSA Member</a></li>
             </ul>
         </li>
         {{-- <li><a href="#contact">Contact</a></li> --}}
