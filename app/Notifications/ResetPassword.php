@@ -15,7 +15,7 @@ class ResetPassword extends BaseResetPassword
         $url = $this->resetUrl($notifiable);
 
         return (new MailMessage)
-            ->subject('Reset Password TESTING')
+            ->subject('Reset Password PSA - WEBSITE')
             ->greeting('Hello!')
             ->line('We received a request to reset your password.')
             ->line('Click the button below to continue.')

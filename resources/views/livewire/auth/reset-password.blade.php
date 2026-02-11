@@ -6,11 +6,30 @@
 
     <form wire:submit="resetPassword" class="flex flex-col gap-6">
         <!-- Email Address -->
+         <flux:input
+            {{-- wire:model="email" --}}
+            value="{{$mem_data->id}}"
+            :label="__('PSA ID')"
+            type="text"
+            required
+            readonly
+            autocomplete="id"
+        />
+        <flux:input
+            {{-- wire:model="email" --}}
+            value="{{$mem_data->name}}"
+            :label="__('Name')"
+            type="text"
+            required
+            readonly
+            autocomplete="name"
+        />
         <flux:input
             wire:model="email"
             :label="__('Email')"
             type="email"
             required
+            readonly
             autocomplete="email"
         />
 

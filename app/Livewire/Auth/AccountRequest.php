@@ -23,7 +23,7 @@ class AccountRequest extends Component
         $mem = DB::table('members')->where('member_id_no', $this->member_id)->first();
         try{
             $mem_email = $mem->mem_email_address;
-            Mail::mailer('info')->to('pcreyes09@gmail.com')->send(new CreationRequest($this->member_id, $mem->mem_last_name, $mem->password));
+            Mail::mailer('info')->to('pcrstorage09@gmail.com')->send(new CreationRequest($this->member_id, $mem->mem_last_name, $mem->password));
             session()->flash('status', __('An account creation request has been sent to this email address: ') . $mem_email);
         }
         catch (\Exception $e){
