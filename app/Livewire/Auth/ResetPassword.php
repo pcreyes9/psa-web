@@ -2,7 +2,9 @@
 
 namespace App\Livewire\Auth;
 
+use App\Models\User;
 use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Session;
@@ -23,6 +25,7 @@ class ResetPassword extends Component
     public string $password = '';
 
     public string $password_confirmation = '';
+    public $mem_data;
 
     /**
      * Mount the component.
@@ -32,6 +35,9 @@ class ResetPassword extends Component
         $this->token = $token;
 
         $this->email = request()->string('email');
+
+        $this->mem_data = User::where('email', $this->email)->first();
+        // dd($this->mem_data);
     }
 
     /**
