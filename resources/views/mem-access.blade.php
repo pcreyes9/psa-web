@@ -1,6 +1,5 @@
 <x-layouts.app :title="__('Members')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-
         <div class="w-full aspect-video">
             <iframe 
                 class="w-full h-full rounded-xl"
@@ -9,7 +8,6 @@
                 allowfullscreen>
             </iframe>
         </div>
-
     </div>
 </x-layouts.app>
 

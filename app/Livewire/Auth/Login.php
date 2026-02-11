@@ -24,9 +24,8 @@ class Login extends Component
 
     #[Validate('required|string')]
     public string $password = '';
-
+    
     public bool $remember = false;
-
     public function login(): void
     {
         $check = DB::table('members')->where('member_id_no', $this->member_id)->value('bal');
