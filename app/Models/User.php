@@ -12,6 +12,7 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +21,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'id',
-        'mem_email_address',
+        'name',
+        'email',
         'password',
     ];
 
@@ -43,7 +45,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            // 'password' => 'hashed',
+            'password' => 'hashed',
         ];
     }
 

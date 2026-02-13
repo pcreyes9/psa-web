@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('title', 'PSA - Officers & Boards')
+@section('title', '404 ERROR')
 
 @section('content')
     <section>

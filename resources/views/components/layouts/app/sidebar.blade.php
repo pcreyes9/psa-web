@@ -13,9 +13,11 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
-                    <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="video-camera" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Video Recordings') }}</flux:navlist.item>
+                    <flux:navlist.item icon="newspaper" :href="route('settings.good-standing')" :current="request()->routeIs('settings.good-standing')" wire:navigate>{{ __('Certificate of Goodstanding') }}</flux:navlist.item>
                     {{-- <flux:navlist.item icon="home" :href="route('members')" :current="request()->routeIs('members')" wire:navigate>{{ __('Members') }}</flux:navlist.item> --}}
-                    <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user" :href="route('settings.profile')" :current="request()->routeIs('settings.profile', 'settings.password')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
+                    <flux:navlist.item icon="device-phone-mobile" :href="route('settings.appearance')" :current="request()->routeIs('settings.appearance')" wire:navigate>{{ __('Website Appearance') }}</flux:navlist.item>
 
                 </flux:navlist.group>
             </flux:navlist>
@@ -36,8 +38,9 @@
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
                 <flux:profile
-                    :name="auth()->user()->id"
-                    :initials="auth()->user()->initials()"
+                    :name="auth()->user()->name"
+                    {{-- :initials="auth()->user()->initials()" --}}
+                    :initials="auth()->user()->id"
                     icon-trailing="chevrons-up-down"
                 />
 
@@ -54,8 +57,8 @@
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate text-xs font-bold">{{ auth()->user()->mem_first_name }} {{ auth()->user()->mem_last_name }}</span>
-                                    <span class="truncate text-xs">{{ auth()->user()->mem_email_address }}</span>
+                                    <span class="truncate text-xs font-bold">{{ auth()->user()->name }}</span>
+                                    <span class="truncate text-xs">{{ auth()->user()->email }}</span>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +90,7 @@
 
             <flux:dropdown position="top" align="end">
                 <flux:profile
-                    :initials="auth()->user()->initials()"
+                    :initials="auth()->user()->id"
                     icon-trailing="chevron-down"
                 />
 
@@ -99,13 +102,13 @@
                                     <span
                                         class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white"
                                     >
-                                        {{ auth()->user()->initials() }}
+                                        {{ auth()->user()->id }}
                                     </span>
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate text-xs font-bold">{{ auth()->user()->mem_first_name }} {{ auth()->user()->mem_last_name }}</span>
-                                    <span class="truncate text-xs">{{ auth()->user()->mem_email_address }}</span>
+                                    <span class="truncate text-xs font-bold">{{ auth()->user()->name }}</span>
+                                    <span class="truncate text-xs">{{ auth()->user()->email }}</span>
                                 </div>
                             </div>
                         </div>

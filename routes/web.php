@@ -5,6 +5,7 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
+use App\Livewire\Settings\GoodStanding;
 
 // Route::get('/', function () {
 //     return view('template/pages/landing');
@@ -95,6 +96,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/profile', Profile::class)->name('settings.profile');
     Route::get('settings/password', Password::class)->name('settings.password');
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
+
+    Route::get('settings/good-standing', GoodStanding::class)->name('settings.good-standing');
 
     Route::view('admin/dashboard', 'admin.dashboard')->name('admin_dashboard');
 });

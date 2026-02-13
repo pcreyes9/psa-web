@@ -7,22 +7,26 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
 
 class Profile extends Component
 {
     public string $name = '';
     public string $email = '';
-    public $mem_id = '', $prc = '';
+    public $mem_data;
 
     /**
      * Mount the component.
      */
     public function mount(): void
     {
-        $this->name = Auth::user()->mem_last_name;
-        $this->email = Auth::user()->mem_email_address;
-        $this->mem_id = Auth::user()->id;
-        $this->prc = Auth::user()->mem_prc_no;
+        $this->name = Auth::user()->name;
+        $this->email = Auth::user()->email;
+        // $this->mem_id = Auth::user()->id;
+        // $this->prc = Auth::user()->mem_prc_no;
+
+        $this->mem_data = DB::table('members')->where('member_id_no', Auth::user()->id)->first();
+        
     }
 
     /**

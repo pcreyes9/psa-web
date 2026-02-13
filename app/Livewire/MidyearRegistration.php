@@ -24,21 +24,22 @@ class MidyearRegistration extends Component
 
     public $allowed_ext = ['jpg', 'jpeg', 'png', 'heic'];
 
-    public $btnShow = "hidden";
+    public bool $btnShow = false, $btnSubmit = true;
 
     public function render()
     {
         if(DB::table('registrations')->where('psa_id', '=', $this->psa_id)->exists()){
             session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. DB::table('registrations')->where('psa_id', '=', $this->psa_id)->value('email') .'. Thank you!');
-            $this->btnShow = "hidden";
+            $this->btnShow = false;
         }
-        else{
-            $this->btnShow = "";
+        else if($this->btnSubmit){
+            $this->btnShow = true;
         }
 
         if($this->disc != ""){
             $this->disc_show = true;
         }
+
         $this->member = DB::table('members')
         ->where('member_id_no', $this->psa_id)
         ->first();
@@ -73,10 +74,15 @@ class MidyearRegistration extends Component
     }
 
     public function submit(){
+        $this->btnSubmit = false;
+        $this->btnShow = false;
+        // dd($this->btnSubmit);
+        // session()->flash('message', 'You are already registered. If you have any concern about your registration, please kindly reply to the email we sent to '. DB::table('registrations')->where('psa_id', '=', $this->psa_id)->value('email') .'. Thank you!');
+
         $date = Carbon::now()->format('mdy_his');
         // dd($date);
         $pay_extension = strtolower($this->payment_proof->extension());
-
+        
         // dd("submitted");
         if (in_array($pay_extension, $this->allowed_ext)) {
             $this->payment_name = "{$this->psa_id}_{$this->member->mem_last_name}_Proof_of_Payment_{$date}.{$pay_extension}";
@@ -101,6 +107,8 @@ class MidyearRegistration extends Component
             $this->register();
             // dd("proceed to save");
         }
+        
+        $this->btnSubmit = true;
     }
 
     public function register(){
@@ -140,6 +148,7 @@ class MidyearRegistration extends Component
                 'public_uploads'
             );
         }
+        $this->btnSubmit = true;
 
         Mail::mailer('smtp')->to($this->email_address)->send(new RegistrationEmail($this->member->mem_last_name));
         return redirect()->route('midyear-registration-deets')->with('success', 'Your registration is on process, Dr. ' . $this->member->mem_last_name . '. We will update you in this email, ' . $this->email_address . '. Thank you and we hope to see you soon!');
