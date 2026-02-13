@@ -140,7 +140,21 @@
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div> --}}
 
-                            <button type="submit" class="mt-4 w-full" {{ $btnShow }}>Register</button>
+                            @if ( $btnShow && $btnSubmit)
+                                <button 
+                                    type="submit"
+                                    class="mt-4 w-full"
+                                    wire:loading.remove
+                                >
+                                    Register
+                                </button>
+
+                                <p><span wire:loading>
+                                        Processing...
+                                    </span>
+                                </p>
+
+                            @endif         
                         </div>
                     </div>
                 </form>
