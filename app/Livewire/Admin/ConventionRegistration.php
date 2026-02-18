@@ -7,6 +7,7 @@ use Livewire\WithPagination;
 use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -19,8 +20,9 @@ class ConventionRegistration extends Component
     
     public function render()
     {
-        
-
+        if($user = Auth::user()->id != 0){
+            return redirect()->route('dashboard');
+        }
         Paginator::useBootstrapFive();
         $reg = DB::table('registrations')->orderBy('id', 'DESC')->Paginate(15);
 

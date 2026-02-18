@@ -26,11 +26,17 @@
             <ul>
                 <li class="dropdown"><a href="#"><span>Convention</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
-                        <li class="dropdown"><a href="#"><span>Midyear 2026</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        {{-- <li><a href="{{ route('midyear2026') }}">Midyear Convention 2026</a></li> --}}
+                        <li class="dropdown"><a href="{{ route('midyear2026') }}"><span>Midyear Convention 2026</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
                                 <li><a href="{{ route('midyear-poster') }}">Poster</a></li>
                                 <li><a href="{{ route('midyear-registration-deets') }}">Registration</a></li>
-                                {{-- <li><a href="#">Annual</a></li> --}}
+                                {{-- <li class="dropdown"><a href="#"><span>Sponsorship & Exhibition</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                    <ul>
+                                        <li><a href="{{ route('midyear-poster') }}">List of Exhibitors</a></li>
+                                        <li><a href="{{ route('midyear-registration-deets') }}">Booth Checker</a></li>
+                                    </ul>
+                                </li> --}}
                             </ul>
                         </li>
                         <li><a target="_blank" href="https://aca2025manila.org/">ACA 2025 Manila</a></li>
