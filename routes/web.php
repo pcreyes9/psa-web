@@ -6,6 +6,7 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Livewire\Settings\GoodStanding;
+use Illuminate\Support\Facades\Auth;
 
 // Route::get('/', function () {
 //     return view('template/pages/landing');
@@ -43,6 +44,10 @@ Route::get('/hymn', function () {
     return view('template/pages/psa-hymn');
 })->name('hymn');
 
+Route::get('/pja', function () {
+    return view('template/pages/pja');
+})->name('pja');
+
 // Route::get('/gallery-aca1', function () {
 //     return view('template/pages/gallery-aca');
 // })->name('gallery-aca1');
@@ -53,9 +58,9 @@ Route::get('/gallery-aca-{day}', [GalleryController::class, 'general'])->name('g
 
 
 //CME ACTIVITIES
-Route::get('/pja', function () {
-    return view('template/pages/pja');
-})->name('pja');
+
+
+Route::view('midyear2026', 'template/midyear/midyear-landing')->name('midyear2026');
 
 Route::get('/midyear-registration-details', function () {
     return view('template/pages/mid-reg');
@@ -98,8 +103,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 
     Route::get('settings/good-standing', GoodStanding::class)->name('settings.good-standing');
+    // Route::view('settings/good-standing', 'goodStanding')->name('settings.good-standing');
 
-    Route::view('admin/dashboard', 'admin.dashboard')->name('admin_dashboard');
+    Route::get('/admin/dashboard', function () {
+        if(Auth::user()->id != 0){
+            return redirect()->route('dashboard');
+        }
+        else{
+            return view('admin.dashboard');
+        }
+    })->name('admin_dashboard');
+
+    // Route::view('admin/dashboard', 'admin.dashboard')->name('admin_dashboard');
 });
 
 // ADMIN LOGIN
