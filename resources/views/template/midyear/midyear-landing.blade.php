@@ -50,12 +50,12 @@
                     </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
                     <div class="service-item item-pink position-relative">
                         <i class="bi bi-chat-square-text icon"></i>
                         <h3>Abstract Submission</h3>
                     </div>
-                </div><!-- End Service Item -->
+                </div><!-- End Service Item --> --}}
             </div>
         </div>  
     </section><!-- /Services Section -->

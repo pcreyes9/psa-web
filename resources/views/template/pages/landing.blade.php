@@ -1,6 +1,30 @@
 @extends('template.master')
 @section('title', 'Philippine Society of Anesthesiologists')
 @section('content')
+
+<section id="pricing" class="pricing section mt-5">
+    <!-- Section Title -->
+    {{-- <div class="container section-title" data-aos="fade-up">
+      <h2>UPCOMING EVENTS</h2> 
+    </div><!-- End Section Title --> --}}
+
+    <div class="container mt-3">
+      <div class="row gy-4 justify-content-center">
+        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="">
+            <a target="_blank" href="{{ route('midyear-registration') }}"><img src="images/PSA MIDYEAR 2026 RATES.png" class="img-fluid animated " alt=""></a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+          <a href="{{route('midyear-registration')}}"
+          target="_blank"
+          class="btn btn-primary px-4 py-2 fs-5 fw-bold">
+              Register Now!
+          </a>
+      </div>
+      </div>
+    </div>
+  </section>
   <section id="hero" class="hero section">
     <div class="container">
       <div class="row gy-4">
@@ -28,29 +52,7 @@
   </section>
   
   <!-- UPCOMING EVENTS Section -->
-  <section id="pricing" class="pricing section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>UPCOMING EVENTS</h2> 
-    </div><!-- End Section Title -->
-
-    <div class="container">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="pricing-tem">
-            <a target="_blank" href="{{ route('midyear-registration-deets') }}"><img src="images/PSA_MIDYEAR_2026_POSTER.jpg" class="img-fluid animated " alt=""></a>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center mt-4">
-          <a href="{{route('midyear-registration-deets')}}"
-          target="_blank"
-          class="btn btn-primary px-4 py-2 fs-5 fw-bold">
-              Register Now!
-          </a>
-      </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- RECENT EVENTS Section -->
   <section id="pricing" class="pricing section">

@@ -55,6 +55,7 @@ class GoodStanding extends Component
     public function render()
     {
         return view('livewire.settings.good-standing')
+        
         ->layout('components.layouts.app', [
                 'title' => $this->title ?? 'PSA Good Standing',
             ]);
