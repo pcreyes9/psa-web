@@ -48,6 +48,10 @@ Route::get('/pja', function () {
     return view('template/pages/pja');
 })->name('pja');
 
+Route::get('/pickleball-tournament', function () {
+    return view('template/pages/mid-sports');
+})->name('sports');
+
 // Route::get('/gallery-aca1', function () {
 //     return view('template/pages/gallery-aca');
 // })->name('gallery-aca1');
