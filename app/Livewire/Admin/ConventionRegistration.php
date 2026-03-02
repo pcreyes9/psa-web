@@ -10,10 +10,10 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 
 
-
 class ConventionRegistration extends Component
 {
     use WithPagination;
+    protected $paginationTheme = 'bootstrap';
 
     public $sort = 'dateNew', $sortName = 'Registration ID (newest)', $label = 'Registration ID (newest)';
     public $from, $to, $search;
@@ -61,6 +61,13 @@ class ConventionRegistration extends Component
             'info' => $info
         ]);
         return response()->streamDownload(function () use ($pdf) { echo $pdf->stream(); }, 'Registration ID ' . $this->from . ' - ' . $this->to .'.pdf');
+    }
+
+    public function approve($id){
+        dd($id);
+        // DB::table('registrations')->where('id', $id)->update(['status' => 'Approved']);
+        // $this->render();
+        // return redirect()->route('admin_dashboard')->with('success', 'Registration ID ' . $id . ' has been approved!');
     }
 
     public function updatedSort()
