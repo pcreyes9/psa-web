@@ -136,8 +136,14 @@
                                     </span>
                                 </td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-outline-primary">
-                                        Approve
+                                    <button
+                                        class="btn btn-sm {{ $regs->status == 'Approved'
+                                            ? ''
+                                            : 'btn-outline-primary' }}"
+                                        wire:click="approve({{ $regs->id }})"
+                                        {{ $regs->status == 'Approved' ? 'disabled' : '' }}
+                                    >
+                                        {{ $regs->status == 'Approved' ? '-' : 'Approve' }}
                                     </button>
                                 </td>
                             </tr>
