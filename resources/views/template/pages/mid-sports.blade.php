@@ -6,9 +6,7 @@
     <section id="portfolio" class="portfolio section">
         <div class="container text-center mt-5">
             {{-- <p class="text-muted text-center"><i>(Click the poster to see registration details and rates)</i></p> --}}
-            <a href="{{ route('midyear-registration-deets') }}">
-                <img src="images/Pickleball_Tournament.jpg" class="img-fluid animated " alt="">
-            </a>
+            <img src="images/Pickleball_Tournament.jpg" class="img-fluid animated " alt="">
             {{-- <div class="d-flex justify-content-center mt-4">
                 <a href="{{ route('midyear-registration') }}"
                 target="_blank"
