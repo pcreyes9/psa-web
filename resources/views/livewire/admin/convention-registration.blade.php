@@ -137,13 +137,38 @@
                                 </td>
                                 <td class="text-center">
                                     <button
-                                        class="btn btn-sm {{ $regs->status == 'Approved'
-                                            ? ''
-                                            : 'btn-outline-primary' }}"
+                                        class="btn btn-sm 
+                                            @if($regs->status == 'Pending')
+                                                btn-success
+                                            @elseif($regs->status == 'Confirmed')
+                                                btn-primary
+                                            @else
+                                                btn-secondary
+                                            @endif
+                                        "
                                         wire:click="approve({{ $regs->id }})"
-                                        {{ $regs->status == 'Approved' ? 'disabled' : '' }}
+                                        wire:confirm="Are you sure you about this registration?"
+                                        wire:loading.attr="disabled"
+                                        wire:target="approve({{ $regs->id }})"
+                                        @if($regs->status == 'Confirmed' || $regs->status == 'Approved') disabled @endif
                                     >
-                                        {{ $regs->status == 'Approved' ? '-' : 'Approve' }}
+
+                                        {{-- Normal Text --}}
+                                        <span wire:loading.remove wire:target="approve({{ $regs->id }})">
+                                            @if($regs->status == 'Pending')
+                                                Confirm
+                                            @elseif($regs->status == 'Confirmed')
+                                                Approve
+                                            @else
+                                                -
+                                            @endif
+                                        </span>
+
+                                        {{-- Loading Text --}}
+                                        <span wire:loading wire:target="approve({{ $regs->id }})">
+                                            Processing...
+                                        </span>
+
                                     </button>
                                 </td>
                             </tr>

@@ -40,9 +40,7 @@ class MidyearRegistration extends Component
             $this->disc_show = true;
         }
 
-        $this->member = DB::table('members')
-        ->where('member_id_no', $this->psa_id)
-        ->first();
+        $this->member = DB::table('members')->where('member_id_no', $this->psa_id)->first();
 
         // dd($member);
         
@@ -59,10 +57,16 @@ class MidyearRegistration extends Component
             }
         // dd($this->res);
         }
-
+        
         return view('livewire.midyear-registration', [
             'member' => $this->member,
         ]);
+    }
+
+    public function selectRow($index){
+        $selected = $this->res[$index];
+        $parts = explode(' - ', $selected);
+        $this->psa_id = trim($parts[0]);
     }
 
     public function showChecker(){

@@ -13,10 +13,29 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                        <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
-                        @if ($this->res != null)
-                            <textarea class="form-control " rows="6" style="box-shadow: 2px 2px 3px gray; background-color: white; color: black; font-weight: bold; text-align:left;" id="message-text" readonly>{{ implode("\n", $res)}}</textarea>
-                        @endif
+                            <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
+                            @if ($this->res != null)
+                                <div class="form-control p-0"
+                                    style="
+                                        box-shadow: 2px 2px 3px gray;
+                                        background-color: white;
+                                        font-weight: bold;
+                                        max-height: 200px;   /* control height here */
+                                        overflow-y: auto;    /* enable vertical scroll */
+                                        text-align: left;
+                                    ">
+
+                                    @foreach($res as $index => $item)
+                                        <div 
+                                            class="p-1 border-bottom row-clickable"
+                                            style="cursor: pointer;"
+                                            {{-- wire:click="selectRow({{ $index }})" --}}
+                                        >
+                                            {{ $item }}
+                                        </div>
+                                    @endforeach
+                                </div> 
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -36,7 +55,7 @@
                         </div>
                     <div class="row gy-4">
                         <div class="col-md-2">
-                            <input type="number" name="psa_id" wire:model.live='psa_id' class="form-control" placeholder="PSA ID No." required="">
+                            <input type="number" class="form-control" name="psa_id" wire:model.live='psa_id'  placeholder="PSA ID No." required="">
                         </div>
 
                         <div class="col-md-4">

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MidyearConvention\PayConfirmEmail;
 
 
 class ConventionRegistration extends Component
@@ -64,9 +66,13 @@ class ConventionRegistration extends Component
     }
 
     public function approve($id){
-        dd($id);
-        // DB::table('registrations')->where('id', $id)->update(['status' => 'Approved']);
-        // $this->render();
+        // dd($id);
+
+        DB::table('registrations')->where('id', $id)->update(['status' => 'Confirmed']);
+        $mem = DB::table('registrations')->where('id', $id)->first();
+        Mail::mailer('smtp')->to($mem->email)->send(new PayConfirmEmail ($mem->last_name));
+
+        $this->render();
         // return redirect()->route('admin_dashboard')->with('success', 'Registration ID ' . $id . ' has been approved!');
     }
 

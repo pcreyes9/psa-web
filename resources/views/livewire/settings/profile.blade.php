@@ -3,8 +3,9 @@
     <x-settings.layout :heading="__('Profile')" :subheading="__('View your information')">
         <x-auth-session-status class="text-center mb-5" type="status" :status="session('status')" />
         
+        
         <form wire:submit="updateProfileInformation">
-            <div class="grid grid-cols-12 gap-4">
+            <div class="grid grid-cols-12 gap-4 mt-5">
 
                 {{-- Last Name --}}
                 <div class="col-span-12 md:col-span-3">

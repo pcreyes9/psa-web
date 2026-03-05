@@ -48,7 +48,7 @@
 
     @if (Route::has('register'))
         <div class="space-x-1 rtl:space-x-reverse text-center text-sm text-zinc-600 dark:text-zinc-400">
-            {{ __('Don\'t have an account?') }}
+            {{ __('Don\'t have a PSA Website Account?') }}
             <flux:link :href="route('acc-request')" wire:navigate>{{ __('Sign up') }}</flux:link>
             <br> or <br>
             {{ __('Don\'t have a PSA ID?') }}
