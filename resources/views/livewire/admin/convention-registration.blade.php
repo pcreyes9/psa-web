@@ -147,6 +147,7 @@
                                             @endif
                                         "
                                         wire:click="approve({{ $regs->id }})"
+                                        wire:confirm="Are you sure you about this registration?"
                                         wire:loading.attr="disabled"
                                         wire:target="approve({{ $regs->id }})"
                                         @if($regs->status == 'Confirmed' || $regs->status == 'Approved') disabled @endif

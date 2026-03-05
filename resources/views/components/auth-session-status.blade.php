@@ -1,4 +1,4 @@
-@props(['status', 'type' => 'success'])
+{{-- @props(['status', 'type' => 'success'])
 
 @php
 $colors = [
@@ -13,5 +13,25 @@ $colors = [
     'class' => 'px-4 py-3 rounded-md font-medium text-sm flex items-center gap-2 ' . ($colors[$type] ?? $colors['success'])
 ]) }}>
     <span>{{ $status }}</span>
+</div>
+@endif --}}
+
+@props(['status', 'type' => 'success'])
+
+@if ($status)
+<div x-data="{ visible: true }" x-show="visible">
+    
+    <flux:callout 
+        :variant="$type" 
+        icon="exclamation-circle" 
+        inline
+        class="flex items-start gap-2"
+    >
+        <flux:callout.heading class="flex-1">
+            {{ $status }}
+        </flux:callout.heading> 
+
+    </flux:callout>
+
 </div>
 @endif
