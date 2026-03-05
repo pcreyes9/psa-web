@@ -29,7 +29,7 @@
                                         <div 
                                             class="p-1 border-bottom row-clickable"
                                             style="cursor: pointer;"
-                                            wire:click="selectRow({{ $index }})"
+                                            {{-- wire:click="selectRow({{ $index }})" --}}
                                         >
                                             {{ $item }}
                                         </div>
