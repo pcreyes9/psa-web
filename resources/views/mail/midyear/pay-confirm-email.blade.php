@@ -1,7 +1,9 @@
 Dear Dr. {{ $name }},
 <br>
 <br>
-Thank you for registering for the PSA Midyear Convention 2026. Payment for your registration has been confirmed. You will receive another email containing your QR code for the Convention.
+Thank you for registering for the PSA Midyear Convention 2026. Payment for your registration has been confirmed.
+<br>
+You will receive another email containing your QR code for the Convention.
 <br>
 <br>
 See you soon!
