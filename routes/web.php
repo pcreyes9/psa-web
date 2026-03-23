@@ -79,6 +79,10 @@ Route::get('/midyear-registration', function () {
     return view('template/midyear/midyear-registration');
 })->name('midyear-registration');
 
+Route::get('/scientific-program', function () {
+    return view('template/pages/scientific-program');
+})->name('sci-prog');
+
 Route::get('/subspec-activity', function () {
     return view('template/pages/subspec-activity');
 })->name('subspec-activity');
