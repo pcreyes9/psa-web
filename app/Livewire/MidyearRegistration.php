@@ -48,10 +48,10 @@ class MidyearRegistration extends Component
             session()->flash('message', 'Your PSA ID has only 4 digits.');
         }
         
-        if(strlen($this->name) >= 3){
+        if(strlen($this->name) >= 2){
             // dd(strlen($this->name));
             $this->res=array();
-            $this->list=DB::table('members')->where('mem_last_name', 'like', '%'.$this->name )->orWhere('mem_last_name', 'like', $this->name .'%' )->get()->toArray();
+            $this->list=DB::table('members')->where('mem_last_name', 'like', '%'.$this->name )->orWhere('mem_last_name', 'like', $this->name .'%' )->orderBy('mem_last_name')->get()->toArray();
             foreach($this->list as $lis){
                 $this->res [] = $lis->member_id_no . ' - ' . $lis->mem_last_name . ', ' . $lis->mem_first_name;
             }
