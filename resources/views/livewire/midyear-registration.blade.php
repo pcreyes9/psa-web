@@ -115,7 +115,7 @@
                         <div class="col-md-4 text-start">
                             <label class ="mb-1" style="font-weight: 600; color:black">Discount ID:</label><br>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio1" value="senior_disc">
+                                <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio1" value="senior_disc" required>
                                 <label class="form-check-label" for="discount_radio1">
                                     Senior Citizen
                                 </label>
@@ -127,7 +127,7 @@
                                 </label>
                             </div> --}}
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio3" value="non_disc" checked>
+                                <input class="form-check-input" type="radio" wire:model.live='disc' name="discount_radio" id="discount_radio3" value="non_disc" checked required>
                                 <label class="form-check-label" for="discount_radio3">
                                     None
                                 </label>
