@@ -39,7 +39,8 @@
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-item item-red position-relative">
                         <i class="bi bi-journal-bookmark icon"></i>
-                        <h3>Program</h3>
+                        <h3>Scientific Program</h3>
+                        <a href="{{ route('sci-prog') }}" class="stretched-link"></a>
                     </div>
                 </div><!-- End Service Item -->
 
