@@ -244,13 +244,16 @@
             </flux:select>
 
             <!-- Hospital Affiliation (wide) -->
-            <flux:input
-                wire:model="hospital_affiliation"
-                :label="__('Hospital Affiliation')"
-                type="text"
-                placeholder="Hospital / Institution"
+            <flux:select 
+                wire:model="hospital_affiliation" 
+                :label="__('Hospital Affiliation')" 
+                placeholder="Select your hospital affiliation"
                 class="md:col-span-2 lg:col-span-4"
-            />
+            >
+                @foreach ($hospitals as $item)
+                    <flux:select.option value="{{ $item->hosp_name   }}">{{ $item->hosp_name }}</flux:select.option>
+                @endforeach
+            </flux:select>
 
         </div>
 
