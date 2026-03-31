@@ -86,6 +86,7 @@ class WorkshopRegistration extends Component
     }
 
     public function submit(){
+        // dd($this->);
         $this->btnSubmit = false;
         $this->btnShow = false;
 

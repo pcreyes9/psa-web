@@ -62,15 +62,15 @@
                         </div>
 
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="first_name" value="{{ $member?->first_name }}"  placeholder="First Name" readonly>
+                            <input type="text" class="form-control" name="first_name" wire:model.live='first_name' value="{{ $member?->first_name }}"  placeholder="First Name" >
                         </div>
 
                         <div class="col-md-4">
-                            <input type="text" class="form-control" name="last_name" value="{{ $member?->last_name }}" placeholder="Last Name" readonly>
+                            <input type="text" class="form-control" name="last_name" wire:model.live='last_name' value="{{ $member?->last_name }}" placeholder="Last Name" >
                         </div>
 
                         <div class="col-md-2">
-                            <input type="text" class="form-control" name="middle_initial" value="{{ $member?->middle_name }}" placeholder="Middle Initial" readonly>
+                            <input type="text" class="form-control" name="middle_initial" wire:model.live='middle_initial' value="{{ $member?->middle_name }}" placeholder="Middle Initial" readonly>
                         </div>
 
                         {{-- <div class="col-md-6">
