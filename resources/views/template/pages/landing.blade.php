@@ -51,32 +51,95 @@
     </div>
   </section>
   
+  <section id="services" class="services section mt-5 pt-5">
+      <div class="container section-title" data-aos="fade-up">
+          <h2>MIDYEAR CONVENTION 2026</h2>
+          <p>May 14, 2026 | KCC Events & Convention Center | General Santos City<br></p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+          <div class="row gy-4">
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="service-item item-cyan position-relative">
+                      <i class="bi bi-image-fill icon"></i>
+                      <h3>Poster</h3>
+                      {{-- <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p> --}}
+                      <a href="{{ route('midyear-poster') }}" class="stretched-link"></a>
+                  </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                  <div class="service-item item-orange position-relative">
+                      <i class="bi bi-calendar-event-fill icon"></i>
+                      <h3>Registration</h3>
+                      <a href="{{ route('midyear-registration-deets') }}" class="stretched-link"></a>
+
+                  </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                  <div class="service-item item-teal position-relative">
+                      <i class="bi bi-easel icon"></i>
+                      <h3>List of Exhibitors</h3>
+                  </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="service-item item-red position-relative">
+                      <i class="bi bi-journal-bookmark icon"></i>
+                      <h3>Scientific Program</h3>
+                      <a href="{{ route('sci-prog') }}" class="stretched-link"></a>
+                  </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+                  <div class="service-item item-indigo position-relative">
+                      <i class="bi bi-airplane icon"></i>
+                      <h3>Tours & Accommodations</h3>
+                      <a href="{{ route('accomm-tours') }}" class="stretched-link"></a>
+                  </div>
+              </div><!-- End Service Item -->
+
+              <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                  <div class="service-item item-pink position-relative">
+                      <i class="bi bi-dribbble icon"></i>
+                      <h3>Pickleball Tournament</h3>
+                      <a href="{{ route('sports') }}" class="stretched-link"></a>
+                  </div>
+              </div><!-- End Service Item -->
+          </div>
+      </div>  
+  </section><!-- /Services Section -->
+
   <!-- ANNOUNCEMENTS EVENTS Section -->
   <section id="pricing" class="pricing section">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Announcements</h2> 
+      <h2>Recent Announcements</h2> 
     </div><!-- End Section Title -->
 
     <div class="container">
-      <div class="row gy-4 justify-content-center">
-       <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row gy-5 justify-content-center">
+       <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="pricing-tem">
                 <a target="_blank" href="https://sites.google.com/romanotravelandtours.com/soxtours/navigation"><img src="images/tour and transpo.jpg" class="img-fluid animated " alt=""></a>
             </div>
         </div>
 
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-tem">
                 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1Unxg_RUAJU8G2LJ8N8x8z1kJdr6nWA3Z6X5hF35QwhY/edit?usp=drivesdk"><img src="images/hotel and accom.jpg" class="img-fluid animated " alt=""></a>
             </div>
-        </div>    
+        </div>  
+        <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-tem">
+                <a target="_blank" href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&osid=1&continue=https://docs.google.com/forms/d/e/1FAIpQLSeOouavlzo7yI1KwTqef9l8mzLSNPU6QpABaqlmD64GF4Dr1Q/viewform?usp%3Dsend_form&followup=https://docs.google.com/forms/d/e/1FAIpQLSeOouavlzo7yI1KwTqef9l8mzLSNPU6QpABaqlmD64GF4Dr1Q/viewform?usp%3Dsend_form&ltmpl=forms&authuser=0"><img src="images/Pickleball_Tournament.jpg" class="img-fluid animated " alt=""></a>
+            </div>
+        </div> 
 
       </div>
     </div>
   </section>
-  
-
   <!-- RECENT EVENTS Section -->
   <section id="pricing" class="pricing section">
     <!-- Section Title -->
