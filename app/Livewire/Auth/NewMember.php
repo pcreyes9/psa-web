@@ -34,7 +34,7 @@ class NewMember extends Component
     // File Upload
     public $payment;
 
-    public $chapters;
+    public $chapters, $hospitals;
 
     public function membership(){
         // $this->redirect(route('acc-request', absolute: false), navigate: true);
@@ -46,6 +46,7 @@ class NewMember extends Component
         ];
 
         $this->chapters = DB::table('chapters')->get();
+        $this->hospitals = DB::table('hospitals')->orderBy('hosp_name')->get();
     }
 
     public function addDependent()

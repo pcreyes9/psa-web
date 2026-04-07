@@ -47,7 +47,8 @@
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-item item-indigo position-relative">
                         <i class="bi bi-airplane icon"></i>
-                        <h3>Accommodation & Tours</h3>
+                        <h3>Tours & Accommodations</h3>
+                        <a href="{{ route('accomm-tours') }}" class="stretched-link"></a>
                     </div>
                 </div><!-- End Service Item -->
 

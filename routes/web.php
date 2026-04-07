@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Livewire\Settings\GoodStanding;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/', function () {
 //     return view('template/pages/landing');
@@ -48,9 +49,13 @@ Route::get('/pja', function () {
     return view('template/pages/pja');
 })->name('pja');
 
-Route::get('/pickleball-tournament', function () {
-    return view('template/pages/mid-sports');
-})->name('sports');
+Route::get('/subspec-activity', function () {
+    return view('template/pages/subspec-activity');
+})->name('subspec-activity');
+
+Route::get('/subspec-sig', function () {
+    return view('template/pages/subsec-sig');
+})->name('subspec-sig');
 
 // Route::get('/gallery-aca1', function () {
 //     return view('template/pages/gallery-aca');
@@ -62,8 +67,6 @@ Route::get('/gallery-aca-{day}', [GalleryController::class, 'general'])->name('g
 
 
 //CME ACTIVITIES
-
-
 Route::view('midyear2026', 'template/midyear/midyear-landing')->name('midyear2026');
 
 Route::get('/midyear-registration-details', function () {
@@ -79,17 +82,41 @@ Route::get('/midyear-registration', function () {
     return view('template/midyear/midyear-registration');
 })->name('midyear-registration');
 
+Route::get('/workshop-registration', function () {
+    // dd("redirecting...");
+    return view('template/midyear/workshop-registration');
+})->name('workshop-registration');
+
 Route::get('/scientific-program', function () {
     return view('template/pages/scientific-program');
 })->name('sci-prog');
 
-Route::get('/subspec-activity', function () {
-    return view('template/pages/subspec-activity');
-})->name('subspec-activity');
+Route::get('/pickleball-tournament', function () {
+    return view('template/pages/mid-sports');
+})->name('sports');
 
-Route::get('/subspec-sig', function () {
-    return view('template/pages/subsec-sig');
-})->name('subspec-sig');
+Route::get('/accomm-tours', function () {
+    return view('template/pages/accomm-tours');
+})->name('accomm-tours');
+
+
+
+Route::get('/exhibitors/{booth}', function ($booth) {
+    $exists = DB::table('exhibitors')->where('code', $booth)->exists();
+
+    if (! $exists) {
+        abort(404); // or any other action you want
+    }
+    else{
+        return view('template/midyear/booth-reg', compact('booth'));
+    }
+})->name('booth-reg');
+
+Route::get('/booth-checker', function () {
+    return view('template/midyear/booth-checker');
+})->name('booth-checker');
+
+
 
 
 
