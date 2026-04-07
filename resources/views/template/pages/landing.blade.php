@@ -120,18 +120,18 @@
 
     <div class="container">
       <div class="row gy-5 justify-content-center">
-       <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+       <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="pricing-tem">
                 <a target="_blank" href="https://sites.google.com/romanotravelandtours.com/soxtours/navigation"><img src="images/tour and transpo.jpg" class="img-fluid animated " alt=""></a>
             </div>
         </div>
 
-        <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-tem">
                 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1Unxg_RUAJU8G2LJ8N8x8z1kJdr6nWA3Z6X5hF35QwhY/edit?usp=drivesdk"><img src="images/hotel and accom.jpg" class="img-fluid animated " alt=""></a>
             </div>
         </div>  
-        <div class="col-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-tem">
                 <a target="_blank" href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&osid=1&continue=https://docs.google.com/forms/d/e/1FAIpQLSeOouavlzo7yI1KwTqef9l8mzLSNPU6QpABaqlmD64GF4Dr1Q/viewform?usp%3Dsend_form&followup=https://docs.google.com/forms/d/e/1FAIpQLSeOouavlzo7yI1KwTqef9l8mzLSNPU6QpABaqlmD64GF4Dr1Q/viewform?usp%3Dsend_form&ltmpl=forms&authuser=0"><img src="images/Pickleball_Tournament.jpg" class="img-fluid animated " alt=""></a>
             </div>
