@@ -36,7 +36,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   @livewireStyles
-  @livewireScripts
 </head>
 
 <body class="index-page">

@@ -12,6 +12,11 @@
                 WORKSHOP REGISTRATION
             </a>
         </div>
+        @if (session('success'))
+            <div class="alert alert-success mt-4 text-center">
+                {{ session('success') }}
+            </div>
+        @endif
         {{-- <div class="container pt-5 mt-5">
             <img src="images/sci-program/front.png" class="img-fluid animated" alt="">
         </div> --}}

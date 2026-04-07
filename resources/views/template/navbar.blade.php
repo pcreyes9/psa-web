@@ -29,10 +29,10 @@
                         {{-- <li><a href="{{ route('midyear2026') }}">Midyear Convention 2026</a></li> --}}
                         <li class="dropdown"><a href="{{ route('midyear2026') }}"><span>Midyear Convention 2026</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                             <ul>
-                                <li><a href="{{ route('midyear-poster') }}">Poster</a></li>
+                                {{-- <li><a href="{{ route('midyear-poster') }}">Poster</a></li>
                                 <li><a href="{{ route('midyear-registration-deets') }}">Registration</a></li>
                                 <li><a href="{{ route('sci-prog') }}">Scientific Program</a></li>
-                                <li><a href="{{ route('sports') }}">Pickleball Tournament</a></li>
+                                <li><a href="{{ route('sports') }}">Pickleball Tournament</a></li> --}}
                                 {{-- <li class="dropdown"><a href="#"><span>Sponsorship & Exhibition</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                                     <ul>
                                         <li><a href="{{ route('midyear-poster') }}">List of Exhibitors</a></li>

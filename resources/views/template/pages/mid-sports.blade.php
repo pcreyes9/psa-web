@@ -4,7 +4,11 @@
 
 @section('content')
     <section id="portfolio" class="portfolio section">
-        <div class="container text-center mt-5">
+        <!-- Section Title -->
+        <div class="container section-title mt-5" data-aos="fade-up">
+            <h2>Pickleball Tournament</h2> 
+        </div><!-- End Section Title -->
+        <div class="container text-center">
             {{-- <p class="text-muted text-center"><i>(Click the poster to see registration details and rates)</i></p> --}}
             <img src="images/Pickleball_Tournament.jpg" class="img-fluid animated " alt="">
             {{-- <div class="d-flex justify-content-center mt-4">

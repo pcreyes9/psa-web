@@ -14,6 +14,8 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
+                            <div class=""><small class="text-muted">*Only the CONFIRMED Registrants will be listed here.</small></div>
+
                             @if ($this->res != null)
                                 <div class="form-control p-0"
                                     style="
@@ -35,9 +37,7 @@
                                         </div>
                                         
                                     @endforeach
-                                    
                                 </div>
-                                <div class="mt-3"><small class="text-muted">*Only the CONFIRMED Registrants will be listed here.</small></div>
                             @endif
                         </div>
                     </div>
@@ -50,55 +50,56 @@
                     @csrf
                     {{-- {{ $psa_id }} --}}
                     <div class="col-12">
-                            @if (session()->has('message'))
-                                <div class="alert alert-warning">
-                                    {{ session('message') }}
-                                </div>
-                            @endif
-                        </div>
+                        @if (session()->has('message'))
+                            <div class="alert alert-warning">
+                                {{ session('message') }}
+                            </div>
+                        @endif
+                    </div>
                     <div class="row gy-4">
-                        <div class="col-md-2">
-                            <input type="number" class="form-control" name="psa_id" wire:model.live='psa_id'  placeholder="PSA ID No." required="">
-                        </div>
-
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" name="first_name" wire:model.live='first_name' value="{{ $member?->first_name }}"  placeholder="First Name" >
-                        </div>
-
-                        <div class="col-md-4">
-                            <input type="text" class="form-control" name="last_name" wire:model.live='last_name' value="{{ $member?->last_name }}" placeholder="Last Name" >
-                        </div>
+                        <div class="text-muted"><i>Please enter the same name that appears on your PRC ID.</i></div>
 
                         <div class="col-md-2">
-                            <input type="text" class="form-control" name="middle_initial" wire:model.live='middle_initial' value="{{ $member?->middle_name }}" placeholder="Middle Initial" readonly>
-                        </div>
-
-                        {{-- <div class="col-md-6">
-                            <input type="text" class="form-control" name="hospital_name" wire:model="hospitalName" placeholder="Name of Hospital" required="">
-                        </div>
-
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" name="hospital_address" wire:model="hospitalAddress" placeholder="Hospital Address" required="">
-                        </div> --}}
-
-                        <div class="col-md-4">
-                            <input type="number" class="form-control" name="prc_number" value="{{ $member?->prc_number }}" placeholder="PRC Number (7 digits)" required="">
+                            <label class="mb-1" style="font-weight: 700; color:black;">PSA ID No.</label>
+                            <input type="number" class="form-control" name="psa_id" wire:model.live='psa_id' placeholder="PSA ID No." required="">
                         </div>
 
                         <div class="col-md-4">
-                            <input type="email" class="form-control" name="email_address" value="{{ $member?->email }}" placeholder="Email" required="">
+                            <label class="mb-1" style="font-weight: 700; color:black;">First Name</label>
+                            <input type="text" class="form-control" name="first_name" wire:model='first_name' placeholder="First Name" required="">
                         </div>
 
                         <div class="col-md-4">
-                            <input type="number" class="form-control" name="contact_number" value="{{ $member?->contact_number }}" placeholder="Contact Number" required="">
+                            <label class="mb-1" style="font-weight: 700; color:black;">Last Name</label>
+                            <input type="text" class="form-control" name="last_name" wire:model='last_name'  placeholder="Last Name"  required="">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="mb-1" style="font-weight: 700; color:black;">Middle Initial</label>
+                            <input type="text" class="form-control" name="middle_initial" wire:model='middle_initial'  placeholder="Middle Initial" readonly>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="mb-1" style="font-weight: 700; color:black;">PRC Number</label>
+                            <input type="number" class="form-control" name="prc_number" wire:model='prc_number'  placeholder="PRC Number (7 digits)" required="">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="mb-1" style="font-weight: 700; color:black;">Email</label>
+                            <input type="email" class="form-control" name="email_address" wire:model='email_address'  placeholder="Email" required="">
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="mb-1" style="font-weight: 700; color:black;">Contact Number</label>
+                            <input type="number" class="form-control" name="contact_number" wire:model='contact_number'  placeholder="Contact Number" required="">
                         </div>
                         <div class="col-md-6 text-start mt-5">
-                            <p class="mb-2" >Midyear Convention 2026 Workshops</p>
+                            <p class="mb-3" >Midyear Convention 2026 Workshops</p>
 
 
                             @foreach ($wrshps as $sessions)
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" wire:model.live='wrshp' name="workshop" id="workshop-{{ $sessions['name'] }}" value="{{ $sessions['name'] }}" required>
+                                    <input class="form-check-input" type="radio" wire:model='wrshp' name="workshop" id="workshop-{{ $sessions['name'] }}" value="{{ $sessions['name'] }}" required {{ $sessions['count'] >= 60 ? 'disabled' : '' }}>
                                     <label class="form-check-label" style="color: black" for="workshop-{{ $sessions['name'] }}">
                                        <strong>{{ $sessions['name'] }}</strong> <br> <i>(Registered  {{ $sessions['count'] }} out of 60)</i>
                                     </label>

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Livewire\Settings\GoodStanding;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/', function () {
 //     return view('template/pages/landing');
@@ -94,6 +95,26 @@ Route::get('/pickleball-tournament', function () {
     return view('template/pages/mid-sports');
 })->name('sports');
 
+Route::get('/accomm-tours', function () {
+    return view('template/pages/accomm-tours');
+})->name('accomm-tours');
+
+
+
+Route::get('/exhibitors/{booth}', function ($booth) {
+    $exists = DB::table('exhibitors')->where('code', $booth)->exists();
+
+    if (! $exists) {
+        abort(404); // or any other action you want
+    }
+    else{
+        return view('template/midyear/booth-reg', compact('booth'));
+    }
+})->name('booth-reg');
+
+Route::get('/booth-checker', function () {
+    return view('template/midyear/booth-checker');
+})->name('booth-checker');
 
 
 
