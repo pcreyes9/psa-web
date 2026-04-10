@@ -14,7 +14,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
-                            <div class=""><small class="text-muted">*Only the CONFIRMED Registrants will be listed here.</small></div>
+                            <div class=""><small class="text-muted">*Only CONFIRMED payments of registrants will be listed here.</small></div>
 
                             @if ($this->res != null)
                                 <div class="form-control p-0"
