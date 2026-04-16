@@ -28,10 +28,10 @@
         <div class="container">
             <img src="images/socials-program/Opening Ceremony.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
-        <div class="container pt-5 mt-2">
+        <div class="container pt-sm-5 mt-2">
             <img src="images/socials-program/Fellowship Night.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
-        <div class="container pt-5 mt-2">
+        <div class="container pt-sm-5 mt-2">
             <img src="images/socials-program/Closing Ceremony.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
         
