@@ -29,12 +29,12 @@
                     </div>
                 </div><!-- End Service Item -->
 
-                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-item item-teal position-relative">
                         <i class="bi bi-easel icon"></i>
                         <h3>List of Exhibitors</h3>
                     </div>
-                </div><!-- End Service Item -->
+                </div><!-- End Service Item --> --}}
 
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-item item-red position-relative">
@@ -43,6 +43,14 @@
                         <a href="{{ route('sci-prog') }}" class="stretched-link"></a>
                     </div>
                 </div><!-- End Service Item -->
+
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                  <div class="service-item item-red position-relative">
+                      <i class="bi bi-journal-bookmark icon"></i>
+                      <h3>Socials Program</h3>
+                      <a href="{{ route('social-prog') }}" class="stretched-link"></a>
+                  </div>
+              </div><!-- End Service Item -->
 
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
                     <div class="service-item item-indigo position-relative">

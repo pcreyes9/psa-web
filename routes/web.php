@@ -91,6 +91,10 @@ Route::get('/scientific-program', function () {
     return view('template/pages/scientific-program');
 })->name('sci-prog');
 
+Route::get('/social-program', function () {
+    return view('template/pages/social-program');
+})->name('social-prog');
+
 Route::get('/pickleball-tournament', function () {
     return view('template/pages/mid-sports');
 })->name('sports');
