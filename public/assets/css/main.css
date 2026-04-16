@@ -1394,7 +1394,7 @@ section,
 
 @media (min-width: 1200px) {
   .pricing .pricing-tem:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
   }
 }
