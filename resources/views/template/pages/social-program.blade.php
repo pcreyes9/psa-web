@@ -14,7 +14,7 @@
         </div> --}}
 
         <div class="container section-title mt-5 pt-5" data-aos="fade-up">
-            <h2>SOCIALS PROGRAM</h2>
+            <h2>SOCIAL PROGRAMS</h2>
             <p>May 14, 2026 | KCC Events & Convention Center | General Santos City<br></p>
         </div><!-- End Section Title -->
         @if (session('success'))

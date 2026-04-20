@@ -95,7 +95,7 @@
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="service-item item-red position-relative">
                       <i class="bi bi-journal-bookmark icon"></i>
-                      <h3>Socials Program</h3>
+                      <h3>Social Programs</h3>
                       <a href="{{ route('social-prog') }}" class="stretched-link"></a>
                   </div>
               </div><!-- End Service Item -->
@@ -127,7 +127,7 @@
     </div><!-- End Section Title -->
 
     <div class="container">
-      <div class="row gy-5 justify-content-center">
+      <div class="row justify-content-center">
        <div class="col-12 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="pricing-tem">
                 <a target="_blank" href="https://sites.google.com/romanotravelandtours.com/soxtours/navigation"><img src="images/tour and transpo.jpg" class="img-fluid animated " alt=""></a>
