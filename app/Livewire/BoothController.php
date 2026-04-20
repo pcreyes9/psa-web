@@ -41,6 +41,6 @@ class BoothController extends Component
             'exhibitor_name' => $this->booth_name,
             'created_at' => now(),
         ]);
-        return redirect()->route('midyear-poster')->with('success', "You have successfully registered, " . $this->booth_name .", " . ' Dr. '. $this->member->first_name ." " . $this->member->last_name);
+        return redirect()->route('booth-checker')->with('success', "You have successfully registered, " . $this->booth_name .", " . ' Dr. '. $this->member->first_name ." " . $this->member->last_name);
     }
 }

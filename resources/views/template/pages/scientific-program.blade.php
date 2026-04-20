@@ -23,10 +23,10 @@
         <div class="container pt-3 mt-2">
             <img src="images/sci-program/day1.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
-        <div class="container pt-5 mt-2">
+        <div class="container pt-sm-5 mt-2">
             <img src="images/sci-program/day2.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
-        <div class="container pt-5 mt-2">
+        <div class="container pt-sm-5 mt-2">
             <img src="images/sci-program/day3.png?v={{ time() }}" class="img-fluid animated" alt="">
         </div>
         

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class BoothChecker extends Component
 {
-    public $search, $boothVisit = [], $name;
+    public $search, $boothVisit = [], $boothsToVisit = [], $name;
     public function render()
     {
 
@@ -28,6 +28,14 @@ class BoothChecker extends Component
                 ->where('psa_id', $this->search)
                 ->get();
                 // dd($this->boothVisit);
+            $this->boothsToVisit = DB::table('exhibitors as e')
+                ->whereNotExists(function ($query) {
+                    $query->select(DB::raw(1))
+                        ->from('booth_reg as b')
+                        ->whereColumn('b.exhibitor_name', 'e.pharma_name')
+                        ->where('b.psa_id', $this->search);
+                })
+                ->get();
         }
         
         return view('livewire.booth-checker');
