@@ -20,7 +20,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <div class="row my-4 pt-5 justify-content-center">
+            <div class="row my-4 justify-content-center">
                 <div class="col-md-6 mb-2">
                     <a href="{{ route('workshop-registration') }}"
                         target="_blank"
