@@ -72,10 +72,10 @@ class WorkshopRegistration extends Component
             return;
         }
 
-        if ($registration->status == 'Pending') {
-            session()->flash('message', 'Your registration exists but payment is not yet confirmed.');
-            return;
-        }
+        // if ($registration->status == 'Pending') {
+        //     session()->flash('message', 'Your registration exists but payment is not yet confirmed.');
+        //     return;
+        // }
 
         if (DB::table('workshop_reg')->where('psa_id', $this->psa_id)->exists()) {
             $workshop = DB::table('workshop_reg')
@@ -107,7 +107,7 @@ class WorkshopRegistration extends Component
 
         $this->res = DB::table('registrations')
             ->where('last_name', 'like', "%{$this->name}%")
-            ->where('status', '!=', 'Pending')
+            // ->where('status', '!=', 'Pending')
             ->orderBy('last_name')
             ->get()
             ->map(fn($r) => "{$r->psa_id} - {$r->last_name}, {$r->first_name}")

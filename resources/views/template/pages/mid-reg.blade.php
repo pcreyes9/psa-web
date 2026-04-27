@@ -10,13 +10,22 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <div class="my-4">
-                <a href="{{ route('midyear-registration') }}"
-                target="_blank"
-                class="btn btn-primary w-100 px-4 py-2 fs-5 fw-bold text-center"
-                style="max-width: 520px; margin: auto; display: block;">
-                    Click here to register for Midyear Convention 2026
-                </a>
+            <div class="row my-4 pt-5 justify-content-center">
+                <div class="col-md-4 mb-2">
+                    <a href="{{ route('midyear-registration') }}"
+                        target="_blank"
+                        class="btn btn-primary w-100 px-4 py-2 fs-5 fw-bold text-center">
+                        Convention Registration
+                    </a>
+                </div>
+
+                <div class="col-md-4 mb-2">
+                    <a href="{{ route('workshop-registration') }}"
+                        target="_blank"
+                        class="btn btn-primary w-100 px-4 py-2 fs-5 fw-bold text-center">
+                        Workshp Registration
+                    </a>
+                </div>
             </div>
 
            <div class="my-4 text-center">
@@ -27,30 +36,6 @@
                         alt="PSA Midyear 2026 Rates">
                 </a>
             </div>
-
-            {{-- <div class="row gy-4 my-4">
-                <h3 class="">
-                    Bank Details for Payment
-                </h3>
-                <div class="col-md-6">
-                    <p class="mod">
-                        <strong>BPI</strong>
-                        <br>
-                        Account Name: Philippine Society of Anesthesiologists, Inc.
-                        <br>
-                        Account Number: 4433 1136 03
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <p class="mod">
-                        <strong>LandBank</strong>
-                        <br>
-                        Account Name: Philippine Society of Anesthesiologists, Inc.
-                        <br>
-                        Account Number: 0711 0635 44
-                    </p>
-                </div>
-            </div> --}}
         </div>
     </section>
 @endsection
