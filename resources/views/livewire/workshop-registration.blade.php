@@ -14,7 +14,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
-                            <div class=""><small class="text-muted">*Only CONFIRMED payments of registrants will be listed here.</small></div>
+                            <div class=""><small class="text-muted">*Only registered delegates will be listed here.</small></div>
 
                             @if ($this->res != null)
                                 <div class="form-control p-0"
@@ -98,10 +98,24 @@
 
 
                             @foreach ($wrshps as $sessions)
+                                @php
+                                    $limit = $sessions['name'] === 'POCUS Workshop' ? 35 : 60;
+                                @endphp
+
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" wire:model='wrshp' name="workshop" id="workshop-{{ $sessions['name'] }}" value="{{ $sessions['name'] }}" required {{ $sessions['count'] >= 60 ? 'disabled' : '' }}>
-                                    <label class="form-check-label" style="color: black" for="workshop-{{ $sessions['name'] }}">
-                                       <strong>{{ $sessions['name'] }}</strong> <br> <i>(Registered  {{ $sessions['count'] }} out of 60)</i>
+                                    <input class="form-check-input"
+                                        type="radio"
+                                        wire:model='wrshp'
+                                        name="workshop"
+                                        id="workshop-{{ $sessions['name'] }}"
+                                        value="{{ $sessions['name'] }}"
+                                        required
+                                        {{ $sessions['count'] >= $limit ? 'disabled' : '' }}>
+
+                                    <label class="form-check-label" style="color: black"
+                                        for="workshop-{{ $sessions['name'] }}">
+                                        <strong>{{ $sessions['name'] }}</strong><br>
+                                        <i>(Registered {{ $sessions['count'] }} out of {{ $limit }})</i>
                                     </label>
                                 </div>
                             @endforeach
