@@ -27,7 +27,7 @@ class WorkshopRegistrationEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Registration: PSA Midyear Convention 2026',
+            subject: 'Workshop Registration: PSA Midyear Convention 2026',
         );
     }
 
