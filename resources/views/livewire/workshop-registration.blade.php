@@ -76,7 +76,7 @@
 
                         <div class="col-md-2">
                             <label class="mb-1" style="font-weight: 700; color:black;">Middle Initial</label>
-                            <input type="text" class="form-control" name="middle_initial" wire:model='middle_initial'  placeholder="Middle Initial" readonly>
+                            <input type="text" class="form-control" name="middle_initial" wire:model='middle_initial'  placeholder="Middle Initial" required="">
                         </div>
 
                         <div class="col-md-4">

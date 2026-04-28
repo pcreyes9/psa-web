@@ -68,8 +68,24 @@ class WorkshopRegistration extends Component
             ->first();
 
         if (!$registration) {
-            session()->flash('message', 'You are not yet registered. Please proceed to registration.');
-            return;
+            $vip = DB::table('vips')->where('member_id_no', $this->psa_id)->first();
+            if(!$vip){
+                session()->flash('message', 'You are not yet registered. Please proceed to registration.');
+                return;
+            }
+            else{
+                // dd($vip);
+                $this->fill([
+                    'first_name' => $vip->fname,
+                    'last_name' => $vip->lname,
+                    'middle_initial' => $vip->mname,
+                    'prc_number' => $vip->mem_prc_no,
+                ]);
+
+                $this->btnShow = true;
+                return;
+            }
+            
         }
 
         // if ($registration->status == 'Pending') {
