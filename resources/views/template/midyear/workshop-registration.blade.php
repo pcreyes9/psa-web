@@ -12,7 +12,7 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <p class="" ><strong>Only registered members can register for the workshop.</strong></p>
+                <p class="" ><strong>Only VIPs and registered delegates can register for the workshop.</strong></p>
                 
                 <livewire:workshop-registration/>
             </div>

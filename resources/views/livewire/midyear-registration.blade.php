@@ -79,7 +79,15 @@
                         </div>
 
                         <div class="col-md-4">
-                            <input type="number" class="form-control" name="prc_number" wire:model="prc_number" placeholder="PRC Number (7 digits)" required="">
+                            <input type="text"
+                                class="form-control"
+                                name="prc_number"
+                                wire:model="prc_number"
+                                placeholder="PRC Number (7 digits)"
+                                required
+                                pattern="\d{7}"
+                                maxlength="7"
+                                inputmode="numeric">                        
                         </div>
 
                         <div class="col-md-4">

@@ -14,7 +14,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class ="mb-1" style="font-weight: 750; color:black;">PSA ID No.</label>
-                            <div class=""><small class="text-muted">*Only registered delegates will be listed here.</small></div>
+                            <div class=""><small class="text-muted">*Only VIPs and registered delegates will be listed here.</small></div>
 
                             @if ($this->res != null)
                                 <div class="form-control p-0"
@@ -76,12 +76,20 @@
 
                         <div class="col-md-2">
                             <label class="mb-1" style="font-weight: 700; color:black;">Middle Initial</label>
-                            <input type="text" class="form-control" name="middle_initial" wire:model='middle_initial'  placeholder="Middle Initial" readonly>
+                            <input type="text" class="form-control" name="middle_initial" wire:model='middle_initial'  placeholder="Middle Initial" required="">
                         </div>
 
                         <div class="col-md-4">
-                            <label class="mb-1" style="font-weight: 700; color:black;">PRC Number</label>
-                            <input type="number" class="form-control" name="prc_number" wire:model='prc_number'  placeholder="PRC Number (7 digits)" required="">
+                            <label class="mb-1" style="font-weight: 700; color:black;">PRC Number (7 digits)</label>
+                            <input type="text"
+                                class="form-control"
+                                name="prc_number"
+                                wire:model="prc_number"
+                                placeholder="PRC Number (7 digits)"
+                                required
+                                pattern="\d{7}"
+                                maxlength="7"
+                                inputmode="numeric">                        
                         </div>
 
                         <div class="col-md-4">
