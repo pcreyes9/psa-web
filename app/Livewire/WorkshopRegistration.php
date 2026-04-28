@@ -121,12 +121,21 @@ class WorkshopRegistration extends Component
             return;
         }
 
-        $this->res = DB::table('registrations')
+        $registrations = DB::table('registrations')
             ->where('last_name', 'like', "%{$this->name}%")
-            // ->where('status', '!=', 'Pending')
             ->orderBy('last_name')
             ->get()
-            ->map(fn($r) => "{$r->psa_id} - {$r->last_name}, {$r->first_name}")
+            ->map(fn($r) => "{$r->psa_id} - {$r->last_name}, {$r->first_name}");
+
+        $vips = DB::table('vips')
+            ->where('lname', 'like', "%{$this->name}%")
+            ->orderBy('lname')
+            ->get()
+            ->map(fn($r) => "{$r->member_id_no} - {$r->lname}, {$r->fname}");
+
+        $this->res = $registrations
+            ->merge($vips)
+            ->values()
             ->toArray();
     }
 
