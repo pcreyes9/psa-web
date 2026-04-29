@@ -7,19 +7,29 @@
     {{-- <div class="container section-title" data-aos="fade-up">
       <h2>UPCOMING EVENTS</h2> 
     </div><!-- End Section Title --> --}}
-
+    
     <div class="container mt-3">
       <div class="row gy-4 justify-content-center">
-        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+        {{-- <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="">
             <a target="_blank" href="{{ route('midyear-registration') }}"><img src="images/PSA MIDYEAR 2026 RATES.png" class="img-fluid animated " alt=""></a>
           </div>
+        </div> --}}
+        <div class="mx-auto" style="max-width: 100%">
+          <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/Yt9-53X1_K8?si=KSuTYYqIcuzMW6Wr" 
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                      referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+          </div>
         </div>
-        <div class="d-flex justify-content-center mt-4">
+        <div class="d-flex justify-content-center mt-5">
           <a href="{{route('midyear-registration')}}"
           target="_blank"
           class="btn btn-primary px-4 py-2 fs-5 fw-bold">
-              Register Now!
+              REGISTER NOW!
           </a>
       </div>
       </div>
