@@ -12,9 +12,9 @@
                         {{ session('success') }}
                     </div>
                 @endif
-                <p class="" ><strong>Forgot your PSA ID NO.? </strong></p>
+                <p class="" ><strong>PRE-REGISTRATION IS NOW CLOSED </strong></p>
                 
-                <livewire:midyear-registration/>
+                {{-- <livewire:midyear-registration/> --}}
             </div>
         </div>
     </section>
