@@ -76,9 +76,9 @@ class WorkshopRegistration extends Component
             else{
                 // dd($vip);
                 $this->fill([
-                    'first_name' => $vip->fname,
-                    'last_name' => $vip->lname,
-                    'middle_initial' => $vip->mname,
+                    'first_name' => $vip->first_name,
+                    'last_name' => $vip->last_name,
+                    'middle_initial' => $vip->middle_name,
                     'prc_number' => $vip->mem_prc_no,
                 ]);
 
