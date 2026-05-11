@@ -8,6 +8,8 @@ use App\Http\Controllers\GalleryController;
 use App\Livewire\Settings\GoodStanding;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Google\Client;
+use Google\Service\Sheets;
 
 // Route::get('/', function () {
 //     return view('template/pages/landing');
@@ -120,7 +122,30 @@ Route::get('/booth-checker', function () {
     return view('template/midyear/booth-checker');
 })->name('booth-checker');
 
+Route::get('/midyear-eval', function () {
+    return view('template/midyear/eval-form');
+})->name('midyear-eval');
 
+Route::get('/scan-qr', function () {
+    return view('template/pages/qr');
+})->name('scan-qr');
+
+
+// Route::get('/read-sheet', function () {
+
+//     $client = new Client();
+//     $client->setAuthConfig(storage_path('app/google/service-account.json'));
+//     $client->addScope(Sheets::SPREADSHEETS_READONLY);
+
+//     $service = new Sheets($client);
+
+//     $spreadsheetId = env('GOOGLE_SHEET_ID');
+//     $range = "Form Responses 1!A:B";
+
+//     $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+
+//     return $response->getValues();
+// });
 
 
 

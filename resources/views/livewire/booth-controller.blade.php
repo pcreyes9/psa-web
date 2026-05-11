@@ -1,6 +1,6 @@
 <section id="contact" class="contact section ">
-    <div class="row justify-content-center"> {{-- center horizontally --}}
-        <div class="col-lg-6"> {{-- control width + center block --}}
+    <div class="row justify-content-center">
+        <div class="col-lg-6"> 
             <form wire:submit.prevent="submit" class="php-email-form text-center">
                 @csrf
 
@@ -21,6 +21,7 @@
                             name="psa_id" 
                             wire:model.live="psa_id" 
                             placeholder="PSA ID No." 
+                            x-on:keydown.enter.prevent
                             required
                         >
                     </div>

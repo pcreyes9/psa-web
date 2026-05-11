@@ -3,7 +3,7 @@
         <div class="mb-3 pt-n5">
             <button type="button" class="btn btn-dark solid" wire:click="showChecker" style="box-shadow: 2px 2px 3px gray; background-color: #ac071a; color: white; font-weight: bold">PSA ID NO. Checker</button>
             @if($show)
-                <div class="row mt-3 mb-3text-center justify-content-center mb-5">
+                <div class="row mt-3 mb-3 text-center justify-content-center mb-5">
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class ="mb-1" style="font-weight: 750; color:black;">Enter Last Name:</label>

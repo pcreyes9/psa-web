@@ -14,7 +14,7 @@
       <!-- Section Title -->
     <div class="container section-title mt-5" data-aos="fade-up">
         <h2>ASEAN CONGRESS OF Anesthesiologists 2025</h2>
-    <p>{{$title}}</p>
+        <p>{{$title}}</p>
     </div><!-- End Section Title -->
 
     <div class="container">
