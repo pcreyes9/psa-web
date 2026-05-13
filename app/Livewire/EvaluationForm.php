@@ -28,7 +28,7 @@ class EvaluationForm extends Component
         $this->ref_no = null;
 
         // PSA ID must be exactly 4 digits
-        if (strlen($this->psa_id) != 4) {
+        if (strlen($this->psa_id) < 5) {
             return;
         }
 
