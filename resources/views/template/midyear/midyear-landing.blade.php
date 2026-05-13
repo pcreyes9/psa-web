@@ -19,14 +19,13 @@
                         <a href="{{ route('midyear-poster') }}" class="stretched-link"></a>
                     </div>
                 </div><!-- End Service Item -->
-                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item item-cyan position-relative">
                         <i class="bi bi-image-fill icon"></i>
                         <h3>Evaluation Form</h3>
-                        {{-- <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p> --}}
                         <a href="{{ route('midyear-eval') }}" class="stretched-link"></a>
                     </div>
-                </div><!-- End Service Item -->
+                </div> --}}
 
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-item item-orange position-relative">
