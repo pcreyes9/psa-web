@@ -16,7 +16,7 @@
                         <div class="col-md-6"> {{-- narrower input --}}
                             <label class="mb-1 fw-bold text-dark">PSA ID No. (4-digit)</label>
                             <input 
-                                type="number" 
+                                type="text" 
                                 class="form-control text-center" 
                                 name="psa_id" 
                                 wire:model.live="psa_id" 

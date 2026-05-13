@@ -17,7 +17,7 @@ class BoothController extends Component
 
     public function render()
     {
-        $this->member = DB::table('registrations')->where('psa_id', $this->psa_id)->first();
+        $this->member = DB::table('members')->where('member_id_no', $this->psa_id)->first();
 
         if(!$this->member && strlen($this->psa_id) > 4) {
             session()->flash('message', 'PSA ID not found. Please enter a valid PSA ID.');
@@ -37,10 +37,10 @@ class BoothController extends Component
     public function submit(){
         DB::table('booth_reg')->insert([
             'psa_id' => $this->psa_id,
-            'name' => $this->member->first_name . ' ' . $this->member->last_name,
+            'name' => $this->member->mem_first_name . ' ' . $this->member->mem_last_name,
             'exhibitor_name' => $this->booth_name,
             'created_at' => now(),
         ]);
-        return redirect()->route('booth-checker')->with('success', "You have successfully registered, " . $this->booth_name .", " . ' Dr. '. $this->member->first_name ." " . $this->member->last_name);
+        return redirect()->route('booth-checker')->with('success', "You have successfully registered, " . $this->booth_name .", " . ' Dr. '. $this->member->mem_first_name ." " . $this->member->mem_last_name);
     }
 }

@@ -9,10 +9,10 @@
 
         <div class="col-6 col-md-3 mb-2 mb-md-0">
             <input 
-                type="text"
+                type="number"
                 wire:model.live="search"
                 name="search"
-                id="search"
+                id="search" 
                 class="form-control"
                 placeholder="Enter PSA ID..."
             >
