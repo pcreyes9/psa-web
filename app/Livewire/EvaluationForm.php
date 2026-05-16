@@ -108,7 +108,7 @@ class EvaluationForm extends Component
             'ref_no' => $this->ref_no,
         ]);
 
-        session()->flash('success', 'Certificate is downloading. Kindly Check your downloads. Thank you!');
+        session()->flash('message', 'Certificate is downloading. Kindly Check your downloads. Thank you!');
         $this->btnShow = false;
 
 
