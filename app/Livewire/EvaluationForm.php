@@ -108,12 +108,15 @@ class EvaluationForm extends Component
             'ref_no' => $this->ref_no,
         ]);
 
+        session()->flash('success', 'Certificate is downloading. Kindly Check your downloads. Thank you!');
+
         return response()->streamDownload(
             function () use ($pdf) {
                 echo $pdf->stream();
             },
             $this->psa_id . ' - Midyear Convention 2026 Certification.pdf'
         );
+
     }
     
     public function render()
