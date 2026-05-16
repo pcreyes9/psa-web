@@ -89,6 +89,13 @@ class EvaluationForm extends Component
                 return;
             }
         }
+
+        if(!$this->first_name){
+            session()->flash(
+                'message',
+                'Your details were not found in the evaluation form responses. Please fill out the evaluation form. Thank you.'
+            );
+        }
     }
 
     public function submit()
