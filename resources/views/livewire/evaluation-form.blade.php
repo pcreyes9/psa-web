@@ -36,7 +36,7 @@
                             class="mt-4 w-full"
                             wire:loading.remove
                         >
-                            Download Evaluation Form
+                            Download Certificate of Attendance
                         </button>
 
                         <p>
