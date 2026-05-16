@@ -1,7 +1,9 @@
 <section id="contact" class="contact section ">
     <div class="row justify-content-center">
         <div class="col-lg-6"> 
-            <form wire:submit.prevent="submit" class="php-email-form text-center">
+            <h1 class="text-center mb-4 text-uppercase">BOOTH REGISTRATION IS NOW CLOSED. THANK YOU FOR YOUR PARTICIPATION!</h1>
+
+            {{-- <form wire:submit.prevent="submit" class="php-email-form text-center">
                 @csrf
 
                 <div class="col-12">
@@ -13,7 +15,7 @@
                 </div>
                 <h1 class="text-center mb-4 text-uppercase">{{ $this->booth_name }}</h1>
                 <div class="row justify-content-center gy-4">
-                    <div class="col-md-6"> {{-- narrower input --}}
+                    <div class="col-md-6"> 
                         <label class="mb-1 fw-bold text-dark">PSA ID No. (4-digit)</label>
                         <input 
                             type="number" 
@@ -26,7 +28,6 @@
                         >
                     </div>
                 </div>
-                {{-- {{ $psa_id }} --}}
 
                 @if ($btnShow)
                     <button 
@@ -43,7 +44,7 @@
                     </span>
                 </p>
                 @endif
-            </form>
+            </form> --}}
         </div>
     </div>
 </section>
