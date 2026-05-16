@@ -104,7 +104,7 @@
             <p style="font-size: 60px;"><i>to</i></p>
 
             <h1 style="font-size: 100px;">
-                {{ $first_name }} {{ $middle_name }} {{ $last_name }}, MD
+                {{ strtoupper($first_name . ' ' . $middle_name . ' ' . $last_name) }}, MD
             </h1>
             <p style="font-size: 60px;"><i>for having attended the</i></p>
             <p style="font-size: 95px; margin: -5px">PSA MIDYEAR CONVENTION 2026</p>
