@@ -109,6 +109,8 @@ class EvaluationForm extends Component
         ]);
 
         session()->flash('success', 'Certificate is downloading. Kindly Check your downloads. Thank you!');
+        $this->btnShow = false;
+
 
         return response()->streamDownload(
             function () use ($pdf) {
