@@ -19,22 +19,23 @@
                         <a href="{{ route('midyear-poster') }}" class="stretched-link"></a>
                     </div>
                 </div><!-- End Service Item -->
-                {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item item-cyan position-relative">
-                        <i class="bi bi-image-fill icon"></i>
+                
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-item item-orange position-relative">
+                        <i class="bi bi-file-text icon"></i>
                         <h3>Evaluation Form</h3>
                         <a href="{{ route('midyear-eval') }}" class="stretched-link"></a>
                     </div>
-                </div> --}}
+                </div>
 
-                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-item item-orange position-relative">
                         <i class="bi bi-calendar-event-fill icon"></i>
                         <h3>Registration</h3>
                         <a href="{{ route('midyear-registration-deets') }}" class="stretched-link"></a>
 
                     </div>
-                </div><!-- End Service Item -->
+                </div> --}}
 
                 {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-item item-teal position-relative">
