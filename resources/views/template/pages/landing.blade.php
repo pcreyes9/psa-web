@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="d-flex justify-content-center mt-5">
-          <a href="{{route('midyear-registration')}}"
+          <a href="https://forms.gle/yvuDo1BKQm9eQyWKA"
           target="_blank"
           class="btn btn-primary px-4 py-2 fs-5 fw-bold">
               Evaluate now to get your Certificate of Attendance!
