@@ -110,7 +110,7 @@
             <p style="font-size: 95px; margin: -5px">PSA MIDYEAR CONVENTION 2026</p>
             <p style="font-size: 60px;"><i>with the theme</i></p>
             <p><i style="font-size: 90px; font-weight: bold;">BREAKING BARRIERS:</i><br><span style="font-size: 85px;">ADVANCING ANESTHESIA <br> IN A RESOURCE - LIMITED ENVIRONMENT</span></p>
-            <p style="font-size: 60px;"><i>held at KCC Events and Convention Center, General Santos City held at KCC Events and Convention Center, General Santos City on May 14 to 16, 2026</i></p>
+            <p style="font-size: 60px;"><i>held at KCC Events and Convention Center, General Santos City <br> on May 14 to 16, 2026</i></p>
         </div>
 
         <div class="signature-section">
