@@ -60,7 +60,7 @@
         </li>
         <li class="dropdown"><a href="#"><span>Links</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li><a target="_blank" href="{{route('sim-wars')}}">SIM WARS TRILOGY</a></li>
+                {{-- <li><a target="_blank" href="{{route('sim-wars')}}">SIM WARS TRILOGY</a></li> --}}
                 <li><a target="_blank" href="https://www.koreanesthesia.org/">Koreanethesia 2025</a></li>
                 <li><a target="_blank" href="https://aca2025manila.org/">Asean Congress of Anesthesiologists 2025</a></li>
                 <li><a target="_blank" href="https://wcacongress.org/">World Congress of Anesthesiologists (WCA)</a></li>
