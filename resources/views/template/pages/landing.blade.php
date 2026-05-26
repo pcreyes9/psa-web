@@ -10,7 +10,7 @@
     
     <div class="container mt-3">
       <div class="row gy-4 justify-content-center">
-        <div class="col-xl-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+        {{-- <div class="col-xl-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
           <div class="text-center">
             <a target="_blank" href="{{ route('sim-wars') }}"><img src="images/sim-wars-poster.jpg" class="img-fluid animated " alt=""></a>
             <small class="text-muted"><i>Click the poster to learn more</i></small>
@@ -20,8 +20,7 @@
 
         <div class="container section-title mt-5 pt-5" data-aos="fade-up">
             <h2>MIDYEAR CONVENTION 2026 HIGHLIGHTS</h2>
-            {{-- <p>May 14, 2026 | KCC Events & Convention Center | General Santos City<br></p> --}}
-        </div><!-- End Section Title -->
+        </div> --}}
         
         <div class="mx-auto" style="max-width: 100%">
           <div class="ratio ratio-16x9">
