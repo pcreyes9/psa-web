@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 165" role="img" aria-label="Aspen Pharmacare">
+  <rect width="410" height="165" fill="#fff"/>
+  <g fill="#0054a6">
+    <path d="M78.8 8.8C37.6 22.8 11.8 52.6 11.8 90.6c0 38.5 31.3 64.8 70.7 64.8 25.7 0 48.4-10.4 61.8-30.5 13.7-20.6 12.4-46.1-1.5-68.3-6.3-10-18.6-19-27.2-18.1-7.8.8-10.2 8.8-4.7 15 17.9 20.2 20.1 42.5 8.9 59.9-9 14-24.8 22.4-43.2 22.4-26.5 0-47.4-18.2-47.4-44.3 0-26.9 20.2-49 53.2-63.5 9.8-4.3 16.9-11.3 14.7-18.1-2.3-7.1-10.4-3.8-18.3-1.1z"/>
+    <text x="134" y="105" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="400" letter-spacing="-2">aspen</text>
+    <text x="139" y="149" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="12">PHARMACARE</text>
+  </g>
+  <circle cx="64" cy="95" r="14" fill="#ef3340"/>
+</svg>

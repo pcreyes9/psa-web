@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 279 181" role="img" aria-label="B. Braun Sharing Expertise">
+  <rect width="279" height="181" fill="#fff"/>
+  <g fill="#00a98f">
+    <text x="17" y="94" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="800" letter-spacing="1">B</text>
+    <rect x="57" y="61" width="2" height="38" rx="1"/>
+    <text x="71" y="94" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="800" letter-spacing="-1">BRAUN</text>
+    <text x="66" y="123" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="500" letter-spacing="3.1">SHARING EXPERTISE</text>
+  </g>
+</svg>
