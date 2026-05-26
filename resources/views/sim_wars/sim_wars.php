@@ -16,6 +16,8 @@
     <meta property="og:image" content="sim_wars/assets/sim-wars-trilogy-philippines-2026.png" />
     <link rel="preload" href="sim_wars/assets/sim-wars-trilogy-philippines-2026.png" as="image" />
     <link rel="stylesheet" href="sim_wars/styles.css" />
+    <link href="assets/template/logo/PSA_LOGO.png" rel="icon">
+
   </head>
   <body>
     <header class="site-header" aria-label="Page navigation">
