@@ -1,9 +1,9 @@
 <section id="contact" class="contact section ">
     <div class="row justify-content-center">
         <div class="col-lg-6"> 
-            <h1 class="text-center mb-4 text-uppercase">BOOTH REGISTRATION IS NOW CLOSED. THANK YOU FOR YOUR PARTICIPATION!</h1>
+            {{-- <h1 class="text-center mb-4 text-uppercase">BOOTH REGISTRATION IS NOW CLOSED. THANK YOU FOR YOUR PARTICIPATION!</h1> --}}
 
-            {{-- <form wire:submit.prevent="submit" class="php-email-form text-center">
+            <form wire:submit.prevent="submit" class="php-email-form text-center">
                 @csrf
 
                 <div class="col-12">
@@ -44,7 +44,7 @@
                     </span>
                 </p>
                 @endif
-            </form> --}}
+            </form>
         </div>
     </div>
 </section>
