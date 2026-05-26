@@ -10,11 +10,19 @@
     
     <div class="container mt-3">
       <div class="row gy-4 justify-content-center">
-        {{-- <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="">
-            <a target="_blank" href="{{ route('midyear-registration') }}"><img src="images/PSA MIDYEAR 2026 RATES.png" class="img-fluid animated " alt=""></a>
+        <div class="col-xl-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-center">
+            <a target="_blank" href="{{ route('sim-wars') }}"><img src="images/sim-wars-poster.jpg" class="img-fluid animated " alt=""></a>
+            <small class="text-muted"><i>Click the poster to learn more</i></small>
+
           </div>
-        </div> --}}
+        </div>
+
+        <div class="container section-title mt-5 pt-5" data-aos="fade-up">
+            <h2>MIDYEAR CONVENTION 2026 HIGHLIGHTS</h2>
+            {{-- <p>May 14, 2026 | KCC Events & Convention Center | General Santos City<br></p> --}}
+        </div><!-- End Section Title -->
+        
         <div class="mx-auto" style="max-width: 100%">
           <div class="ratio ratio-16x9">
               <iframe 
@@ -28,6 +36,7 @@
             </iframe>
           </div>
         </div>
+
         <div class="d-flex justify-content-center mt-5">
           <a href="https://forms.gle/yvuDo1BKQm9eQyWKA"
           target="_blank"

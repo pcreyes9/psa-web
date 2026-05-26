@@ -130,6 +130,10 @@ Route::get('/scan-qr', function () {
     return view('template/pages/qr');
 })->name('scan-qr');
 
+Route::get('/sim-wars', function () {
+    return view('sim_wars/sim_wars');
+})->name('sim-wars');
+
 
 // Route::get('/read-sheet', function () {
 
