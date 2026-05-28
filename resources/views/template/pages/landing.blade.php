@@ -10,9 +10,23 @@
     
     <div class="container mt-3">
       <div class="row gy-4 justify-content-center">
-        <div class="col-xl-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-12 mb-3" data-aos="zoom-in" data-aos-delay="100">
           <div class="text-center">
-            <a target="_blank" href="{{ route('sim-wars') }}"><img src="images/sim-wars-poster.jpg" class="img-fluid animated " alt=""></a>
+            <a target="_blank" href="{{ route('sim-wars') }}" class="d-block w-100">
+                <!-- Mobile Portrait -->
+                <img src="{{ asset('images/sim-wars-poster.jpg') }}"
+                    class="img-fluid w-100 d-block d-md-none"
+                    alt="SIM Wars Poster"
+                    style="object-fit: cover;">
+
+                <!-- Desktop Landscape -->
+                <img src="{{ asset('images/sim-wars-landscape.jpg') }}"
+                    class="img-fluid w-100 d-none d-md-block"
+                    alt="SIM Wars Landscape"
+                    style="object-fit: cover;">
+
+            </a>        
+            
             <small class="text-muted"><i>Click the poster to learn more</i></small>
 
           </div>
