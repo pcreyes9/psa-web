@@ -98,35 +98,63 @@
         </div>
       </section>
 
+      <div class="video-section">
+        <iframe
+            src="https://www.youtube.com/embed/RFVr-0iXjQo?autoplay=1&mute=1"
+            title="YouTube video player"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+      </div>
+
       <section class="section intro" id="about">
+
         <div class="section-kicker">Why Join</div>
+
         <div class="intro-grid">
-          <div>
-            <h2>Turn “knowing what to do” into “performing when it counts”</h2>
-            <p>
-              Simulation is an essential 21st-century tool for anesthesia education, allowing learners to practice cognitive, technical, and behavioral skills without risk to real patients. SIM WARS TRILOGY goes beyond trophies and rankings: it is intentionally designed to strengthen clinical reasoning, teamwork, and readiness for time-critical patient care.
-            </p>
-          </div>
-          <dl class="quick-facts">
             <div>
-              <dt>Who can join</dt>
-              <dd>Anesthesiology training programs and their residency or fellowship trainees</dd>
+                <h2>Turn “knowing what to do” into “performing when it counts”</h2>
+                <p>
+                    Simulation is an essential 21st-century tool for anesthesia education,
+                    allowing learners to practice cognitive, technical, and behavioral skills
+                    without risk to real patients. SIM WARS TRILOGY goes beyond trophies and
+                    rankings: it is intentionally designed to strengthen clinical reasoning,
+                    teamwork, and readiness for time-critical patient care.
+                </p>
             </div>
-            <div>
-              <dt>Team setup</dt>
-              <dd>3-4 trainees with one program trainer serving as coach</dd>
-            </div>
-            <div>
-              <dt>Program limit</dt>
-              <dd>Each training program may enter up to 2 teams with different coaches</dd>
-            </div>
-            <div>
-              <dt>Screening</dt>
-              <dd>The Registration and Screening Committee will assist with screening and registration</dd>
-            </div>
-          </dl>
+
+            <dl class="quick-facts">
+                <div>
+                    <dt>Who can join</dt>
+                    <dd>
+                        Anesthesiology training programs and their residency or fellowship trainees
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Team setup</dt>
+                    <dd>
+                        3-4 trainees with one program trainer serving as coach
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Program limit</dt>
+                    <dd>
+                        Each training program may enter up to 2 teams with different coaches
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Screening</dt>
+                    <dd>
+                        The Registration and Screening Committee will assist with screening and registration
+                    </dd>
+                </div>
+            </dl>
         </div>
-      </section>
+
+    </section>
 
       <section class="section benefits" aria-labelledby="benefits-title">
         <div class="section-kicker">Competition Focus</div>
