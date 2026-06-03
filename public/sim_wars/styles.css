@@ -16,6 +16,20 @@
   --content: 1180px;
 }
 
+.video-section {
+    /* margin-top: 58px; */
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 0 auto;
+}
+
+.video-section iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -195,6 +209,30 @@ textarea {
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.86);
   font-size: 1.16rem;
+}
+
+.hero-deadline {
+  display: inline-grid;
+  gap: 3px;
+  margin-top: 24px;
+  padding: 13px 16px;
+  border: 1px solid rgba(245, 189, 79, 0.42);
+  border-radius: var(--radius);
+  background: rgba(5, 14, 30, 0.62);
+  color: var(--white);
+}
+
+.hero-deadline span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero-deadline strong {
+  color: var(--gold);
+  font-size: 1.22rem;
+  line-height: 1.1;
 }
 
 .hero-actions,
@@ -566,6 +604,11 @@ address {
   text-transform: uppercase;
 }
 
+.worksheet-details .deferred-section summary span {
+  background: rgba(239, 118, 95, 0.12);
+  color: var(--coral);
+}
+
 .worksheet-details p {
   margin: 0;
   padding: 16px 20px 20px;
@@ -621,6 +664,37 @@ address {
   top: 120px;
 }
 
+.deadline-panel {
+  margin-top: 28px;
+  padding: 22px 24px;
+  border-left: 4px solid var(--coral);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.deadline-panel span,
+.deadline-panel strong {
+  display: block;
+}
+
+.deadline-panel span {
+  color: var(--coral);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.deadline-panel strong {
+  margin-top: 4px;
+  color: var(--ink);
+  font-size: 1.52rem;
+  line-height: 1.1;
+}
+
+.deadline-panel p {
+  margin-top: 10px;
+}
+
 .contact-panel {
   margin-top: 32px;
   padding: 24px;
@@ -663,6 +737,16 @@ legend {
   color: var(--ink);
   font-size: 1rem;
   font-weight: 900;
+}
+
+.fieldset-note {
+  margin: -6px 0 18px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: rgba(21, 91, 216, 0.07);
+  color: var(--blue);
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
 label {

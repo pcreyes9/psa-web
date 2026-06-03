@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,14 +17,12 @@
     <meta property="og:image" content="sim_wars/assets/sim-wars-trilogy-philippines-2026.png" />
     <link rel="preload" href="sim_wars/assets/sim-wars-trilogy-philippines-2026.png" as="image" />
     <link rel="stylesheet" href="sim_wars/styles.css" />
-    <link href="assets/template/logo/PSA_LOGO.png" rel="icon">
-
   </head>
   <body>
     <header class="site-header" aria-label="Page navigation">
       <div class="brand-logos" aria-label="Organizer logos">
         <a href="https://www.psa-inc.org/" target="_blank" rel="noopener" aria-label="Philippine Society of Anesthesiologists">
-          <img src="sim_wars/assets/logos/PSA_LOGO.png" alt="Philippine Society of Anesthesiologists logo" />
+          <img src="sim_wars/assets/logos/psa-logo.png" alt="Philippine Society of Anesthesiologists logo" />
         </a>
         <a href="https://forms.gle/fj1nsHf8gjn2KhcQ6" target="_blank" rel="noopener" aria-label="ACCESS official submission portal">
           <img src="sim_wars/assets/logos/access-logo.png" alt="ACCESS logo" />
@@ -54,6 +53,10 @@
           </h1>
           <p class="hero-lede">
             A high-energy live simulation competition for anesthesiology training programs, built to test clinical reasoning, teamwork, resource management, and coordinated care under crisis conditions.
+          </p>
+          <p class="hero-deadline">
+            <span>Registration deadline</span>
+            <strong>June 20, 2026</strong>
           </p>
           <div class="hero-actions" aria-label="Registration actions">
             <a class="button button-primary" href="#registration">
@@ -95,35 +98,63 @@
         </div>
       </section>
 
+      <div class="video-section">
+        <iframe
+            src="https://www.youtube.com/embed/RFVr-0iXjQo?autoplay=1&mute=1"
+            title="YouTube video player"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+      </div>
+
       <section class="section intro" id="about">
+
         <div class="section-kicker">Why Join</div>
+
         <div class="intro-grid">
-          <div>
-            <h2>Turn “knowing what to do” into “performing when it counts”</h2>
-            <p>
-              Simulation is an essential 21st-century tool for anesthesia education, allowing learners to practice cognitive, technical, and behavioral skills without risk to real patients. SIM WARS TRILOGY goes beyond trophies and rankings: it is intentionally designed to strengthen clinical reasoning, teamwork, and readiness for time-critical patient care.
-            </p>
-          </div>
-          <dl class="quick-facts">
             <div>
-              <dt>Who can join</dt>
-              <dd>Anesthesiology training programs and their residency or fellowship trainees</dd>
+                <h2>Turn “knowing what to do” into “performing when it counts”</h2>
+                <p>
+                    Simulation is an essential 21st-century tool for anesthesia education,
+                    allowing learners to practice cognitive, technical, and behavioral skills
+                    without risk to real patients. SIM WARS TRILOGY goes beyond trophies and
+                    rankings: it is intentionally designed to strengthen clinical reasoning,
+                    teamwork, and readiness for time-critical patient care.
+                </p>
             </div>
-            <div>
-              <dt>Team setup</dt>
-              <dd>3-4 trainees with one program trainer serving as coach</dd>
-            </div>
-            <div>
-              <dt>Program limit</dt>
-              <dd>Each training program may enter up to 2 teams with different coaches</dd>
-            </div>
-            <div>
-              <dt>Screening</dt>
-              <dd>The Registration and Screening Committee will assist with screening and registration</dd>
-            </div>
-          </dl>
+
+            <dl class="quick-facts">
+                <div>
+                    <dt>Who can join</dt>
+                    <dd>
+                        Anesthesiology training programs and their residency or fellowship trainees
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Team setup</dt>
+                    <dd>
+                        3-4 trainees with one program trainer serving as coach
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Program limit</dt>
+                    <dd>
+                        Each training program may enter up to 2 teams with different coaches
+                    </dd>
+                </div>
+
+                <div>
+                    <dt>Screening</dt>
+                    <dd>
+                        The Registration and Screening Committee will assist with screening and registration
+                    </dd>
+                </div>
+            </dl>
         </div>
-      </section>
+
+    </section>
 
       <section class="section benefits" aria-labelledby="benefits-title">
         <div class="section-kicker">Competition Focus</div>
@@ -188,31 +219,31 @@
             <div class="section-kicker">Scenario Submission Kit</div>
             <h2 id="scenario-title">Prepare your simulation scenario before submitting</h2>
             <p>
-              Each team should submit a completed Simulation Scenario Worksheet with the official registration. Scenario topics should center on Anesthesia Crisis Resource Management across anesthesia topics and subspecialties. AI-assisted scenario development is accepted, but citations must be included.
+              For the first registration and initial submission, teams only need to complete Sections 1, 2, 3, and 8 of the Simulation Scenario Worksheet. Sections 4, 5, 6, and 7 are not required at this stage. Scenario topics should center on Anesthesia Crisis Resource Management across anesthesia topics and subspecialties. AI-assisted scenario development is accepted, but citations must be included.
             </p>
             <div class="scenario-stats" aria-label="Scenario timing requirements">
               <div>
-                <strong>10 min</strong>
-                <span>Estimated scenario time</span>
+                <strong>1, 2, 3, 8</strong>
+                <span>Required for initial submission</span>
               </div>
               <div>
-                <strong>5 min</strong>
-                <span>Estimated debriefing time</span>
+                <strong>4-7</strong>
+                <span>Not required for registration</span>
               </div>
               <div>
-                <strong>ACRM</strong>
-                <span>Required scenario focus</span>
+                <strong>June 20</strong>
+                <span>Registration deadline</span>
               </div>
             </div>
           </div>
 
           <aside class="scenario-card" aria-label="Scenario worksheet resources">
             <h3>Worksheet resources</h3>
-            <p>Download the worksheet, complete it with your team, then upload it through the official registration and submission portal.</p>
+            <p>Download the worksheet and complete only Sections 1, 2, 3, and 8 for the initial registration. Sections 4-7 can be left blank until later instructions are shared.</p>
             <div class="scenario-actions">
               <a
                 class="button button-primary"
-                href="sim_wars/assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
+                href="assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
                 download
               >
                 <span>Download worksheet</span>
@@ -236,59 +267,59 @@
         </div>
 
         <div class="worksheet-details" aria-label="Simulation Scenario Worksheet sections">
-          <details open>
+          <details class="required-section" open>
             <summary>
-              <span>Section 1</span>
-              Scenario Developers
+              <span>Required</span>
+              Section 1: Scenario Developers
             </summary>
             <p>Scenario title, developer, brief case description, estimated scenario time, and estimated debriefing time.</p>
           </details>
-          <details>
+          <details class="required-section" open>
             <summary>
-              <span>Section 2</span>
-              Scenario Demographics
+              <span>Required</span>
+              Section 2: Scenario Demographics
             </summary>
             <p>Target learners, learner preparation, and simulation location.</p>
           </details>
-          <details>
+          <details class="required-section" open>
             <summary>
-              <span>Section 3</span>
-              Curriculum Integration
+              <span>Required</span>
+              Section 3: Curriculum Integration
             </summary>
             <p>Educational goal, up to 5 ACRM and medical objectives, case summary, and references.</p>
           </details>
-          <details>
+          <details class="deferred-section">
             <summary>
-              <span>Section 4</span>
-              Debriefing Points
+              <span>Not required now</span>
+              Section 4: Debriefing Points
             </summary>
-            <p>Knowledge points, technical skills, and non-technical skills to guide the debriefing discussion.</p>
+            <p>This section is not required for the first registration submission.</p>
           </details>
-          <details>
+          <details class="deferred-section">
             <summary>
-              <span>Section 5</span>
-              Orientation Script and Room Setup
+              <span>Not required now</span>
+              Section 5: Orientation Script and Room Setup
             </summary>
-            <p>Case brief, scenario cast, simulator type, facilitators, actors, simulation technology support, participants, equipment, and moulage.</p>
+            <p>This section is not required for the first registration submission.</p>
           </details>
-          <details>
+          <details class="deferred-section">
             <summary>
-              <span>Section 6</span>
-              Patient Information
+              <span>Not required now</span>
+              Section 6: Patient Information
             </summary>
-            <p>Patient chart, vital signs, review of systems, allergies, history, current medications, and extra patient information.</p>
+            <p>This section is not required for the first registration submission.</p>
           </details>
-          <details>
+          <details class="deferred-section">
             <summary>
-              <span>Section 7</span>
-              Storyboard
+              <span>Not required now</span>
+              Section 7: Storyboard
             </summary>
-            <p>Simulation flow, scripted moments, patient states, timeline, expected learner actions, modifiers, triggers, and facilitator notes.</p>
+            <p>This section is not required for the first registration submission.</p>
           </details>
-          <details>
+          <details class="required-section" open>
             <summary>
-              <span>Section 8</span>
-              Supporting Documents and Debriefing Guide
+              <span>Required</span>
+              Section 8: Supporting Documents and Debriefing Guide
             </summary>
             <p>Laboratory results, images, ideal or expected actions, actual performance, plus/delta or AI feedback, and follow-up teaching points.</p>
           </details>
@@ -301,7 +332,8 @@
             <li>Coach name and contact details</li>
             <li>3-4 trainee names and year levels</li>
             <li>Scenario title and ACRM topic</li>
-            <li>Completed Simulation Scenario Worksheet</li>
+            <li>Worksheet Sections 1, 2, 3, and 8 completed</li>
+            <li>Sections 4, 5, 6, and 7 left blank for now</li>
             <li>References and AI citation, if applicable</li>
           </ul>
         </div>
@@ -312,12 +344,17 @@
           <div class="section-kicker">Registration</div>
           <h2 id="registration-title">Prepare your team details, then complete the official submission</h2>
           <p>
-            Use this section to generate a clean team registration summary for coach and trainee review. Final registration and scenario file submission should be completed through the official Google Form.
+            Use this section to generate a detailed registration summary for coach and trainee review. Initial scenario submission only requires Worksheet Sections 1, 2, 3, and 8. Final registration and file submission should be completed through the official Google Form.
           </p>
+          <div class="deadline-panel" aria-label="Registration deadline">
+            <span>Registration deadline</span>
+            <strong>June 20, 2026</strong>
+            <p>Initial submission: Sections 1, 2, 3, and 8 only.</p>
+          </div>
           <div class="contact-panel" aria-label="Inquiry contacts">
             <h3>For inquiries</h3>
-            <p>Dr. Grace Catalan <a href="tel:+639228960381">09228960381</a></p>
-            <p>Dr. Ralph Anislag <a href="tel:+639176330080">09176330080</a></p>
+            <p>ACCESS Sim Wars Contact <a href="tel:+639228960381">09228960381</a></p>
+            <p>ACCESS Sim Wars Contact <a href="tel:+639176330080">09176330080</a></p>
           </div>
         </div>
 
@@ -332,6 +369,10 @@
               Training program / institution
               <input name="program" autocomplete="organization" required />
             </label>
+            <label>
+              Department / training unit
+              <input name="department" autocomplete="organization" required />
+            </label>
             <div class="form-row">
               <label>
                 Country / region
@@ -340,6 +381,20 @@
               <label>
                 City
                 <input name="city" autocomplete="address-level2" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Program director / coordinator
+                <input name="programDirector" autocomplete="name" />
+              </label>
+              <label>
+                Team entry from program
+                <select name="teamEntry" required>
+                  <option value="">Select one</option>
+                  <option>First team from this program</option>
+                  <option>Second team from this program</option>
+                </select>
               </label>
             </div>
           </fieldset>
@@ -407,7 +462,8 @@
           </fieldset>
 
           <fieldset>
-            <legend>Scenario</legend>
+            <legend>Initial Scenario Submission</legend>
+            <p class="fieldset-note">For first registration, complete Worksheet Sections 1, 2, 3, and 8 only. Sections 4-7 are not required at this stage.</p>
             <label>
               Scenario topic
               <select name="topic" required>
@@ -426,16 +482,82 @@
               <input name="scenarioTitle" required />
             </label>
             <label>
-              Brief description
+              Scenario developer(s)
+              <input name="scenarioDevelopers" required />
+            </label>
+            <label>
+              Section 1: Brief description of case
               <textarea
                 name="scenarioBrief"
                 rows="4"
                 placeholder="Case keywords, critical events, expected learner actions..."
+                required
+              ></textarea>
+            </label>
+            <div class="form-row">
+              <label>
+                Section 2: Target learners
+                <input name="targetLearners" required />
+              </label>
+              <label>
+                Section 2: Simulation location
+                <input name="simulationLocation" required />
+              </label>
+            </div>
+            <label>
+              Section 2: Learner preparation
+              <textarea
+                name="learnerPreparation"
+                rows="3"
+                placeholder="Necessary skills or knowledge before attending the simulation..."
+              ></textarea>
+            </label>
+            <label>
+              Section 3: Educational goal
+              <textarea
+                name="educationalGoal"
+                rows="3"
+                required
+              ></textarea>
+            </label>
+            <label>
+              Section 3: Objectives, max 5
+              <textarea
+                name="objectives"
+                rows="5"
+                placeholder="List ACRM and medical objectives..."
+                required
+              ></textarea>
+            </label>
+            <label>
+              Section 3: Case summary
+              <textarea
+                name="caseSummary"
+                rows="4"
+                placeholder="Brief summary of case progression or critical events..."
+                required
+              ></textarea>
+            </label>
+            <label>
+              Section 3: References
+              <textarea
+                name="references"
+                rows="3"
+                placeholder="Include citations, including AI assistance if used..."
+              ></textarea>
+            </label>
+            <label>
+              Section 8: Supporting documents and debriefing guide summary
+              <textarea
+                name="debriefingGuide"
+                rows="4"
+                placeholder="Labs, images, ideal actions, performance gaps, plus/delta or AI feedback..."
+                required
               ></textarea>
             </label>
             <label class="check-line">
               <input name="eligibility" type="checkbox" required />
-              <span>I confirm that the team meets the eligibility requirements and will submit the registration form and scenario worksheet through the official portal.</span>
+              <span>I confirm that the team meets the eligibility requirements and will submit Worksheet Sections 1, 2, 3, and 8 by June 20, 2026.</span>
             </label>
           </fieldset>
 
@@ -484,8 +606,8 @@
           <a class="partner-logo" href="https://www.bbraun.ph/en.html" target="_blank" rel="noopener">
             <img src="sim_wars/assets/logos/bbraun-logo-official.svg" alt="B. Braun Philippines" />
           </a>
-          <a class="partner-logo" href="https://www.aspen.ph/" target="_blank" rel="noopener">
-            <img src="sim_wars/assets/logos/aspen-logo-official.svg" alt="Aspen Philippines" />
+          <a class="partner-logo" href="https://aspensystem.com.ph/category/lab-furniture/" target="_blank" rel="noopener">
+            <img src="sim_wars/assets/logos/aspen-multi-system-logo.png" alt="Aspen Multi-System Corp." />
           </a>
         </div>
       </section>
