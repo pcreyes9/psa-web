@@ -27,7 +27,7 @@
 
             </a>        
             
-            <small class="text-muted"><i>Click the poster to learn more</i></small>
+            <small class="text-muted"><i>Click the poster to register and learn more</i></small>
 
           </div>
         </div>
