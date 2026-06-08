@@ -11,12 +11,12 @@ class ScanQr extends Component
     public $scannedCode = '';
     public $displayName = 'Waiting for Scan...';
     public $success = false;
-    public $member, $psa_id;
+    public $member = null, $psa_id;
 
     #[On('qrScanned')]
     public function qrScanned($code)
     {
-        // $this->scannedCode = $code;
+        $this->scannedCode = $code;
         $this->success = true;
 
         /*
