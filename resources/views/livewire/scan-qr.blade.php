@@ -11,7 +11,7 @@
                             d-flex align-items-center justify-content-center"
                     style="width:70px;height:70px;font-size:24px;">
 
-                    {{ strtoupper(substr($member?->mem_first_name ?? 'M',0,1)) }}
+                    {{ strtoupper(substr($member?->member_id_no ?? 'M',0,4)) }}
 
                 </div>
 
@@ -20,6 +20,7 @@
                     <h3 class="mb-1 fw-bold">
                         {{ $member?->mem_last_name }},
                         {{ $member?->mem_first_name }}
+                        {{ $member?->mem_middle_name }}
                     </h3>
 
                     <small class="opacity-75">
@@ -42,7 +43,7 @@
                 </div>
 
                 <div class="row g-3">
-                    <div class="col-6">
+                    <div class="col-12 col-sm-3">
                         <div class="border rounded-3 p-3">
                             <small class="text-muted d-block">
                                 PSA ID
@@ -53,13 +54,13 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-12 col-sm-9">
                         <div class="border rounded-3 p-3">
                             <small class="text-muted d-block">
                                 Chapter
                             </small>
                             <strong>
-                                {{ $member->psa_chapter_code }}
+                                {{ $member->psa_chapter_code }} - {{ $member->psa_chapter_desc }}
                             </strong>
                         </div>
                     </div>
@@ -81,7 +82,7 @@
                                 Phone Number
                             </small>
                             <strong>
-                                {{ $member->mem_email_address }}
+                                {{ $member->mem_mobile_no1 }}
                             </strong>
                         </div>
                     </div>
@@ -96,7 +97,7 @@
                 QR Code Scanner
             </h6>
 
-            <div class="bg-white rounded-4 border shadow-sm p-2">
+            <div class="bg-gray rounded-4 border shadow-sm p-2">
                 <div id="reader"></div>
             </div>
 

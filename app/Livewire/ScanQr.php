@@ -19,6 +19,7 @@ class ScanQr extends Component
         $this->scannedCode = $code;
         $this->success = true;
 
+        // dd($this->scannedCode);
         /*
         Example:
         Fetch data from database here
@@ -26,20 +27,20 @@ class ScanQr extends Component
 
         // TEMPORARY DISPLAY
         $this->member = DB::table('members')
-            ->where('member_id_no', $code)
+            ->leftJoin(
+                'chapters',
+                'members.psa_chapter_code',
+                '=',
+                'chapters.psa_chapter_code'
+            )
+            ->where('members.member_id_no', $code)
+            ->select(
+                'members.*',
+                'chapters.psa_chapter_desc'
+            )
             ->first();
 
-        if ($this->member) {
-
-            $this->displayName =
-                'Name: ' . $this->member->mem_first_name . ' ' .
-                $this->member->mem_last_name;
-            $this->psa_id = 'PSA ID: ' . $this->member->member_id_no;
-
-        } else {
-
-            $this->displayName = 'Member Not Found';
-        }
+        // dd($this->member);
     }
 
     public function scanAgain()
