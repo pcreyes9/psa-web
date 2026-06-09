@@ -4,19 +4,15 @@
 
         <!-- Header -->
         <div class="bg-primary bg-gradient text-white p-4">
-
             <div class="d-flex align-items-center">
-
                 <div class="rounded-circle bg-white text-primary fw-bold
                             d-flex align-items-center justify-content-center"
                     style="width:70px;height:70px;font-size:24px;">
 
                     {{ strtoupper(substr($member?->member_id_no ?? 'M',0,4)) }}
-
                 </div>
 
                 <div class="ms-3">
-
                     <h3 class="mb-1 fw-bold">
                         {{ $member?->mem_last_name }},
                         {{ $member?->mem_first_name }}
@@ -26,23 +22,20 @@
                     <small class="opacity-75">
                         PSA Member
                     </small>
-
                 </div>
-
             </div>
-
         </div>
 
         <!-- Member Details -->
         @if($member)
             <div class="p-4">
-
                 <div class="alert alert-success border-0 rounded-3">
                     <i class="bi bi-check-circle-fill me-2"></i>
                     Member Verified
                 </div>
 
                 <div class="row g-3">
+
                     <div class="col-12 col-sm-3">
                         <div class="border rounded-3 p-3">
                             <small class="text-muted d-block">
@@ -92,7 +85,6 @@
 
         <!-- Scanner -->
         <div class="p-4 bg-light">
-
             <h6 class="fw-bold mb-3">
                 QR Code Scanner
             </h6>
@@ -185,6 +177,5 @@
             startScanner();
 
         });
-
     </script>
 </div>

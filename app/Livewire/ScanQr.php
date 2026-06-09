@@ -19,13 +19,6 @@ class ScanQr extends Component
         $this->scannedCode = $code;
         $this->success = true;
 
-        // dd($this->scannedCode);
-        /*
-        Example:
-        Fetch data from database here
-        */
-
-        // TEMPORARY DISPLAY
         $this->member = DB::table('members')
             ->leftJoin(
                 'chapters',
@@ -40,7 +33,6 @@ class ScanQr extends Component
             )
             ->first();
 
-        // dd($this->member);
     }
 
     public function scanAgain()
