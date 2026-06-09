@@ -1,55 +1,116 @@
 <div class="min-vh-100 d-flex align-items-center justify-content-center py-5">
-
     <div class="card border-0 shadow-lg rounded-4 overflow-hidden"
-         style="max-width: 420px; width: 100%;">
+     style="max-width: 500px; width:100%;">
 
-        <div class="bg-primary text-white text-left py-4 px-3">
+        <!-- Header -->
+        <div class="bg-primary bg-gradient text-white p-4">
+            <div class="d-flex align-items-center">
+                <div class="rounded-circle bg-white text-primary fw-bold
+                            d-flex align-items-center justify-content-center"
+                    style="width:70px;height:70px;font-size:24px;">
 
-            <h1 class="fw-bold mb-3" style="font-size: 28px;">
-                {{ $displayName }}
-            </h1>
+                    {{ strtoupper(substr($member?->member_id_no ?? 'M',0,4)) }}
+                </div>
 
-            <h1 class="fw-bold mb-3" style="font-size: 28px;">
-                {{ $psa_id }}
-            </h1>
+                <div class="ms-3">
+                    <h3 class="mb-1 fw-bold">
+                        {{ $member?->mem_last_name }},
+                        {{ $member?->mem_first_name }}
+                        {{ $member?->mem_middle_name }}
+                    </h3>
 
+                    <small class="opacity-75">
+                        PSA Member
+                    </small>
+                </div>
+            </div>
         </div>
 
-        <div class="p-4">
+        <!-- Member Details -->
+        @if($member)
+            <div class="p-4">
+                <div class="alert alert-success border-0 rounded-3">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Member Verified
+                </div>
 
-            <!-- QR Reader -->
-            <div class="bg-white border rounded-4 overflow-hidden p-2">
+                <div class="row g-3">
+
+                    <div class="col-12 col-sm-3">
+                        <div class="border rounded-3 p-3">
+                            <small class="text-muted d-block">
+                                PSA ID
+                            </small>
+                            <strong>
+                                {{ $member->member_id_no }}
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-9">
+                        <div class="border rounded-3 p-3">
+                            <small class="text-muted d-block">
+                                Chapter
+                            </small>
+                            <strong>
+                                {{ $member->psa_chapter_code }} - {{ $member->psa_chapter_desc }}
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="border rounded-3 p-3">
+                            <small class="text-muted d-block">
+                                Email Address
+                            </small>
+                            <strong>
+                                {{ $member->mem_email_address }}
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="border rounded-3 p-3">
+                            <small class="text-muted d-block">
+                                Phone Number
+                            </small>
+                            <strong>
+                                {{ $member->mem_mobile_no1 }}
+                            </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        <!-- Scanner -->
+        <div class="p-4 bg-light">
+            <h6 class="fw-bold mb-3">
+                QR Code Scanner
+            </h6>
+
+            <div class="bg-gray rounded-4 border shadow-sm p-2">
                 <div id="reader"></div>
             </div>
 
-            <!-- Scan Result -->
             @if($success)
-                <div class="alert alert-success mt-4">
-                    <strong>Scanned:</strong>
-                    {{ $scannedCode }}
-                </div>
-            @endif
-
-            <!-- Refresh Page -->
-            @if($success)
-                <div class="text-center mt-3">
+                <div class="text-center mt-4">
                     <button
                         onclick="window.location.reload()"
-                        class="btn btn-primary rounded-pill px-4">
-                        Scan Again
+                        class="btn btn-primary btn-lg rounded-pill px-4">
+
+                        Scan Another QR
+
                     </button>
                 </div>
             @endif
 
-            <!-- Status -->
-            <div class="text-center mt-4">
+            <div class="text-center mt-3">
                 <small class="text-muted">
                     Ensure proper lighting and camera permission is enabled
                 </small>
             </div>
-
         </div>
-
     </div>
 
     <!-- QR Script -->
@@ -116,7 +177,5 @@
             startScanner();
 
         });
-
     </script>
-
 </div>

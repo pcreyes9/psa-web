@@ -1,6 +1,6 @@
 @extends('template.master')
 
-@section('title', 'PSA - Hymn')
+@section('title', 'PSA - Scan Member')
 
 @section('content')
     <section>

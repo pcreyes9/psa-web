@@ -11,35 +11,28 @@ class ScanQr extends Component
     public $scannedCode = '';
     public $displayName = 'Waiting for Scan...';
     public $success = false;
-    public $member, $psa_id;
+    public $member = null, $psa_id;
 
     #[On('qrScanned')]
     public function qrScanned($code)
     {
-        // $this->scannedCode = $code;
+        $this->scannedCode = $code;
         $this->success = true;
 
-        /*
-        Example:
-        Fetch data from database here
-        */
-
-        // TEMPORARY DISPLAY
         $this->member = DB::table('members')
-            ->where('member_id_no', $code)
+            ->leftJoin(
+                'chapters',
+                'members.psa_chapter_code',
+                '=',
+                'chapters.psa_chapter_code'
+            )
+            ->where('members.member_id_no', $code)
+            ->select(
+                'members.*',
+                'chapters.psa_chapter_desc'
+            )
             ->first();
 
-        if ($this->member) {
-
-            $this->displayName =
-                'Name: ' . $this->member->mem_first_name . ' ' .
-                $this->member->mem_last_name;
-            $this->psa_id = 'PSA ID: ' . $this->member->member_id_no;
-
-        } else {
-
-            $this->displayName = 'Member Not Found';
-        }
     }
 
     public function scanAgain()

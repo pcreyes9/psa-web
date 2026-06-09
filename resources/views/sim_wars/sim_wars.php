@@ -243,7 +243,7 @@
             <div class="scenario-actions">
               <a
                 class="button button-primary"
-                href="assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
+                href="sim_wars/assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
                 download
               >
                 <span>Download worksheet</span>
