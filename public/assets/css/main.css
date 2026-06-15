@@ -1133,6 +1133,16 @@ section,
   transform: scale(1);
 }
 
+.fb-post-card {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fb-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.12);
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/

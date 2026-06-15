@@ -39,6 +39,11 @@
 </head>
 
 <body class="index-page">
+  <div id="fb-root"></div>
+
+  <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
+  </script>
   <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto">

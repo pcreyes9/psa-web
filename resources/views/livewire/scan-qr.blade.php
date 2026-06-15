@@ -7,7 +7,7 @@
             <div class="d-flex align-items-center">
                 <div class="rounded-circle bg-white text-primary fw-bold
                             d-flex align-items-center justify-content-center"
-                    style="width:70px;height:70px;font-size:24px;">
+                    style="width:70px;height:70px;font-size:20px;">
 
                     {{ strtoupper(substr($member?->member_id_no ?? 'M',0,4)) }}
                 </div>
