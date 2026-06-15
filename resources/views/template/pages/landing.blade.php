@@ -3,94 +3,155 @@
 @section('content')
 
 <section id="pricing" class="pricing section mt-5">
-    <!-- Section Title -->
-    {{-- <div class="container section-title" data-aos="fade-up">
-      <h2>UPCOMING EVENTS</h2> 
-    </div><!-- End Section Title --> --}}
-    
     <div class="container mt-3">
-      <div class="row gy-4 justify-content-center">
-        <div class="col-xl-12 mb-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="text-center">
-            <a target="_blank" href="{{ route('sim-wars') }}" class="d-block w-100">
-                <!-- Mobile Portrait -->
-                <img src="{{ asset('images/sim-wars-poster.jpg') }}"
-                    class="img-fluid w-100 d-block d-md-none"
-                    alt="SIM Wars Poster"
-                    style="object-fit: cover;">
+        <div class="row gy-4 justify-content-center">
 
-                <!-- Desktop Landscape -->
-                <img src="{{ asset('images/sim-wars-landscape.jpg') }}"
-                    class="img-fluid w-100 d-none d-md-block"
-                    alt="SIM Wars Landscape"
-                    style="object-fit: cover;">
+            <!-- SIM Wars Banner -->
+            <div class="col-xl-12 mb-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="text-center">
+                    <a target="_blank" href="{{ route('sim-wars') }}" class="d-block w-100">
 
-            </a>        
-            
-            <p class="text-muted"><i>Click the poster to register and learn more</i></p>
+                        <!-- Mobile Portrait -->
+                        <img src="{{ asset('images/sim-wars-poster.jpg') }}"
+                             class="img-fluid w-100 d-block d-md-none"
+                             alt="SIM Wars Poster"
+                             style="object-fit: cover;">
 
-          </div>
+                        <!-- Desktop Landscape -->
+                        <img src="{{ asset('images/sim-wars-landscape.jpg') }}"
+                             class="img-fluid w-100 d-none d-md-block"
+                             alt="SIM Wars Landscape"
+                             style="object-fit: cover;">
+
+                    </a>
+
+                    <p class="text-muted">
+                        <i>Click the poster to register and learn more</i>
+                    </p>
+                </div>
+            </div>
         </div>
 
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+
+                        <h1 data-aos="fade-up">MISSION</h1>
+                        <p data-aos="fade-up" data-aos-delay="100">
+                            To promote and maintain a community of responsible anesthesiologists who can practice safe and quality anesthesia care in the pursuit of serving the interests of its members, their patients and the nation.
+                        </p>
+
+                        <h1 data-aos="fade-up">VISION</h1>
+                        <p data-aos="fade-up" data-aos-delay="100">
+                            A Society that envisions the Filipino anesthesiologists as world-class professionals pursuing the PSA Mission with a deep of fulfillment and pride.
+                        </p>
+
+                        <h1 data-aos="fade-up">SHARED VALUES</h1>
+                        <p data-aos="fade-up" data-aos-delay="100">
+                            <strong>
+                                Commitment to Quality Care |
+                                Concern for Members |
+                                Professional Growth
+                            </strong>
+                        </p>
+
+                        <div class="d-flex flex-column flex-md-row"
+                             data-aos="fade-up"
+                             data-aos-delay="200">
+
+                            <a href="https://www.youtube.com/watch?v=hkIcSJ5enp8"
+                               class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0">
+                                <i class="bi bi-play-circle"></i>
+                                <span>Watch PSA Hymn</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-1 order-lg-2 hero-img d-flex flex-column align-items-center justify-content-center"
+                         data-aos="zoom-out">
+
+                        <img src="assets/template/logo/PSA_LOGO.png"
+                             class="img-fluid animated"
+                             alt="PSA Logo">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Midyear Convention Highlights -->
         <div class="container section-title mt-5 pt-5" data-aos="fade-up">
             <h2>MIDYEAR CONVENTION 2026 HIGHLIGHTS</h2>
         </div>
-        
+
         <div class="mx-auto" style="max-width: 100%">
-          <div class="ratio ratio-16x9">
-              <iframe 
-                width="560" 
-                height="315"
-                src="https://www.youtube.com/embed/UU6AmoBhmDI?autoplay=1&mute=1"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>
-          </div>
+            <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.youtube.com/embed/UU6AmoBhmDI?autoplay=1&mute=1"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
         </div>
 
         <div class="d-flex justify-content-center mt-5">
-          <a href="https://forms.gle/yvuDo1BKQm9eQyWKA"
-          target="_blank"
-          class="btn btn-primary px-4 py-2 fs-5 fw-bold">
-              Evaluate now to get your Certificate of Attendance!
-          </a>
-      </div>
-      </div>
-    </div>
-  </section>
-  <section id="hero" class="hero section">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">MISSION</h1>
-          <p data-aos="fade-up" data-aos-delay="100">To promote and maintain a community of responsible anesthesiologists who can practice safe and quality anesthesia care in the pursuit of serving the interests of its members, their patients and the nation.</p>
-          <h1 data-aos="fade-up">VISION</h1>
-          <p data-aos="fade-up" data-aos-delay="100">A Society that envisions the Filipino anesthesiologists as world-class professionals pursuing the PSA Mission with a deep of fulfillment and pride.</p>
-          <h1 data-aos="fade-up">SHARED VALUES</h1>
-          <p data-aos="fade-up" data-aos-delay="100"><strong>Commitment to Quality Care |
-            Concern for Members |
-            Professional Growth</strong> </p>
-          
-          <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-              {{-- <a href="{{ route('login') }}" target="_blank" class="btn-get-started">Members Access <i class="bi bi-arrow-right"></i></a> --}}
-              <a href="https://www.youtube.com/watch?v=hkIcSJ5enp8" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch PSA Hymn</span></a>
-          </div>
+            <a href="https://forms.gle/yvuDo1BKQm9eQyWKA"
+               target="_blank"
+               class="btn btn-primary px-4 py-2 fs-5 fw-bold">
+                Evaluate now to get your Certificate of Attendance!
+            </a>
         </div>
 
-        <div class="col-lg-6 order-1 order-lg-2 hero-img d-flex flex-column align-items-center justify-content-center" data-aos="zoom-out">
-          <img src="assets/template/logo/PSA_LOGO.png" class="img-fluid animated" alt="">
+        <!-- Facebook Highlights -->
+        <div class="container py-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="fb-post-card">
+                        <div class="p-3 d-flex justify-content-center">
+                            <div class="fb-post"
+                                 data-href="https://www.facebook.com/story.php?story_fbid=122167194212901887&id=61577056622167"
+                                 data-width="350">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="fb-post-card">
+                        <div class="p-3 d-flex justify-content-center">
+                            <div class="fb-post"
+                                 data-href="https://www.facebook.com/story.php?story_fbid=122167233824901887&id=61577056622167"
+                                 data-width="350">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="fb-post-card">
+                        <div class="p-3 d-flex justify-content-center">
+                            <div class="fb-post"
+                                 data-href="https://www.facebook.com/story.php?story_fbid=122167349732901887&id=61577056622167"
+                                 data-width="350">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
   
-  <section id="services" class="services section mt-5 pt-5">
+  
+  {{-- <section id="services" class="services section mt-5 pt-5">
       <div class="container section-title" data-aos="fade-up">
           <h2>MIDYEAR CONVENTION 2026</h2>
           <p>May 14, 2026 | KCC Events & Convention Center | General Santos City<br></p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
           <div class="row gy-4">
@@ -98,10 +159,9 @@
                   <div class="service-item item-cyan position-relative">
                       <i class="bi bi-image-fill icon"></i>
                       <h3>Poster</h3>
-                      {{-- <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p> --}}
                       <a href="{{ route('midyear-poster') }}" class="stretched-link"></a>
                   </div>
-              </div><!-- End Service Item -->
+              </div>
 
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-item item-orange position-relative">
@@ -111,20 +171,13 @@
                     </div>
                 </div>
 
-              {{-- <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-                  <div class="service-item item-teal position-relative">
-                      <i class="bi bi-easel icon"></i>
-                      <h3>List of Exhibitors</h3>
-                  </div>
-              </div><!-- End Service Item --> --}}
-
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="service-item item-red position-relative">
                       <i class="bi bi-journal-bookmark icon"></i>
                       <h3>Scientific Program</h3>
                       <a href="{{ route('sci-prog') }}" class="stretched-link"></a>
                   </div>
-              </div><!-- End Service Item -->
+              </div>
 
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
                   <div class="service-item item-red position-relative">
@@ -132,7 +185,7 @@
                       <h3>Social Programs</h3>
                       <a href="{{ route('social-prog') }}" class="stretched-link"></a>
                   </div>
-              </div><!-- End Service Item -->
+              </div>
 
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
                   <div class="service-item item-indigo position-relative">
@@ -140,7 +193,7 @@
                       <h3>Tours & Accommodations</h3>
                       <a href="{{ route('accomm-tours') }}" class="stretched-link"></a>
                   </div>
-              </div><!-- End Service Item -->
+              </div>
 
               <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
                   <div class="service-item item-pink position-relative">
@@ -148,17 +201,17 @@
                       <h3>Pickleball Tournament</h3>
                       <a href="{{ route('sports') }}" class="stretched-link"></a>
                   </div>
-              </div><!-- End Service Item -->
+                </div>
           </div>
       </div>  
-  </section><!-- /Services Section -->
+  </section> --}}
 
   <!-- ANNOUNCEMENTS EVENTS Section -->
-  <section id="pricing" class="pricing section">
-    <!-- Section Title -->
+  {{-- <section id="pricing" class="pricing section">
+    
     <div class="container section-title" data-aos="fade-up">
       <h2>Recent Announcements</h2> 
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container">
       <div class="row justify-content-center">
@@ -186,16 +239,18 @@
 
       </div>
     </div>
-  </section>
+  </section> --}}
   <!-- RECENT EVENTS Section -->
   <section id="pricing" class="pricing section">
-    <!-- Section Title -->
+    
     <div class="container section-title" data-aos="fade-up">
       <h2>RECENT EVENTS</h2> 
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container">
+      
       <div class="row gy-4 justify-content-center">
+
         <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="pricing-tem">
             <a target="_blank" href="https://aca2025manila.org/"><img src="images/ACA POSTER V9.png" class="img-fluid animated " alt=""></a>
@@ -206,7 +261,13 @@
           <div class="pricing-tem">
             <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLxzHgmHcx1M9uPgiyFTl2nQ2-1gJ9ua6QafSPxzhmHn5IqA/viewform?usp=header"><img src="images/PSARP Poster.png" class="img-fluid animated " alt=""></a>
           </div>
-        </div>  
+        </div> 
+
+        <div class="col-xl-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="pricing-tem">
+            <a target="_blank" href="#"><img src="images/PSA_MIDYEAR_2026_POSTER.jpg" class="img-fluid animated " alt=""></a>
+          </div>
+        </div> 
 
       </div>
     </div>
@@ -214,11 +275,11 @@
   
   <!-- /Hero Section -->
   <section id="portfolio" class="portfolio section">
-    <!-- Section Title -->
+    
     <div class="container section-title mt-5" data-aos="fade-up">
         <h2>ASEAN CONGRESS OF Anesthesiologists 2025</h2>
         <p>23rd - 25th October 2025 | MARRIOTT GRAND BALLROOM, Pasay City | Philippines</p>
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container">
       <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
@@ -257,10 +318,10 @@
   {{-- @include('template.pages.recentEvents') --}}
   <!-- Contact Section -->
   <section id="contact" class="contact section">
-    <!-- Section Title -->
+    
     <div class="container section-title" data-aos="fade-up">
       <h2>Contact Us</h2>
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4">
