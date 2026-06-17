@@ -2,6 +2,8 @@
 @section('title', 'Philippine Society of Anesthesiologists')
 @section('content')
 
+{{-- testing --}}
+
 <section id="pricing" class="pricing section mt-5">
     <div class="container mt-3">
         <div class="row gy-4 justify-content-center">
