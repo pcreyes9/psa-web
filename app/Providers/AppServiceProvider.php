@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {   
+    {
         DB::listen(function ($query) {
 
             // Only capture UPDATE queries

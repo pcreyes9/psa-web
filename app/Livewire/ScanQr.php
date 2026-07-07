@@ -5,13 +5,18 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\Attributes\On;
 use Illuminate\Support\Facades\DB;
+use Livewire\WithFileUploads;
+
 
 class ScanQr extends Component
 {
+    use WithFileUploads;
+
     public $scannedCode = '';
     public $displayName = 'Waiting for Scan...';
     public $success = false;
     public $member = null, $psa_id;
+    public $photo;
 
     #[On('qrScanned')]
     public function qrScanned($code)
@@ -45,6 +50,35 @@ class ScanQr extends Component
         $this->displayName = 'Waiting for Scan...';
 
         $this->dispatch('restartScanner');
+    }
+
+    public function uploadPhoto()
+    {
+        $this->validate([
+            'photo' => 'required|image|mimes:jpg,jpeg,png|max:5120',
+        ]);
+
+        $filename = $this->member->member_id_no . '.' . $this->photo->extension();
+
+        $path = $this->photo->storeAs(
+            'member-photos',
+            $filename,
+            'public'
+        );
+
+        DB::table('members')
+            ->where('member_id_no', $this->member->member_id_no)
+            ->update([
+                'photo_path' => $path,
+            ]);
+
+        // Update local object so the UI immediately shows the new image
+        $this->member->photo_path = $path;
+
+        session()->flash(
+            'success',
+            'Photo uploaded successfully.'
+        );
     }
 
     public function render()
