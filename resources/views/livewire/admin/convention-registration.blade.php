@@ -1,7 +1,7 @@
 <section>
     <div class="mx-4 mt-5">
         <div class="section-title">
-            <h2 class="text-center mb-5">Admin Convention Registration</h2>
+            <h2 class="text-center mb-5">Admin Convention Registrationssss</h2>
             @if (session('success'))
                 <div class="alert alert-success mt-4">
                     {{ session('success') }}
