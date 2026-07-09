@@ -14,7 +14,7 @@
                 @endif
                 <p class="" ><strong>PRE-REGISTRATION IS NOW CLOSED </strong></p>
                 
-                {{-- <livewire:midyear-registration/> --}}
+                <livewire:midyear-registration/>
             </div>
         </div>
     </section>
