@@ -39,6 +39,11 @@
 </head>
 
 <body class="index-page">
+  <div id="fb-root"></div>
+
+  <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
+  </script>
   <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="{{route('home')}}" class="logo d-flex align-items-center me-auto">
@@ -52,7 +57,7 @@
   </header>
 
     <div style="overflow: hidden; position: relative;">
-      <img class="master-bg" src="{{ asset('images/gradient_bg3.jpg') }}" alt="ASEAN CONGRESS OF ANESTHESIOLOGISTS IN MANILA 2025">
+      <img class="master-bg" src="{{ asset('images/gradient_bg3.jpg') }}" alt="Philippine Society of Anesthesiologists">
       <div >
         <main class="main">
           @yield('content')
@@ -63,7 +68,7 @@
       </div>
     </div>
         {{-- @yield('content') --}}
-  
+
   @livewireScripts
   @include('template.footer')
 

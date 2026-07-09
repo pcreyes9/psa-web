@@ -7,6 +7,7 @@
 <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="https://unpkg.com/html5-qrcode"></script>
 
 <!-- Main JS File -->
 <script src="{{ asset('assets/js/main.js') }}"></script>

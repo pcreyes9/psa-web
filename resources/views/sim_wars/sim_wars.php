@@ -56,7 +56,7 @@
           </p>
           <p class="hero-deadline">
             <span>Registration deadline</span>
-            <strong>June 20, 2026</strong>
+            <strong>June 30, 2026</strong>
           </p>
           <div class="hero-actions" aria-label="Registration actions">
             <a class="button button-primary" href="#registration">
@@ -231,7 +231,7 @@
                 <span>Not required for registration</span>
               </div>
               <div>
-                <strong>June 20</strong>
+                <strong>June 30</strong>
                 <span>Registration deadline</span>
               </div>
             </div>
@@ -243,7 +243,7 @@
             <div class="scenario-actions">
               <a
                 class="button button-primary"
-                href="assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
+                href="sim_wars/assets/sim-wars-trilogy-registration-scenario-worksheet.docx"
                 download
               >
                 <span>Download worksheet</span>
@@ -348,7 +348,7 @@
           </p>
           <div class="deadline-panel" aria-label="Registration deadline">
             <span>Registration deadline</span>
-            <strong>June 20, 2026</strong>
+            <strong>June 30, 2026</strong>
             <p>Initial submission: Sections 1, 2, 3, and 8 only.</p>
           </div>
           <div class="contact-panel" aria-label="Inquiry contacts">
@@ -557,7 +557,7 @@
             </label>
             <label class="check-line">
               <input name="eligibility" type="checkbox" required />
-              <span>I confirm that the team meets the eligibility requirements and will submit Worksheet Sections 1, 2, 3, and 8 by June 20, 2026.</span>
+              <span>I confirm that the team meets the eligibility requirements and will submit Worksheet Sections 1, 2, 3, and 8 by June 30, 2026.</span>
             </label>
           </fieldset>
 
